@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Hware game bgm good bad.mp3-8dac2e8de2f5757bbfaaf8dbb8c122f1.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Hware game bgm good bad.mp3"
+dest_files=[ "res://.import/Hware game bgm good bad.mp3-8dac2e8de2f5757bbfaaf8dbb8c122f1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

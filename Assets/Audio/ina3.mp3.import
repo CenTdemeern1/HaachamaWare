@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ina3.mp3-f5d21d2372554dc8dfb8cb4c4324a16a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/ina3.mp3"
+dest_files=[ "res://.import/ina3.mp3-f5d21d2372554dc8dfb8cb4c4324a16a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

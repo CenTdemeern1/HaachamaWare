@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Groundpound.mp3-b40a93fd17478ef58bb87994a59de7ae.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Groundpound.mp3"
+dest_files=[ "res://.import/Groundpound.mp3-b40a93fd17478ef58bb87994a59de7ae.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

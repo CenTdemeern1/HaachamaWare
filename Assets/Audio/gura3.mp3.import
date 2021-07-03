@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/gura3.mp3-2f3ecb80056003a37fd0af85c6686aca.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/gura3.mp3"
+dest_files=[ "res://.import/gura3.mp3-2f3ecb80056003a37fd0af85c6686aca.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

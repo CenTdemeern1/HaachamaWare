@@ -1,0 +1,22 @@
+{ "frames": [
+   {
+    "filename": "splash.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 960, "h": 640 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 960, "h": 640 },
+    "sourceSize": { "w": 960, "h": 640 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.21-dev",
+  "image": "splash.png",
+  "format": "RGBA8888",
+  "size": { "w": 960, "h": 640 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}

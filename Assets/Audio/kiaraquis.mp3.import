@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/kiaraquis.mp3-801bbec8b859495cb4e404b9c52e2f2a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/kiaraquis.mp3"
+dest_files=[ "res://.import/kiaraquis.mp3-801bbec8b859495cb4e404b9c52e2f2a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

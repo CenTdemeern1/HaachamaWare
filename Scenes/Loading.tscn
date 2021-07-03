@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Sprites/HOLOEEENintroWOBG.aseprite" type="SpriteFrames" id=1]
+[ext_resource path="res://Assets/Sprites/Grass.aseprite" type="SpriteFrames" id=2]
+[ext_resource path="res://Scripts/Loading.gd" type="Script" id=3]
+
+[node name="Loading" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 700, 490 )
+frames = ExtResource( 1 )
+frame = 6
+playing = true
+centered = false
+flip_h = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 440, 490 )
+frames = ExtResource( 2 )
+frame = 5
+playing = true
+centered = false
+flip_h = true
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 180, 490 )
+frames = ExtResource( 2 )
+frame = 5
+playing = true
+centered = false
+flip_h = true
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="."]
+position = Vector2( -80, 490 )
+frames = ExtResource( 2 )
+frame = 4
+playing = true
+centered = false
+flip_h = true

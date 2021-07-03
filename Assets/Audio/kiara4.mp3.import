@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/kiara4.mp3-d44a3f2e1f05a609b0a16b25b39b7c23.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/kiara4.mp3"
+dest_files=[ "res://.import/kiara4.mp3-d44a3f2e1f05a609b0a16b25b39b7c23.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

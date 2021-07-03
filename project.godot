@@ -11,7 +11,26 @@ config_version=4
 [application]
 
 config/name="HaachamaWare"
+run/main_scene="res://Scenes/Loading.tscn"
+boot_splash/image="res://Assets/Sprites/splash.png"
+boot_splash/fullsize=false
+boot_splash/use_filter=false
 config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://Scripts/Global.gd"
+
+[display]
+
+window/size/width=960
+window/size/height=640
+window/size/resizable=false
+window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/AsepriteWizard/plugin.cfg" )
 
 [physics]
 

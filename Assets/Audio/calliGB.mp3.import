@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/calliGB.mp3-58a6bc60a91053a416c670959abcd8b5.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/calliGB.mp3"
+dest_files=[ "res://.import/calliGB.mp3-58a6bc60a91053a416c670959abcd8b5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

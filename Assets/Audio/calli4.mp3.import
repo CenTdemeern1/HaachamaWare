@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/calli4.mp3-8a53bd6186d0ee295691a355637ab6a4.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/calli4.mp3"
+dest_files=[ "res://.import/calli4.mp3-8a53bd6186d0ee295691a355637ab6a4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

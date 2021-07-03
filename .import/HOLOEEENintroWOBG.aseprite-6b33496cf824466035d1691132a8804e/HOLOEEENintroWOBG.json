@@ -1,0 +1,265 @@
+{ "frames": [
+   {
+    "filename": "HOLOEEENintroWOBG 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 1.aseprite",
+    "frame": { "x": 260, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 2.aseprite",
+    "frame": { "x": 520, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 3.aseprite",
+    "frame": { "x": 780, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 4.aseprite",
+    "frame": { "x": 1040, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 5.aseprite",
+    "frame": { "x": 1300, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 6.aseprite",
+    "frame": { "x": 1560, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 7.aseprite",
+    "frame": { "x": 1820, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 8.aseprite",
+    "frame": { "x": 2080, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 9.aseprite",
+    "frame": { "x": 2340, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 10.aseprite",
+    "frame": { "x": 2600, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 11.aseprite",
+    "frame": { "x": 2860, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 12.aseprite",
+    "frame": { "x": 3120, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 13.aseprite",
+    "frame": { "x": 3380, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 14.aseprite",
+    "frame": { "x": 3640, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 15.aseprite",
+    "frame": { "x": 3900, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 16.aseprite",
+    "frame": { "x": 4160, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 17.aseprite",
+    "frame": { "x": 4420, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 18.aseprite",
+    "frame": { "x": 4680, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 19.aseprite",
+    "frame": { "x": 4940, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 20.aseprite",
+    "frame": { "x": 5200, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 21.aseprite",
+    "frame": { "x": 5460, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 22.aseprite",
+    "frame": { "x": 5720, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 23.aseprite",
+    "frame": { "x": 5980, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 24.aseprite",
+    "frame": { "x": 6240, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 25.aseprite",
+    "frame": { "x": 6500, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 26.aseprite",
+    "frame": { "x": 6760, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   },
+   {
+    "filename": "HOLOEEENintroWOBG 27.aseprite",
+    "frame": { "x": 7020, "y": 0, "w": 260, "h": 150 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 260, "h": 150 },
+    "sourceSize": { "w": 260, "h": 150 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.21-dev",
+  "image": "HOLOEEENintroWOBG.png",
+  "format": "RGBA8888",
+  "size": { "w": 7280, "h": 150 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}
