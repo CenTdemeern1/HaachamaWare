@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MMConfirm.ogg-1da2a88795d57300fd4a05532b41ab94.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/MMConfirm.ogg"
+dest_files=[ "res://.import/MMConfirm.ogg-1da2a88795d57300fd4a05532b41ab94.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

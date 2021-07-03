@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LogoDrop.ogg-13f632a1e4bc893b1311eed10965e649.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/LogoDrop.ogg"
+dest_files=[ "res://.import/LogoDrop.ogg-13f632a1e4bc893b1311eed10965e649.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

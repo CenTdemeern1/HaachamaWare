@@ -1,6 +1,6 @@
 extends Control
 
-const things_to_load = []
+const things_to_load = ["res://Scenes/OP.tscn"]
 
 func _ready():
 	Global.resource_queue = preload("res://Scripts/resource_queue.gd").new()
@@ -15,4 +15,4 @@ func _process(delta):
 		#I can't just set a grayscale value so I have to do this :(
 		modulate=Color(modulate.r-delta,modulate.g-delta,modulate.b-delta)
 		if modulate.r <= 0:
-			get_tree().change_scene_to(Global.resource_queue.get_resource("res://Scenes/MainScene.tscn"))
+			Global.change_scene("res://Scenes/MainScene.tscn")
