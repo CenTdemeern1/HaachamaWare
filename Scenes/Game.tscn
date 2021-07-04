@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Pot.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/OP.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Game.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Fonts/Early GameBoy.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+use_filter = true
+font_data = ExtResource( 4 )
+
+[node name="Game" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MinigameGoesHere" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0.376471, 1, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]
+
+
+
+
+
+
+Minigame goes here![/center]"
+text = "
+
+
+
+
+
+
+Minigame goes here!"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OP" parent="." instance=ExtResource( 2 )]
+
+[node name="Pot" parent="." instance=ExtResource( 1 )]

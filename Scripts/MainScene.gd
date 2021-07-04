@@ -24,4 +24,4 @@ func _on_LogoDrop_finished():
 
 
 func _on_Start_finished():
-	Global.change_scene("res://Scenes/OP.tscn")
+	Global.change_scene("res://Scenes/Game.tscn")

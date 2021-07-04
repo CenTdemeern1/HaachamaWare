@@ -181,8 +181,21 @@ tracks/12/keys = {
 "update": 0,
 "values": [ Vector2( 372, 0 ), Vector2( 312, -24 ), Vector2( 254, 0 ), Vector2( 223, -19 ) ]
 }
+tracks/13/type = "value"
+tracks/13/path = NodePath(".:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 10.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [node name="OP" type="Control"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {

@@ -1,6 +1,6 @@
 extends Control
 
-const things_to_load = ["res://Scenes/OP.tscn","res://Scenes/Pot.tscn"]
+const things_to_load = ["res://Scenes/OP.tscn","res://Scenes/Pot.tscn","res://Scenes/Game.tscn"]
 
 func _ready():
 	Global.resource_queue = preload("res://Scripts/resource_queue.gd").new()
