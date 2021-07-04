@@ -1,10 +1,26 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Assets/Sprites/HwareOP4.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Audio/HwareOP.ogg" type="AudioStream" id=2]
 [ext_resource path="res://Assets/Sprites/HwareOP3.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Sprites/HwareOP2.aseprite" type="SpriteFrames" id=4]
 [ext_resource path="res://Scripts/OP.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Sprites/pot/stove2.aseprite" type="SpriteFrames" id=6]
+[ext_resource path="res://Assets/Sprites/HwareOP6.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sprites/HwareOP5.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sprites/athuri.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Fonts/Early GameBoy.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Assets/Sprites/atzeth.png" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=2]
+size = 58
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+use_filter = true
+font_data = ExtResource( 10 )
 
 [sub_resource type="Animation" id=1]
 resource_name = "OP"
@@ -64,10 +80,106 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 3.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 3.5, 5.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ false, true ]
+"values": [ false, true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Scene_2/HwareOP4:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 3.5, 5.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -372, 0 ), Vector2( -372, 0 ), Vector2( -284, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Scene_2/HwareOP3:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 3.5, 5.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 36, 0 ), Vector2( 36, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Scene_3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 5.5, 7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Scene_3/AnimatedSprite:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 5.5, 6.95 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Scene_3/AnimatedSprite:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Scene_4:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 7, 10.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Scene_4/HwareOP5:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 7, 10.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 56, 0 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Scene_4/HwareOP6:position")
+tracks/12/interp = 2
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 7, 7.25, 7.5, 7.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 372, 0 ), Vector2( 312, -24 ), Vector2( 254, 0 ), Vector2( 223, -19 ) ]
 }
 
 [node name="OP" type="Control"]
@@ -116,6 +228,7 @@ __meta__ = {
 }
 
 [node name="HwareOP3" type="Sprite" parent="Scene_2"]
+position = Vector2( 36, 0 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 3 )
 centered = false
@@ -135,9 +248,176 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="RichTextLabel" type="RichTextLabel" parent="Scene_2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 480.0
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 1, 0.756863, 0.486275, 1 )
+bbcode_enabled = true
+bbcode_text = "
+
+[center]Music
+SE
+
+HURIKOMI[/center]
+"
+text = "
+
+Music
+SE
+
+HURIKOMI
+"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="athuri" type="Sprite" parent="Scene_2/RichTextLabel"]
+position = Vector2( 240, 445 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 9 )
+
+[node name="Scene_3" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Scene_3"]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 6 )
+centered = false
+
+[node name="ColorRect4" type="ColorRect" parent="Scene_3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -256.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Scene_3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 14.0
+margin_bottom = -242.0
+custom_fonts/normal_font = SubResource( 3 )
+custom_colors/default_color = Color( 0.403922, 0.329412, 0.298039, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Original Music
+
+
+Excuse my rudeness,
+ but could you please rip?
+Calliope Mori[/center]
+"
+text = "Original Music
+
+
+Excuse my rudeness,
+ but could you please rip?
+Calliope Mori
+"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Scene_3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 88.0
+margin_bottom = -168.0
+custom_fonts/normal_font = SubResource( 3 )
+custom_colors/default_color = Color( 0.403922, 0.329412, 0.298039, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Red Heart Haachama[/center]
+"
+text = "Red Heart Haachama
+"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Scene_4" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="Scene_4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 480.0
+color = Color( 1, 0.756863, 0.486275, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HwareOP6" type="Sprite" parent="Scene_4"]
+position = Vector2( 324.832, -21.888 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="HwareOP5" type="Sprite" parent="Scene_4"]
+position = Vector2( 3.2, 0 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="ColorRect2" type="ColorRect" parent="Scene_4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -480.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Scene_4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -480.0
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0.745098, 0.509804, 0.298039, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]
+
+Movie
+Pixel
+
+Ronin[/center]
+"
+text = "
+
+Movie
+Pixel
+
+Ronin
+"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="atzeth" type="Sprite" parent="Scene_4/RichTextLabel"]
+position = Vector2( 240, 445 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 11 )
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/OP = SubResource( 1 )
 script = ExtResource( 5 )
+
+[connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_AnimationPlayer_animation_finished"]

@@ -110,6 +110,7 @@ func get_resource(path):
 			return res
 	else:
 		_unlock("return")
+		push_warning("Warning: requested resource wasn't queued.")
 		return ResourceLoader.load(path)
 
 

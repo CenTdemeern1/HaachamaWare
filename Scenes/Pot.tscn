@@ -1,0 +1,171 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Assets/Sprites/pot/Inagood.aseprite" type="SpriteFrames" id=1]
+[ext_resource path="res://Assets/Sprites/pot/haBG.aseprite" type="SpriteFrames" id=2]
+[ext_resource path="res://Assets/Sprites/pot/pot.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/pot/gooddish_2.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/pot/gooddish.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/pot/BG.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Sprites/pot/futa.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sprites/pot/stove.aseprite" type="SpriteFrames" id=8]
+[ext_resource path="res://Assets/Sprites/pot/Ha.aseprite" type="SpriteFrames" id=9]
+[ext_resource path="res://Assets/Sprites/pot/InaBG.aseprite" type="SpriteFrames" id=10]
+[ext_resource path="res://Assets/Sprites/pot/Inabad.aseprite" type="SpriteFrames" id=11]
+[ext_resource path="res://Assets/Sprites/pot/Inatentacles.aseprite" type="SpriteFrames" id=12]
+[ext_resource path="res://Assets/Sprites/pot/baddish_1.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Sprites/pot/baddish_2.png" type="Texture" id=14]
+[ext_resource path="res://Scripts/AutoPlayAnimatedSprite.gd" type="Script" id=15]
+[ext_resource path="res://Assets/Sprites/pot/gooddish_shine.aseprite" type="SpriteFrames" id=16]
+[ext_resource path="res://Assets/Sprites/pot/baddish_poison.aseprite" type="SpriteFrames" id=17]
+[ext_resource path="res://Assets/Sprites/pot/waku.aseprite" type="SpriteFrames" id=18]
+[ext_resource path="res://Assets/Sprites/pot/drag.aseprite" type="SpriteFrames" id=19]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+
+[node name="Pot" type="Node2D"]
+
+[node name="BG" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Stove" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 8 )
+centered = false
+script = ExtResource( 15 )
+
+[node name="Pot" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="GoodDish" type="Node2D" parent="."]
+
+[node name="GoodDish" type="Sprite" parent="GoodDish"]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="GoodDish2" type="Sprite" parent="GoodDish"]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="Sparkles" type="AnimatedSprite" parent="GoodDish"]
+material = SubResource( 1 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 16 )
+frame = 1
+centered = false
+script = ExtResource( 15 )
+
+[node name="BadDish" type="Node2D" parent="."]
+visible = false
+
+[node name="GoodDish" type="Sprite" parent="BadDish"]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 13 )
+centered = false
+
+[node name="GoodDish2" type="Sprite" parent="BadDish"]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 14 )
+centered = false
+
+[node name="Poison" type="AnimatedSprite" parent="BadDish"]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 17 )
+frame = 1
+centered = false
+script = ExtResource( 15 )
+
+[node name="StomachCure" type="Node2D" parent="."]
+position = Vector2( -54, 0 )
+
+[node name="StomachCure" type="AnimatedSprite" parent="StomachCure"]
+position = Vector2( 0, -28 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 19 )
+centered = false
+script = ExtResource( 15 )
+
+[node name="StomachCure2" type="AnimatedSprite" parent="StomachCure"]
+position = Vector2( 0, 96 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 19 )
+centered = false
+script = ExtResource( 15 )
+
+[node name="StomachCure3" type="AnimatedSprite" parent="StomachCure"]
+position = Vector2( 0, 220 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 19 )
+centered = false
+script = ExtResource( 15 )
+
+[node name="StomachCure4" type="AnimatedSprite" parent="StomachCure"]
+position = Vector2( 0, 344 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 19 )
+centered = false
+script = ExtResource( 15 )
+
+[node name="futa" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 4, 4 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Waku" type="AnimatedSprite" parent="."]
+visible = false
+scale = Vector2( 4, 4 )
+frames = ExtResource( 18 )
+centered = false
+script = ExtResource( 15 )
+
+[node name="Haachama" type="Node2D" parent="."]
+
+[node name="HaachamaBG" type="AnimatedSprite" parent="Haachama"]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 2 )
+centered = false
+script = ExtResource( 15 )
+
+[node name="Haachama" type="AnimatedSprite" parent="Haachama"]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 9 )
+centered = false
+script = ExtResource( 15 )
+
+[node name="Ina" type="Node2D" parent="."]
+
+[node name="InaBG" type="AnimatedSprite" parent="Ina"]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 10 )
+centered = false
+script = ExtResource( 15 )
+
+[node name="InaBG2" type="AnimatedSprite" parent="Ina"]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 12 )
+centered = false
+script = ExtResource( 15 )
+
+[node name="Good" type="Node2D" parent="Ina"]
+
+[node name="InaGood" type="AnimatedSprite" parent="Ina/Good"]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+centered = false
+script = ExtResource( 15 )
+
+[node name="Bad" type="Node2D" parent="Ina"]
+visible = false
+
+[node name="InaBad" type="AnimatedSprite" parent="Ina/Bad"]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 11 )
+centered = false
+script = ExtResource( 15 )
