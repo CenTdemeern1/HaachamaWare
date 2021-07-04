@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Assets/Sprites/pot/Inagood.aseprite" type="SpriteFrames" id=1]
 [ext_resource path="res://Assets/Sprites/pot/haBG.aseprite" type="SpriteFrames" id=2]
@@ -19,41 +19,220 @@
 [ext_resource path="res://Assets/Sprites/pot/baddish_poison.aseprite" type="SpriteFrames" id=17]
 [ext_resource path="res://Assets/Sprites/pot/waku.aseprite" type="SpriteFrames" id=18]
 [ext_resource path="res://Assets/Sprites/pot/drag.aseprite" type="SpriteFrames" id=19]
+[ext_resource path="res://Assets/Audio/Good1.ogg" type="AudioStream" id=20]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 1
 
-[node name="Pot" type="Node2D"]
+[sub_resource type="Animation" id=2]
+resource_name = "Good"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("AudioStreamPlayer:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("..:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Waku:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 1.5, 1.6, 1.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 1, 0, 2 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Haachama:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Ina:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Ina/Good:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Ina/Bad:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Pot/BadDish:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Pot:scale")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.05, 1.05 ), Vector2( 1, 1 ), Vector2( 1.05, 1.05 ), Vector2( 1, 1 ), Vector2( 1.05, 1.05 ), Vector2( 1, 1 ), Vector2( 1.05, 1.05 ), Vector2( 1, 1 ), Vector2( 1.05, 1.05 ), Vector2( 1, 1 ), Vector2( 1.05, 1.05 ), Vector2( 1, 1 ), Vector2( 1.05, 1.05 ), Vector2( 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Pot/GoodDish:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Sparkles:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Poison:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
-[node name="BG" type="Sprite" parent="."]
+[node name="Pot" type="Node2D"]
+position = Vector2( 480, 320 )
+
+[node name="Pot" type="Node2D" parent="."]
+position = Vector2( -480, -320 )
+
+[node name="BG" type="Sprite" parent="Pot"]
 scale = Vector2( 4, 4 )
 texture = ExtResource( 6 )
 centered = false
 
-[node name="Stove" type="AnimatedSprite" parent="."]
+[node name="Stove" type="AnimatedSprite" parent="Pot"]
 scale = Vector2( 4, 4 )
 frames = ExtResource( 8 )
 centered = false
 script = ExtResource( 15 )
 
-[node name="Pot" type="Sprite" parent="."]
+[node name="Pot" type="Node2D" parent="Pot"]
+position = Vector2( 480, 320 )
+
+[node name="Pot" type="Sprite" parent="Pot/Pot"]
+position = Vector2( -480, -320 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 3 )
 centered = false
 
-[node name="GoodDish" type="Node2D" parent="."]
+[node name="GoodDish" type="Node2D" parent="Pot/Pot"]
+position = Vector2( -480, -320 )
 
-[node name="GoodDish" type="Sprite" parent="GoodDish"]
+[node name="GoodDish" type="Sprite" parent="Pot/Pot/GoodDish"]
 scale = Vector2( 4, 4 )
 texture = ExtResource( 5 )
 centered = false
 
-[node name="GoodDish2" type="Sprite" parent="GoodDish"]
+[node name="GoodDish2" type="Sprite" parent="Pot/Pot/GoodDish"]
 scale = Vector2( 4, 4 )
 texture = ExtResource( 4 )
 centered = false
 
-[node name="Sparkles" type="AnimatedSprite" parent="GoodDish"]
+[node name="BadDish" type="Node2D" parent="Pot/Pot"]
+visible = false
+position = Vector2( -480, -320 )
+
+[node name="GoodDish" type="Sprite" parent="Pot/Pot/BadDish"]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 13 )
+centered = false
+
+[node name="GoodDish2" type="Sprite" parent="Pot/Pot/BadDish"]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 14 )
+centered = false
+
+[node name="futa" type="Sprite" parent="Pot/Pot"]
+visible = false
+position = Vector2( -480, -320 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="Sparkles" type="AnimatedSprite" parent="Pot"]
 material = SubResource( 1 )
 scale = Vector2( 4, 4 )
 frames = ExtResource( 16 )
@@ -61,111 +240,101 @@ frame = 1
 centered = false
 script = ExtResource( 15 )
 
-[node name="BadDish" type="Node2D" parent="."]
+[node name="Poison" type="AnimatedSprite" parent="Pot"]
 visible = false
-
-[node name="GoodDish" type="Sprite" parent="BadDish"]
-scale = Vector2( 4, 4 )
-texture = ExtResource( 13 )
-centered = false
-
-[node name="GoodDish2" type="Sprite" parent="BadDish"]
-scale = Vector2( 4, 4 )
-texture = ExtResource( 14 )
-centered = false
-
-[node name="Poison" type="AnimatedSprite" parent="BadDish"]
 scale = Vector2( 4, 4 )
 frames = ExtResource( 17 )
 frame = 1
 centered = false
 script = ExtResource( 15 )
 
-[node name="StomachCure" type="Node2D" parent="."]
+[node name="StomachCure" type="Node2D" parent="Pot"]
 position = Vector2( -54, 0 )
 
-[node name="StomachCure" type="AnimatedSprite" parent="StomachCure"]
+[node name="StomachCure" type="AnimatedSprite" parent="Pot/StomachCure"]
 position = Vector2( 0, -28 )
 scale = Vector2( 4, 4 )
 frames = ExtResource( 19 )
 centered = false
 script = ExtResource( 15 )
 
-[node name="StomachCure2" type="AnimatedSprite" parent="StomachCure"]
+[node name="StomachCure2" type="AnimatedSprite" parent="Pot/StomachCure"]
 position = Vector2( 0, 96 )
 scale = Vector2( 4, 4 )
 frames = ExtResource( 19 )
 centered = false
 script = ExtResource( 15 )
 
-[node name="StomachCure3" type="AnimatedSprite" parent="StomachCure"]
+[node name="StomachCure3" type="AnimatedSprite" parent="Pot/StomachCure"]
 position = Vector2( 0, 220 )
 scale = Vector2( 4, 4 )
 frames = ExtResource( 19 )
 centered = false
 script = ExtResource( 15 )
 
-[node name="StomachCure4" type="AnimatedSprite" parent="StomachCure"]
+[node name="StomachCure4" type="AnimatedSprite" parent="Pot/StomachCure"]
 position = Vector2( 0, 344 )
 scale = Vector2( 4, 4 )
 frames = ExtResource( 19 )
 centered = false
 script = ExtResource( 15 )
 
-[node name="futa" type="Sprite" parent="."]
-visible = false
-scale = Vector2( 4, 4 )
-texture = ExtResource( 7 )
-centered = false
-
-[node name="Waku" type="AnimatedSprite" parent="."]
-visible = false
+[node name="Waku" type="AnimatedSprite" parent="Pot"]
 scale = Vector2( 4, 4 )
 frames = ExtResource( 18 )
 centered = false
-script = ExtResource( 15 )
 
-[node name="Haachama" type="Node2D" parent="."]
+[node name="Haachama" type="Node2D" parent="Pot"]
+visible = false
 
-[node name="HaachamaBG" type="AnimatedSprite" parent="Haachama"]
+[node name="HaachamaBG" type="AnimatedSprite" parent="Pot/Haachama"]
 scale = Vector2( 4, 4 )
 frames = ExtResource( 2 )
 centered = false
 script = ExtResource( 15 )
 
-[node name="Haachama" type="AnimatedSprite" parent="Haachama"]
+[node name="Haachama" type="AnimatedSprite" parent="Pot/Haachama"]
 scale = Vector2( 4, 4 )
 frames = ExtResource( 9 )
 centered = false
 script = ExtResource( 15 )
 
-[node name="Ina" type="Node2D" parent="."]
+[node name="Ina" type="Node2D" parent="Pot"]
+visible = false
 
-[node name="InaBG" type="AnimatedSprite" parent="Ina"]
+[node name="InaBG" type="AnimatedSprite" parent="Pot/Ina"]
 scale = Vector2( 4, 4 )
 frames = ExtResource( 10 )
 centered = false
 script = ExtResource( 15 )
 
-[node name="InaBG2" type="AnimatedSprite" parent="Ina"]
+[node name="InaBG2" type="AnimatedSprite" parent="Pot/Ina"]
 scale = Vector2( 4, 4 )
 frames = ExtResource( 12 )
 centered = false
 script = ExtResource( 15 )
 
-[node name="Good" type="Node2D" parent="Ina"]
+[node name="Good" type="Node2D" parent="Pot/Ina"]
+visible = false
 
-[node name="InaGood" type="AnimatedSprite" parent="Ina/Good"]
+[node name="InaGood" type="AnimatedSprite" parent="Pot/Ina/Good"]
 scale = Vector2( 4, 4 )
 frames = ExtResource( 1 )
 centered = false
 script = ExtResource( 15 )
 
-[node name="Bad" type="Node2D" parent="Ina"]
+[node name="Bad" type="Node2D" parent="Pot/Ina"]
 visible = false
 
-[node name="InaBad" type="AnimatedSprite" parent="Ina/Bad"]
+[node name="InaBad" type="AnimatedSprite" parent="Pot/Ina/Bad"]
 scale = Vector2( 4, 4 )
 frames = ExtResource( 11 )
 centered = false
 script = ExtResource( 15 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Pot"]
+stream = ExtResource( 20 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pot"]
+autoplay = "Good"
+anims/Good = SubResource( 2 )

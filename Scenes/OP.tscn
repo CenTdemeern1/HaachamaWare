@@ -176,7 +176,7 @@ tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 7, 7.25, 7.5, 7.75 ),
+"times": PoolRealArray( 7, 8, 9, 10.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 372, 0 ), Vector2( 312, -24 ), Vector2( 254, 0 ), Vector2( 223, -19 ) ]
@@ -346,6 +346,7 @@ __meta__ = {
 }
 
 [node name="Scene_4" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -362,13 +363,13 @@ __meta__ = {
 }
 
 [node name="HwareOP6" type="Sprite" parent="Scene_4"]
-position = Vector2( 324.832, -21.888 )
+position = Vector2( 223, -19 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 7 )
 centered = false
 
 [node name="HwareOP5" type="Sprite" parent="Scene_4"]
-position = Vector2( 3.2, 0 )
+position = Vector2( 56, 0 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 8 )
 centered = false
