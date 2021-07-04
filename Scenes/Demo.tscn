@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Pot.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/OP.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Demo.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/AutoPlayAnimatedSprite.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Sprites/MockOP.aseprite" type="SpriteFrames" id=5]
+
+[node name="Demo" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 5 )
+centered = false
+script = ExtResource( 4 )
+
+[node name="OP" parent="." instance=ExtResource( 2 )]
+visible = true
+
+[node name="Pot" parent="." instance=ExtResource( 1 )]

@@ -46,5 +46,6 @@ __meta__ = {
 }
 
 [node name="OP" parent="." instance=ExtResource( 2 )]
+visible = true
 
 [node name="Pot" parent="." instance=ExtResource( 1 )]
