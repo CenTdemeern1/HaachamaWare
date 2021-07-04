@@ -51,10 +51,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 3, 3.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 4, 4 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Waku:frame")
@@ -123,10 +123,10 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ true ]
+"values": [ true, false ]
 }
 tracks/8/type = "value"
 tracks/8/path = NodePath("Pot:scale")
@@ -183,10 +183,10 @@ tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0, 0.3, 1.4, 1.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 1.4, 1.7, 3, 3.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -480, -320 ), Vector2( -480, -960 ), Vector2( -480, -960 ), Vector2( -480, -320 ) ]
+"values": [ Vector2( -480, -320 ), Vector2( -480, -960 ), Vector2( -480, -960 ), Vector2( -480, -320 ), Vector2( -480, -320 ), Vector2( -480, -960 ) ]
 }
 tracks/13/type = "value"
 tracks/13/path = NodePath("Pot/BadDish/BadDishStickingOut:visible")
@@ -258,10 +258,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 3, 3.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 4, 4 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Waku:frame")
@@ -354,10 +354,10 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ true ]
+"values": [ true, false ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("Sparkles:visible")
@@ -390,10 +390,10 @@ tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0, 0.3, 1.4, 1.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 1.4, 1.7, 3, 3.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -480, -320 ), Vector2( -480, -960 ), Vector2( -480, -960 ), Vector2( -480, -320 ) ]
+"values": [ Vector2( -480, -320 ), Vector2( -480, -960 ), Vector2( -480, -960 ), Vector2( -480, -320 ), Vector2( -480, -320 ), Vector2( -480, -960 ) ]
 }
 tracks/13/type = "value"
 tracks/13/path = NodePath("Pot/GoodDish/GoodDishStickingOut:visible")
@@ -446,6 +446,7 @@ tracks/16/keys = {
 
 [node name="Pot" type="Node2D"]
 position = Vector2( 480, 320 )
+scale = Vector2( 4, 4 )
 
 [node name="Pot" type="Node2D" parent="."]
 position = Vector2( -480, -320 )
@@ -471,6 +472,7 @@ texture = ExtResource( 3 )
 centered = false
 
 [node name="GoodDish" type="Node2D" parent="Pot/Pot"]
+visible = false
 position = Vector2( -480, -320 )
 
 [node name="GoodDish" type="Sprite" parent="Pot/Pot/GoodDish"]
@@ -510,12 +512,13 @@ texture = ExtResource( 21 )
 centered = false
 
 [node name="futa" type="Sprite" parent="Pot/Pot"]
-position = Vector2( -480, -320 )
+position = Vector2( -480, -960 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 7 )
 centered = false
 
 [node name="Sparkles" type="AnimatedSprite" parent="Pot"]
+visible = false
 material = SubResource( 1 )
 scale = Vector2( 4, 4 )
 frames = ExtResource( 16 )
@@ -570,6 +573,7 @@ texture = ExtResource( 25 )
 [node name="Waku" type="AnimatedSprite" parent="Pot"]
 scale = Vector2( 4, 4 )
 frames = ExtResource( 18 )
+frame = 2
 centered = false
 
 [node name="Haachama" type="Node2D" parent="Pot"]
@@ -603,7 +607,6 @@ centered = false
 script = ExtResource( 15 )
 
 [node name="Good" type="Node2D" parent="Pot/Ina"]
-visible = false
 
 [node name="InaGood" type="AnimatedSprite" parent="Pot/Ina/Good"]
 scale = Vector2( 4, 4 )
