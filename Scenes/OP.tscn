@@ -357,7 +357,6 @@ __meta__ = {
 }
 
 [node name="Scene_4" type="Control" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -403,15 +402,15 @@ custom_colors/default_color = Color( 0.745098, 0.509804, 0.298039, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]
 
-Movie
 Pixel
+Art
 
 Ronin[/center]
 "
 text = "
 
-Movie
 Pixel
+Art
 
 Ronin
 "
