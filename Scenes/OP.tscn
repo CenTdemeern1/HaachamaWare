@@ -219,7 +219,6 @@ __meta__ = {
 visible = false
 scale = Vector2( 4, 4 )
 frames = ExtResource( 4 )
-frame = 26
 centered = false
 
 [node name="Scene_2" type="Control" parent="."]
@@ -240,12 +239,13 @@ __meta__ = {
 }
 
 [node name="HwareOP3" type="Sprite" parent="Scene_2"]
+position = Vector2( 36, 0 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 3 )
 centered = false
 
 [node name="HwareOP4" type="Sprite" parent="Scene_2"]
-position = Vector2( -284, 0 )
+position = Vector2( -372, 0 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 1 )
 centered = false
@@ -301,7 +301,6 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Scene_3"]
 scale = Vector2( 4, 4 )
 frames = ExtResource( 6 )
-frame = 2
 centered = false
 
 [node name="ColorRect4" type="ColorRect" parent="Scene_3"]
@@ -358,6 +357,7 @@ __meta__ = {
 }
 
 [node name="Scene_4" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -374,13 +374,13 @@ __meta__ = {
 }
 
 [node name="HwareOP6" type="Sprite" parent="Scene_4"]
-position = Vector2( 228.948, -13.5648 )
+position = Vector2( 223, -19 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 7 )
 centered = false
 
 [node name="HwareOP5" type="Sprite" parent="Scene_4"]
-position = Vector2( 50.7817, 0 )
+position = Vector2( 56, 0 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 8 )
 centered = false
