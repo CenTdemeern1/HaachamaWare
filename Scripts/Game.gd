@@ -3,12 +3,22 @@ extends Control
 const is_demo = false
 var playing_op
 var HP = 4
+var speed = 1 setget set_speed
+var difficulty = 1# setget set_difficulty
+var minigames_played = 0
 var won = true
 var initial_start_minigame_timer = 16
 var minigames = [
 	"res://Scenes/MicroGames/FishinGura.tscn",
 	"res://Scenes/MicroGames/Evolving.tscn"
 	]
+
+func set_speed(x):
+	speed=x
+	difficulty=pow(speed,0.33)#sqrt(speed)
+#func set_difficulty(x):
+#	difficulty=x
+#	speed=difficulty*difficulty
 
 func _ready():
 	playing_op = true
@@ -35,6 +45,12 @@ func end_minigame():
 		$Pot/Pot/AnimationPlayer.play("GoodTransition")
 	else:
 		$Pot/Pot/AnimationPlayer.play("BadTransition")
+	increment_minigames_played()
+
+func increment_minigames_played():
+	minigames_played+=1
+	if fmod(minigames_played,2.5)<=0.5:
+		self.speed += 1 #Speed up!!!
 
 func start_minigame():
 	self.add_child_below_node($MinigameGoesHere,Global.get_instance(minigames[randi()%len(minigames)]))

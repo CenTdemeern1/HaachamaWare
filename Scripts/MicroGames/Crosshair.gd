@@ -10,10 +10,14 @@ func _process(delta):
 	if !shot:
 		if Input.is_action_just_pressed("button1"):
 			shot=true
+			if $"../Hitbox".get_rect().has_point(self.position):
+				$"..".win()
+			else:
+				$"..".lose()
 			self.play()
 	if !shot:
-		position.x+=(Input.get_action_strength("right")-Input.get_action_strength("left"))*delta*480
-		position.y+=(Input.get_action_strength("down")-Input.get_action_strength("up"))*delta*480
+		position.x+=(Input.get_action_strength("right")-Input.get_action_strength("left"))*delta*480*$"../..".difficulty
+		position.y+=(Input.get_action_strength("down")-Input.get_action_strength("up"))*delta*480*$"../..".difficulty
 		var clamprect : Rect2 = $"../ReferenceRect".get_rect()
 		position.x = clamp(position.x,clamprect.position.x,clamprect.position.x+clamprect.size.x)
 		position.y = clamp(position.y,clamprect.position.y,clamprect.position.y+clamprect.size.y)

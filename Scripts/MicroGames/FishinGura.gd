@@ -4,17 +4,19 @@ func _ready():
 #	print("init")
 	$GuraLaugh.hide()
 	$Gura.show()
+	lifetime/=$"..".difficulty
+	timer=lifetime
 
 func _process(_delta):
 	if !$Crosshair.shot:
-		if timer <= 0.5:
+		if timer <= 0.5/$"..".difficulty:
 			$Miss.show()
 			$Miss.play("Single")
 			$Crosshair.shot=true
 
 func hit():
 #	print("hit!")
-	win()
+#	win()
 	$Hit.play()
 	$GuraLaugh.show()
 	$GuraLaugh.play()
@@ -22,7 +24,7 @@ func hit():
 
 func miss():
 #	print("miss!")
-	lose()
+#	lose()
 	$Miss.show()
 	$Miss.play("Single")
 
