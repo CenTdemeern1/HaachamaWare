@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Assets/Sprites/pot/Inagood.aseprite" type="SpriteFrames" id=1]
 [ext_resource path="res://Assets/Sprites/pot/haBG.aseprite" type="SpriteFrames" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://Assets/Sprites/pot/otama.png" type="Texture" id=25]
 [ext_resource path="res://Assets/Sprites/ED.aseprite" type="SpriteFrames" id=26]
 [ext_resource path="res://Assets/Audio/GameOver.ogg" type="AudioStream" id=27]
+[ext_resource path="res://Scripts/StomachCure.gd" type="Script" id=28]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 1
@@ -1353,8 +1354,9 @@ script = ExtResource( 15 )
 
 [node name="StomachCure" type="Node2D" parent="Pot"]
 position = Vector2( -54, 0 )
+script = ExtResource( 28 )
 
-[node name="StomachCure" type="AnimatedSprite" parent="Pot/StomachCure"]
+[node name="StomachCure1" type="AnimatedSprite" parent="Pot/StomachCure"]
 position = Vector2( 0, -28 )
 scale = Vector2( 4, 4 )
 frames = ExtResource( 19 )
