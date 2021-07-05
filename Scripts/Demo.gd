@@ -1,5 +1,6 @@
 extends Control
 
+const is_demo = true
 var playing_op
 
 func _ready():

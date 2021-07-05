@@ -1,5 +1,6 @@
 extends Control
 
+const is_demo = false
 var playing_op
 var HP = 4
 var won = true
