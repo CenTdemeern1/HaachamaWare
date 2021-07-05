@@ -30,11 +30,13 @@ func time_over():
 		end()
 
 func win():
-	$"..".win()
+	if !preemptively_won_or_lost:
+		$"..".win()
 	preemptively_won_or_lost = true
 
 func lose():
-	$"..".penalize()
+	if !preemptively_won_or_lost:
+		$"..".penalize()
 	preemptively_won_or_lost = true
 
 func win_and_end():

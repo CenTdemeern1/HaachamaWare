@@ -14,6 +14,9 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		$"../../..".unload_minigame()
 		start_minigame_timer = 0
 	if anim_name=="BadTransition":
-		play("Bad")
 		$"../../..".unload_minigame()
-		start_minigame_timer = 0
+		if $"../../..".HP==0:
+			play("GameOver")
+		else:
+			play("Bad")
+			start_minigame_timer = 0
