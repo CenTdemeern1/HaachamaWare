@@ -357,6 +357,7 @@ __meta__ = {
 }
 
 [node name="Scene_4" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -373,13 +374,13 @@ __meta__ = {
 }
 
 [node name="HwareOP6" type="Sprite" parent="Scene_4"]
-position = Vector2( 223, -19 )
+position = Vector2( 268.165, -4.92328 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 7 )
 centered = false
 
 [node name="HwareOP5" type="Sprite" parent="Scene_4"]
-position = Vector2( 56, 0 )
+position = Vector2( 27.5368, 0 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 8 )
 centered = false
