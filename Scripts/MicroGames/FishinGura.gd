@@ -4,8 +4,6 @@ func _ready():
 #	print("init")
 	$GuraLaugh.hide()
 	$Gura.show()
-	lifetime/=$"..".difficulty
-	timer=lifetime
 
 func _process(_delta):
 	if !$Crosshair.shot:
