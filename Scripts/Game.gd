@@ -4,7 +4,7 @@ var playing_op
 var HP = 4
 var won = true
 var initial_start_minigame_timer = 16
-
+var minigames = ["res://Scenes/MicroGames/FishinGura.tscn"]
 
 func _ready():
 	playing_op = true
@@ -33,7 +33,7 @@ func end_minigame():
 		$Pot/Pot/AnimationPlayer.play("BadTransition")
 
 func start_minigame():
-	self.add_child_below_node($MinigameGoesHere,Global.get_instance("res://Scenes/MicroGames/FishinGura.tscn"))
+	self.add_child_below_node($MinigameGoesHere,Global.get_instance(minigames[randi()%len(minigames)]))
 
 func unload_minigame():
 	var minigames = get_tree().get_nodes_in_group("Minigame")
