@@ -100,17 +100,18 @@ func get_resource(path):
 				queue.insert(0, res)
 
 			res = _wait_for_resource(res, path)
-			pending.erase(path)
+#			pending.erase(path) #Why????
 			_unlock("return")
 			return res
 		else:
 			var res = pending[path]
-			pending.erase(path)
+#			pending.erase(path) #Why????
 			_unlock("return")
 			return res
 	else:
 		_unlock("return")
 		push_warning("Warning: requested resource wasn't queued.")
+		print("Unqueued resource name: ",path)
 		return ResourceLoader.load(path)
 
 

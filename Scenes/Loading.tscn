@@ -23,7 +23,7 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 700, 490 )
 frames = ExtResource( 1 )
-frame = 19
+frame = 18
 playing = true
 centered = false
 flip_h = true
@@ -31,7 +31,7 @@ flip_h = true
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
 position = Vector2( 440, 490 )
 frames = ExtResource( 2 )
-frame = 18
+frame = 17
 playing = true
 centered = false
 flip_h = true
@@ -39,7 +39,7 @@ flip_h = true
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
 position = Vector2( 180, 490 )
 frames = ExtResource( 2 )
-frame = 18
+frame = 17
 playing = true
 centered = false
 flip_h = true
@@ -47,7 +47,7 @@ flip_h = true
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="."]
 position = Vector2( -80, 490 )
 frames = ExtResource( 2 )
-frame = 17
+frame = 16
 playing = true
 centered = false
 flip_h = true

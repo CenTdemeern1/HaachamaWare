@@ -17,7 +17,7 @@ func _ready():
 
 
 func _process(delta):
-	if Global.resource_queue.is_ready("res://Scenes/MainScene.tscn"):
+	if len(Global.resource_queue.queue)==0:#is_ready("res://Scenes/MainScene.tscn")
 		#I can't just set a grayscale value so I have to do this :(
 		modulate=Color(modulate.r-delta,modulate.g-delta,modulate.b-delta)
 		if modulate.r <= 0:
