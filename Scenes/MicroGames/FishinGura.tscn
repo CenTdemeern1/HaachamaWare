@@ -1,0 +1,83 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Assets/Sprites/frame/frame.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Sprites/minigame/fishingura (1).aseprite" type="SpriteFrames" id=2]
+[ext_resource path="res://Assets/Sprites/minigame/fishingura_bg_game.aseprite" type="SpriteFrames" id=3]
+[ext_resource path="res://Assets/Sprites/minigame/fishingura_laugh.aseprite" type="SpriteFrames" id=4]
+[ext_resource path="res://Assets/Sprites/minigame/fishingura_arrow_game.aseprite" type="SpriteFrames" id=5]
+[ext_resource path="res://Scripts/MicroGames/Crosshair.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/MicroGames/FishinGura.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/AutoPlayAnimatedSprite.gd" type="Script" id=8]
+[ext_resource path="res://Assets/Sprites/minigame/fishingura.aseprite" type="SpriteFrames" id=9]
+[ext_resource path="res://Scripts/StopAndRewind.gd" type="Script" id=10]
+[ext_resource path="res://Assets/Sprites/minigame/bomb.aseprite" type="SpriteFrames" id=11]
+
+[node name="FishinGura" type="Node2D" groups=[
+"Minigame",
+]]
+script = ExtResource( 7 )
+
+[node name="Hit" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 3 )
+centered = false
+
+[node name="Gura" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 9 )
+centered = false
+script = ExtResource( 8 )
+
+[node name="GuraLaugh" type="AnimatedSprite" parent="."]
+visible = false
+scale = Vector2( 4, 4 )
+frames = ExtResource( 4 )
+centered = false
+
+[node name="Miss" type="AnimatedSprite" parent="."]
+visible = false
+scale = Vector2( 4, 4 )
+frames = ExtResource( 2 )
+animation = "Single"
+centered = false
+
+[node name="Hitbox" type="ReferenceRect" parent="."]
+margin_left = 456.0
+margin_top = 252.0
+margin_right = 504.0
+margin_bottom = 392.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Crosshair" type="AnimatedSprite" parent="."]
+position = Vector2( 474, 341 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 5 )
+offset = Vector2( -0.5, 5.5 )
+script = ExtResource( 6 )
+
+[node name="frame" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+margin_left = 92.0
+margin_top = 80.0
+margin_right = 868.0
+margin_bottom = 560.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bomb" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 11 )
+centered = false
+script = ExtResource( 10 )
+rewindTo = 16
+
+[connection signal="animation_finished" from="Hit" to="." method="_on_Hit_animation_finished"]
+[connection signal="animation_finished" from="Miss" to="." method="_on_Miss_animation_finished"]
+[connection signal="animation_finished" from="Crosshair" to="Crosshair" method="_on_Crosshair_animation_finished"]

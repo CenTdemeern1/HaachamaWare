@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/PathArrowCrosshair.gd" type="Script" id=1]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 243, 265, 0, 0, 0, 0, 324, 413, 0, 0, 0, 0, 349, 434, 0, 0, 0, 0, 368, 412, 0, 0, 0, 0, 315, 231, 0, 0, 0, 0, 348, 208, 0, 0, 0, 0, 481, 291, 0, 0, 0, 0, 481, 301, 0, 0, 0, 0, 466.813, 300.938, 0, 0, 0, 0, 291, 291 )
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ArrowPath" type="Path2D" parent="."]
+curve = SubResource( 1 )
+
+[node name="ArrowCrosshair" type="PathFollow2D" parent="ArrowPath"]
+position = Vector2( 477.335, 288.483 )
+offset = 608.039
+rotate = false
+loop = false
+script = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 480, 320 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( 24, 0, 24, 24, 20, 24, 20, 28, 16, 28, 16, 32, 12, 32, 12, 44, 16, 44, 16, 72, 8, 72, 8, 44, 4, 44, 4, 32, -4, 32, -4, 44, -8, 44, -8, 72, -16, 72, -16, 44, -12, 44, -12, 32, -16, 32, -16, 28, -20, 28, -20, 24, -24, 24, -24, 0, -20, 0, -20, -12, -16, -12, -16, -20, -20, -20, -20, -24, -16, -24, -16, -32, -16, -64, -8, -64, -8, -68, 8, -68, 8, -64, 16, -64, 16, -12, 20, -12, 20, 0 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 0, 1 )
+enabled = true
+cast_to = Vector2( 0, -20 )
+collide_with_areas = true
+collide_with_bodies = false
