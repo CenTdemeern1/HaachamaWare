@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Sprites/frame/frame.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Sprites/minigame/fishingura (1).aseprite" type="SpriteFrames" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://Scripts/MicroGames/FishinGura.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/AutoPlayAnimatedSprite.gd" type="Script" id=8]
 [ext_resource path="res://Assets/Sprites/minigame/fishingura.aseprite" type="SpriteFrames" id=9]
-[ext_resource path="res://Scripts/StopAndRewind.gd" type="Script" id=10]
 [ext_resource path="res://Assets/Sprites/minigame/bomb.aseprite" type="SpriteFrames" id=11]
 [ext_resource path="res://Assets/Audio/gura1.mp3" type="AudioStream" id=12]
 
@@ -17,7 +16,7 @@
 "Minigame",
 ]]
 script = ExtResource( 7 )
-lifetime = 4
+lifetime = 4.0
 
 [node name="Hit" type="AnimatedSprite" parent="."]
 scale = Vector2( 4, 4 )
@@ -77,8 +76,6 @@ __meta__ = {
 scale = Vector2( 4, 4 )
 frames = ExtResource( 11 )
 centered = false
-script = ExtResource( 10 )
-rewindTo = 16
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 12 )

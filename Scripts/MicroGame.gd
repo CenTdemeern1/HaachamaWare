@@ -2,7 +2,7 @@ extends Node
 class_name MicroGame
 
 export var has_timer = true
-export var lifetime = 5
+export(float) var lifetime = 5
 var timer = 5
 export(int,"Win","Lose") var win_or_lose_on_time_over = 1
 var preemptively_won_or_lost = false

@@ -21,6 +21,5 @@ centered = false
 script = ExtResource( 4 )
 
 [node name="OP" parent="." instance=ExtResource( 2 )]
-visible = true
 
 [node name="Pot" parent="." instance=ExtResource( 1 )]

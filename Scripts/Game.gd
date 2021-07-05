@@ -5,7 +5,10 @@ var playing_op
 var HP = 4
 var won = true
 var initial_start_minigame_timer = 16
-var minigames = ["res://Scenes/MicroGames/FishinGura.tscn"]
+var minigames = [
+	"res://Scenes/MicroGames/FishinGura.tscn",
+	"res://Scenes/MicroGames/Evolving.tscn"
+	]
 
 func _ready():
 	playing_op = true

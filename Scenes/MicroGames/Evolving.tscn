@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Sprites/minigame/evolveQ.aseprite" type="SpriteFrames" id=1]
+[ext_resource path="res://Assets/Sprites/minigame/evolveQcancel.aseprite" type="SpriteFrames" id=2]
+[ext_resource path="res://Scripts/MicroGames/Evolving.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Sprites/minigame/bomb.aseprite" type="SpriteFrames" id=4]
+[ext_resource path="res://Assets/Sprites/frame/frame.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Audio/gura1.mp3" type="AudioStream" id=6]
+
+[node name="Evolving" type="Node2D" groups=[
+"Minigame",
+]]
+script = ExtResource( 3 )
+lifetime = 2.7
+
+[node name="Evolve" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+centered = false
+
+[node name="EvolveCancel" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 2 )
+centered = false
+
+[node name="frame" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Bomb" type="AnimatedSprite" parent="."]
+position = Vector2( -811, 122 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 4 )
+centered = false
+offset = Vector2( 202.75, -30.5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
