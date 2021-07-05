@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Assets/Sprites/pot/Inagood.aseprite" type="SpriteFrames" id=1]
 [ext_resource path="res://Assets/Sprites/pot/haBG.aseprite" type="SpriteFrames" id=2]
@@ -28,6 +28,8 @@
 [ext_resource path="res://Assets/Sprites/ED.aseprite" type="SpriteFrames" id=26]
 [ext_resource path="res://Assets/Audio/GameOver.ogg" type="AudioStream" id=27]
 [ext_resource path="res://Scripts/StomachCure.gd" type="Script" id=28]
+[ext_resource path="res://Assets/Sprites/SPEEED.aseprite" type="SpriteFrames" id=29]
+[ext_resource path="res://Scripts/SpeedUpVisual.gd" type="Script" id=30]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 1
@@ -1441,6 +1443,13 @@ scale = Vector2( 4, 4 )
 frames = ExtResource( 11 )
 centered = false
 script = ExtResource( 15 )
+
+[node name="SpeedUp" type="AnimatedSprite" parent="Pot"]
+visible = false
+scale = Vector2( 4, 4 )
+frames = ExtResource( 29 )
+centered = false
+script = ExtResource( 30 )
 
 [node name="Good1" type="AudioStreamPlayer" parent="Pot"]
 stream = ExtResource( 20 )

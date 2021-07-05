@@ -51,6 +51,7 @@ func increment_minigames_played():
 	minigames_played+=1
 	if fmod(minigames_played,2.5)<=0.5:
 		self.speed += 1 #Speed up!!!
+		$Pot/Pot/AnimationPlayer.speedup=true
 
 func start_minigame():
 	self.add_child_below_node($MinigameGoesHere,Global.get_instance(minigames[randi()%len(minigames)]))
