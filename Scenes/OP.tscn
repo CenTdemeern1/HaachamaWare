@@ -176,7 +176,7 @@ tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 8.5, 9.4, 10.3, 12 ),
+"times": PoolRealArray( 8.5, 9.6, 10.8, 12 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 372, 0 ), Vector2( 312, -24 ), Vector2( 254, 0 ), Vector2( 223, -19 ) ]
@@ -195,7 +195,6 @@ tracks/13/keys = {
 }
 
 [node name="OP" type="Control"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
@@ -241,12 +240,13 @@ __meta__ = {
 }
 
 [node name="HwareOP3" type="Sprite" parent="Scene_2"]
+position = Vector2( 36, 0 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 3 )
 centered = false
 
 [node name="HwareOP4" type="Sprite" parent="Scene_2"]
-position = Vector2( -284, 0 )
+position = Vector2( -372, 0 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 1 )
 centered = false
