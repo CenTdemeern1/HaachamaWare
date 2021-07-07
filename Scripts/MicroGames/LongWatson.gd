@@ -6,6 +6,13 @@ var moving_points = quality
 var pos = 1
 
 func _ready():
+	$Stretch.hide()
+	$BG2.hide()
+	$Ame.hide()
+	$Scan.hide()
+	$OP.show()
+	$OP.speed_scale=$"..".difficulty
+	$OP.play()
 	for i in range(quality):
 		points.append(1.0)
 
@@ -24,3 +31,12 @@ func _process(delta):
 	for i in range(len(points)):
 		if i<moving_points:
 			$Stretch.material.set_shader_param("p"+str(i+1),pos)
+
+
+func _on_OP_animation_finished():
+	$Stretch.show()
+	$BG2.show()
+	$Ame.show()
+	$Scan.show()
+	$OP.hide()
+	$OP.stop()

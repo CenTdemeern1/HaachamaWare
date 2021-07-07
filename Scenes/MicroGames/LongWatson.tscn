@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Sprites/minigame/bomb.aseprite" type="SpriteFrames" id=1]
 [ext_resource path="res://Assets/Sprites/frame/frame - ame.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Assets/Sprites/minigame/concoction.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Sprites/minigame/concoctionBG.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Audio/amelia1.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Sprites/minigame/concoction_op.aseprite" type="SpriteFrames" id=7]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -75,7 +76,7 @@ shader_param/tex = ExtResource( 4 )
 "Minigame",
 ]]
 script = ExtResource( 3 )
-lifetime = 4.0
+lifetime = 4.6
 win_or_lose_on_time_over = 0
 
 [node name="BG" type="Sprite" parent="."]
@@ -120,6 +121,14 @@ points = PoolVector2Array( 0, 0, 0, 640 )
 width = 16.0
 default_color = Color( 0.984314, 0.94902, 0.211765, 1 )
 
+[node name="OP" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 7 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="frame" type="Sprite" parent="."]
 scale = Vector2( 4, 4 )
 texture = ExtResource( 2 )
@@ -145,3 +154,5 @@ position = Vector2( 200, 0 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
 autoplay = true
+
+[connection signal="animation_finished" from="OP" to="." method="_on_OP_animation_finished"]
