@@ -9,8 +9,8 @@ var minigames_played = 0
 var won = true
 var initial_start_minigame_timer = 16
 var minigames = [
-#	"res://Scenes/MicroGames/FishinGura.tscn",
-#	"res://Scenes/MicroGames/Evolving.tscn",
+	"res://Scenes/MicroGames/FishinGura.tscn",
+	"res://Scenes/MicroGames/Evolving.tscn",
 	"res://Scenes/MicroGames/LongWatson.tscn"
 	]
 
