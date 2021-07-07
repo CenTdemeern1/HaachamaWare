@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/PathArrowCrosshair.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/MicroGames/Ame_Generate_UVs.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Sprites/minigame/concoction.png" type="Texture" id=3]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -31,3 +33,12 @@ enabled = true
 cast_to = Vector2( 0, -20 )
 collide_with_areas = true
 collide_with_bodies = false
+
+[node name="Ame" type="Polygon2D" parent="."]
+position = Vector2( 420, 80 )
+texture = ExtResource( 3 )
+polygon = PoolVector2Array( 0, 0, 432, 0, 432, 480, 0, 480 )
+uv = PoolVector2Array( 0, 0, 108, -1.20371e-35, 108, 120, -4.76837e-07, 120 )
+script = ExtResource( 2 )
+
+[node name="Line2D" type="Line2D" parent="Ame"]

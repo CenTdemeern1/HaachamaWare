@@ -1,0 +1,147 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Sprites/minigame/bomb.aseprite" type="SpriteFrames" id=1]
+[ext_resource path="res://Assets/Sprites/frame/frame - ame.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/MicroGames/LongWatson.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Sprites/minigame/concoction.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/minigame/concoctionBG.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Audio/amelia1.mp3" type="AudioStream" id=6]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform sampler2D tex;
+uniform float p1;
+uniform float p2;
+uniform float p3;
+uniform float p4;
+uniform float p5;
+uniform float p6;
+uniform float p7;
+uniform float p8;
+uniform float p9;
+uniform float p10;
+uniform float p11;
+uniform float p12;
+uniform float p13;
+uniform float p14;
+uniform float p15;
+uniform float p16;
+uniform float p17;
+uniform float p18;
+uniform float p19;
+uniform float p20;
+
+void fragment() {
+	float arr[21] = float[21] (p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, 1f);
+	int low = int(floor(UV.x*20f));
+	int hi = int(ceil(UV.x*20f));
+	float pro = fract(UV.x*20f);
+	float s = ((arr[hi]-arr[low])*pro)+arr[low];
+	if (s>1f) {
+		discard;
+	} else if (s<0f) {
+		discard;
+	}
+	COLOR = texture(tex,vec2(s,UV.y));
+}
+"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/p1 = 0.0
+shader_param/p2 = 0.05
+shader_param/p3 = 0.1
+shader_param/p4 = 0.15
+shader_param/p5 = 0.2
+shader_param/p6 = 0.25
+shader_param/p7 = 0.3
+shader_param/p8 = 0.35
+shader_param/p9 = 0.4
+shader_param/p10 = 0.45
+shader_param/p11 = 0.5
+shader_param/p12 = 0.55
+shader_param/p13 = 0.6
+shader_param/p14 = 0.65
+shader_param/p15 = 0.7
+shader_param/p16 = 0.75
+shader_param/p17 = 0.8
+shader_param/p18 = 0.85
+shader_param/p19 = 0.9
+shader_param/p20 = 0.95
+shader_param/tex = ExtResource( 4 )
+
+[node name="LongWatson" type="Node2D" groups=[
+"Minigame",
+]]
+script = ExtResource( 3 )
+lifetime = 4.0
+win_or_lose_on_time_over = 0
+
+[node name="BG" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 5 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Stretch" type="ColorRect" parent="."]
+material = SubResource( 2 )
+margin_left = 92.0
+margin_top = 80.0
+margin_right = 868.0
+margin_bottom = 560.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BG2" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 5 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 240, 160 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ame" type="Sprite" parent="."]
+position = Vector2( 436, 80 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 108, 120 )
+
+[node name="Scan" type="Line2D" parent="."]
+position = Vector2( 960, 0 )
+points = PoolVector2Array( 0, 0, 0, 640 )
+width = 16.0
+default_color = Color( 0.984314, 0.94902, 0.211765, 1 )
+
+[node name="frame" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Bomb" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StartScan" type="Position2D" parent="."]
+position = Vector2( 800, 0 )
+
+[node name="EndScan" type="Position2D" parent="."]
+position = Vector2( 200, 0 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
