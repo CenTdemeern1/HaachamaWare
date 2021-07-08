@@ -36,6 +36,7 @@ func _on_Settings_pressed():
 
 
 func _on_Play_pressed():
+	self.svisible = false
 	$"..".start_pressed()
 
 
