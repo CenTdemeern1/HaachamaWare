@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Assets/Sprites/OPLoop.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/IntroLoopAnimatedSprite.gd" type="Script" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Assets/Audio/MMConfirm.ogg" type="AudioStream" id=6]
 [ext_resource path="res://Assets/Sprites/Start.aseprite" type="SpriteFrames" id=7]
 [ext_resource path="res://Assets/Sprites/OPIntro.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/Menu.gd" type="Script" id=9]
+[ext_resource path="res://Assets/Fonts/Gamer.ttf" type="DynamicFontData" id=10]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
@@ -162,6 +164,35 @@ animations = [ {
 "speed": 10.0
 } ]
 
+[sub_resource type="Shader" id=43]
+code = "shader_type canvas_item;
+
+uniform float blur_amount : hint_range(0, 5);
+
+void fragment() {
+	COLOR = textureLod(SCREEN_TEXTURE, SCREEN_UV, blur_amount);
+}"
+
+[sub_resource type="ShaderMaterial" id=38]
+shader = SubResource( 43 )
+shader_param/blur_amount = 0.0
+
+[sub_resource type="StyleBoxEmpty" id=39]
+
+[sub_resource type="StyleBoxEmpty" id=40]
+
+[sub_resource type="StyleBoxFlat" id=41]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="DynamicFont" id=42]
+size = 64
+font_data = ExtResource( 10 )
+
 [node name="MainScene" type="Node2D"]
 script = ExtResource( 3 )
 
@@ -189,6 +220,160 @@ stream = ExtResource( 6 )
 stream = ExtResource( 5 )
 autoplay = true
 
+[node name="Menu" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BlurShader" type="ColorRect" parent="Menu"]
+material = SubResource( 38 )
+margin_right = 960.0
+margin_bottom = 640.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SettingsWindow" type="WindowDialog" parent="Menu"]
+margin_left = 25.0
+margin_top = 45.0
+margin_right = 525.0
+margin_bottom = 545.0
+window_title = "Settings window"
+resizable = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Tabs" type="TabContainer" parent="Menu/SettingsWindow"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+drag_to_rearrange_enabled = true
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="Control" parent="Menu/SettingsWindow/Tabs"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Mods" type="Control" parent="Menu/SettingsWindow/Tabs"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="InvControls" type="CheckBox" parent="Menu/SettingsWindow/Tabs/Mods"]
+margin_right = 24.0
+margin_bottom = 24.0
+text = "Inverted Controls"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InvColors" type="CheckBox" parent="Menu/SettingsWindow/Tabs/Mods"]
+margin_top = 24.0
+margin_right = 139.0
+margin_bottom = 48.0
+text = "Inverted Colors"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LTW" type="CheckBox" parent="Menu/SettingsWindow/Tabs/Mods"]
+margin_top = 48.0
+margin_right = 139.0
+margin_bottom = 72.0
+text = "Lose to win"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Control" parent="Menu/SettingsWindow/Tabs"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="Control" parent="Menu"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Play" type="Button" parent="Menu/Buttons"]
+margin_left = 648.0
+margin_top = 320.0
+margin_right = 898.0
+margin_bottom = 400.0
+custom_styles/pressed = SubResource( 39 )
+custom_styles/focus = SubResource( 40 )
+custom_styles/normal = SubResource( 41 )
+custom_fonts/font = SubResource( 42 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Play Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="Button" parent="Menu/Buttons"]
+margin_left = 648.0
+margin_top = 408.0
+margin_right = 898.0
+margin_bottom = 488.0
+custom_styles/pressed = SubResource( 39 )
+custom_styles/focus = SubResource( 40 )
+custom_styles/normal = SubResource( 41 )
+custom_fonts/font = SubResource( 42 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Settings"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="Menu/Buttons"]
+margin_left = 648.0
+margin_top = 496.0
+margin_right = 898.0
+margin_bottom = 576.0
+custom_styles/pressed = SubResource( 39 )
+custom_styles/focus = SubResource( 40 )
+custom_styles/normal = SubResource( 41 )
+custom_fonts/font = SubResource( 42 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="animation_finished" from="AnimatedSprite" to="AnimatedSprite" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="finished" from="Start" to="." method="_on_Start_finished"]
 [connection signal="finished" from="LogoDrop" to="." method="_on_LogoDrop_finished"]
+[connection signal="pressed" from="Menu/Buttons/Play" to="Menu" method="_on_Play_pressed"]
+[connection signal="pressed" from="Menu/Buttons/Settings" to="Menu" method="_on_Settings_pressed"]
+[connection signal="pressed" from="Menu/Buttons/Exit" to="Menu" method="_on_Exit_pressed"]

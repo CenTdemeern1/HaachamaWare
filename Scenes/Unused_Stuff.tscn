@@ -4,7 +4,7 @@
 [ext_resource path="res://Scripts/MicroGames/Ame_Generate_UVs.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Sprites/minigame/concoction.png" type="Texture" id=3]
 
-[sub_resource type="Curve2D" id=1]
+[sub_resource type="Curve2D" id=38]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 243, 265, 0, 0, 0, 0, 324, 413, 0, 0, 0, 0, 349, 434, 0, 0, 0, 0, 368, 412, 0, 0, 0, 0, 315, 231, 0, 0, 0, 0, 348, 208, 0, 0, 0, 0, 481, 291, 0, 0, 0, 0, 481, 301, 0, 0, 0, 0, 466.813, 300.938, 0, 0, 0, 0, 291, 291 )
 }
@@ -12,7 +12,7 @@ _data = {
 [node name="Node2D" type="Node2D"]
 
 [node name="ArrowPath" type="Path2D" parent="."]
-curve = SubResource( 1 )
+curve = SubResource( 38 )
 
 [node name="ArrowCrosshair" type="PathFollow2D" parent="ArrowPath"]
 position = Vector2( 477.335, 288.483 )
