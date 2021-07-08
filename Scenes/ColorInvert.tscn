@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+void fragment(){
+	COLOR.rgb = vec3(1.0) - texture(SCREEN_TEXTURE, SCREEN_UV).rgb;
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+
+[node name="ColorInvert" type="ColorRect"]
+material = SubResource( 2 )
+margin_right = 960.0
+margin_bottom = 640.0
