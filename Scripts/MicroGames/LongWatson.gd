@@ -4,6 +4,7 @@ const quality = 20
 var points = []
 var moving_points = quality
 var pos = 1
+var wait = true
 
 func _ready():
 	$Stretch.hide()
@@ -17,6 +18,8 @@ func _ready():
 		points.append(1.0)
 
 func _process(delta):
+	if wait:
+		return
 	$Scan.position.x-=delta*240*$"..".difficulty
 	$BG2.region_rect.size.x=clamp($Scan.position.x/4,0,240)
 	$Ame.position.x+=(Input.get_action_strength("right")-Input.get_action_strength("left"))*delta*480*$"..".difficulty
@@ -40,3 +43,4 @@ func _on_OP_animation_finished():
 	$Scan.show()
 	$OP.hide()
 	$OP.stop()
+	wait = false
