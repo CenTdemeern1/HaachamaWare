@@ -76,7 +76,6 @@ shader_param/tex = ExtResource( 4 )
 "Minigame",
 ]]
 script = ExtResource( 3 )
-lifetime = 4.6
 win_or_lose_on_time_over = 0
 
 [node name="BG" type="Sprite" parent="."]
