@@ -37,9 +37,21 @@ func anim_finish(name):
 #		$Pot/Pot/AnimationPlayer.play("Good")
 
 func win():
-	won = true
+	if Global.mods["LTW"]:
+		_penalize()
+	else:
+		_win()
 
 func penalize():
+	if Global.mods["LTW"]:
+		_win()
+	else:
+		_penalize()
+
+func _win():
+	won = true
+
+func _penalize():
 	HP-=1
 	won=false
 
