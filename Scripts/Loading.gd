@@ -8,7 +8,8 @@ const things_to_load = [
 	"res://Scenes/ColorInvert.tscn",
 	"res://Scenes/MicroGames/FishinGura.tscn",
 	"res://Scenes/MicroGames/Evolving.tscn",
-	"res://Scenes/MicroGames/LongWatson.tscn"
+	"res://Scenes/MicroGames/LongWatson.tscn",
+	"res://Scenes/MicroGames/WarioAme.tscn"
 	]
 
 func _ready():

@@ -7,11 +7,12 @@ var speed = 1 setget set_speed
 var difficulty = 1# setget set_difficulty
 var minigames_played = 0
 var won = true
-var initial_start_minigame_timer = 16
+#var initial_start_minigame_timer = 16
 var minigames = [
 	"res://Scenes/MicroGames/FishinGura.tscn",
 	"res://Scenes/MicroGames/Evolving.tscn",
-	"res://Scenes/MicroGames/LongWatson.tscn"
+	"res://Scenes/MicroGames/LongWatson.tscn",
+	"res://Scenes/MicroGames/WarioAme.tscn"
 	]
 
 func set_speed(x):
@@ -26,7 +27,7 @@ func _ready():
 	$OP/AnimationPlayer.play("OP")
 	$Pot/Pot/AnimationPlayer.play("OP")
 	$Pot/Pot/AnimationPlayer.connect("animation_finished",self,"anim_finish")
-	initial_start_minigame_timer = 0
+#	initial_start_minigame_timer = 0
 	if Global.mods["Distraction"]:
 		self.add_child(Global.get_instance("res://Scenes/Distraction.tscn"))
 	if Global.mods["InvColors"]:
@@ -80,8 +81,8 @@ func unload_minigame():
 	assert(len(minigames)==1)
 	minigames[0].queue_free()
 
-func _process(delta):
-	if initial_start_minigame_timer<15.3:
-		initial_start_minigame_timer+=delta
-		if initial_start_minigame_timer>=15.3:
-			start_minigame()
+#func _process(delta):
+#	if initial_start_minigame_timer<15.3:
+#		initial_start_minigame_timer+=delta
+#		if initial_start_minigame_timer>=15.3:
+#			start_minigame()
