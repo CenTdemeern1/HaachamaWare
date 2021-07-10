@@ -9,48 +9,47 @@
 [ext_resource path="res://Assets/Sprites/minigame/warioame_box.aseprite" type="SpriteFrames" id=7]
 [ext_resource path="res://Assets/Audio/amelia4.mp3" type="AudioStream" id=8]
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 4 )
 region = Rect2( 64, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 4 )
 region = Rect2( 128, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=14]
 atlas = ExtResource( 4 )
 region = Rect2( 192, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=15]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 64, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=16]
 atlas = ExtResource( 4 )
 region = Rect2( 64, 64, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=17]
 atlas = ExtResource( 4 )
 region = Rect2( 128, 64, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=18]
 atlas = ExtResource( 4 )
 region = Rect2( 192, 64, 64, 64 )
 
-[sub_resource type="SpriteFrames" id=9]
+[sub_resource type="SpriteFrames" id=19]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ],
 "loop": true,
 "name": "default",
 "speed": 30.0
 } ]
 
-[sub_resource type="Animation" id=12]
-resource_name = "GP"
+[sub_resource type="Animation" id=20]
 length = 0.35
 step = 0.05
 tracks/0/type = "value"
@@ -114,8 +113,7 @@ tracks/4/keys = {
 "values": [ 0, 0, 1, 2 ]
 }
 
-[sub_resource type="Animation" id=13]
-resource_name = "Lose"
+[sub_resource type="Animation" id=21]
 length = 0.35
 step = 0.05
 tracks/0/type = "value"
@@ -125,10 +123,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ "GP" ]
+"values": [ "GP", "Walk" ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Ame:position")
@@ -140,7 +138,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1, 0.15 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 264, 184 ), Vector2( 264, 294 ), Vector2( 264, 404 ) ]
+"values": [ Vector2( 264, 184 ), Vector2( 264, 294 ), Vector2( 264, 304 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Ame:playing")
@@ -149,10 +147,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.15 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ true, false ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("ButtonIndicator:visible")
@@ -167,16 +165,16 @@ tracks/3/keys = {
 "values": [ false ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Box:frame")
+tracks/4/path = NodePath("Ame:frame")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.1, 0.15, 0.25 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0.15 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 0, 0, 1, 2 ]
+"values": [ 1 ]
 }
 
 [sub_resource type="Animation" id=10]
@@ -231,8 +229,7 @@ tracks/3/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=11]
-resource_name = "Quicktime"
+[sub_resource type="Animation" id=22]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Ame:animation")
@@ -274,11 +271,11 @@ __meta__ = {
 }
 
 [node name="Ame" type="AnimatedSprite" parent="."]
-position = Vector2( 264, 184 )
+position = Vector2( 264, 304 )
 scale = Vector2( 4, 4 )
 frames = ExtResource( 6 )
-animation = "GP"
-playing = true
+animation = "Walk"
+frame = 1
 
 [node name="Box" type="AnimatedSprite" parent="."]
 scale = Vector2( 4, 4 )
@@ -289,7 +286,8 @@ centered = false
 visible = false
 position = Vector2( 228, 330 )
 scale = Vector2( 4, 4 )
-frames = SubResource( 9 )
+frames = SubResource( 19 )
+frame = 3
 playing = true
 
 [node name="frame" type="Sprite" parent="."]
@@ -309,10 +307,10 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/GP = SubResource( 12 )
-anims/Lose = SubResource( 13 )
+anims/GP = SubResource( 20 )
+anims/Lose = SubResource( 21 )
 anims/OP = SubResource( 10 )
-anims/Quicktime = SubResource( 11 )
+anims/Quicktime = SubResource( 22 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
