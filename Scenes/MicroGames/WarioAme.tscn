@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Assets/Sprites/minigame/warioame (1).png" type="Texture" id=1]
 [ext_resource path="res://Assets/Sprites/frame/frame - ame.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scripts/MicroGames/WarioAme.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Sprites/minigame/warioame.aseprite" type="SpriteFrames" id=6]
 [ext_resource path="res://Assets/Sprites/minigame/warioame_box.aseprite" type="SpriteFrames" id=7]
+[ext_resource path="res://Assets/Audio/amelia4.mp3" type="AudioStream" id=8]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 4 )
@@ -289,7 +290,6 @@ visible = false
 position = Vector2( 228, 330 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 9 )
-frame = 3
 playing = true
 
 [node name="frame" type="Sprite" parent="."]
@@ -313,5 +313,9 @@ anims/GP = SubResource( 12 )
 anims/Lose = SubResource( 13 )
 anims/OP = SubResource( 10 )
 anims/Quicktime = SubResource( 11 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
