@@ -277,7 +277,6 @@ position = Vector2( 264, 184 )
 scale = Vector2( 4, 4 )
 frames = ExtResource( 6 )
 animation = "GP"
-frame = 1
 playing = true
 
 [node name="Box" type="AnimatedSprite" parent="."]

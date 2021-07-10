@@ -7,6 +7,7 @@ var timer = 5
 export(int,"Win","Lose") var win_or_lose_on_time_over = 1
 var preemptively_won_or_lost = false
 export var speed_up_timer = true
+export var goal = "Set a tagline, dingus!"
 
 func _ready():
 	if speed_up_timer:
