@@ -27,6 +27,8 @@ func _ready():
 	$Pot/Pot/AnimationPlayer.play("OP")
 	$Pot/Pot/AnimationPlayer.connect("animation_finished",self,"anim_finish")
 	initial_start_minigame_timer = 0
+	if Global.mods["Distraction"]:
+		self.add_child(Global.get_instance("res://Scenes/Distraction.tscn"))
 	if Global.mods["InvColors"]:
 		self.add_child(Global.get_instance("res://Scenes/ColorInvert.tscn"))
 	if Global.mods["InvControls"]:

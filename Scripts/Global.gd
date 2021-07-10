@@ -5,7 +5,8 @@ var fadeinMM = true
 var mods = {
 	InvControls=false,
 	InvColors=false,
-	LTW=false
+	LTW=false,
+	Distraction=false
 }
 var controls_are_inverted : bool = false
 
@@ -53,3 +54,9 @@ func set_controls_inverted(a:bool):
 	if !a == controls_are_inverted:
 		controls_are_inverted = a
 		invert_controls()
+
+func set_fullscreen(v):
+	OS.window_fullscreen=v
+
+func toggle_fullscreen():
+	OS.window_fullscreen=!OS.window_fullscreen

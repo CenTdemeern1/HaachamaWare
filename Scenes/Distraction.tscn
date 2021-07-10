@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Sprites/haaton.png" type="Texture" id=1]
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 2
+emission_box_extents = Vector3( 480, 1, 1 )
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+gravity = Vector3( 0, 784, 0 )
+initial_velocity = 800.0
+angular_velocity = 150.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+
+[node name="Distraction" type="Particles2D"]
+position = Vector2( 480, 740 )
+amount = 48
+lifetime = 3.0
+visibility_rect = Rect2( -150, -150, 300, 300 )
+process_material = SubResource( 3 )
+texture = ExtResource( 1 )
