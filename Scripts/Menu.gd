@@ -11,10 +11,11 @@ func _process(_delta):
 	#Might be some weird jank
 	#I think I figured out the jank...
 	#Forgot to clamp the parent's fade in color modulate
-	if Input.is_action_just_pressed("button1"):
-		self.svisible = true
-	if Input.is_action_just_pressed("button2"):
+	if self.svisible and Input.is_action_just_pressed("button2"):
 		self.svisible = false
+		$SettingsWindow.hide()
+	elif Input.is_action_just_pressed("button1") or Input.is_action_just_pressed("button2") or Input.is_action_just_pressed("up") or Input.is_action_just_pressed("down") or Input.is_action_just_pressed("left") or Input.is_action_just_pressed("right"):
+		self.svisible = true
 	if self.svisible:
 		$"..".block_demo=true
 		v+=(1-v)/4
@@ -37,6 +38,7 @@ func _on_Settings_pressed():
 
 func _on_Play_pressed():
 	self.svisible = false
+	$SettingsWindow.hide()
 	$"..".start_pressed()
 
 

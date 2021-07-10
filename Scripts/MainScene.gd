@@ -7,6 +7,7 @@ var block_demo = false
 func _ready():
 	if Global.fadeinMM:
 		modulate=Color(0,0,0)
+	Global.set_controls_inverted(false)
 
 
 func _process(delta):

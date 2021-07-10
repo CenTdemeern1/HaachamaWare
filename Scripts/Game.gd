@@ -29,6 +29,8 @@ func _ready():
 	initial_start_minigame_timer = 0
 	if Global.mods["InvColors"]:
 		self.add_child(Global.get_instance("res://Scenes/ColorInvert.tscn"))
+	if Global.mods["InvControls"]:
+		Global.set_controls_inverted(true)
 
 func anim_finish(name):
 	if name=="OP":
