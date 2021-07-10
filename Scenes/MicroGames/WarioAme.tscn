@@ -263,6 +263,7 @@ tracks/1/keys = {
 "Minigame",
 ]]
 script = ExtResource( 5 )
+goal = "Ground pound!"
 
 [node name="BG" type="Sprite" parent="."]
 scale = Vector2( 4, 4 )

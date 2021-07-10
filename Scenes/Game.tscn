@@ -1,14 +1,21 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Pot.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/OP.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Fonts/Early GameBoy.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Assets/Fonts/Wariowareincv2-2OOBw.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
 use_filter = true
 font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
 
 [node name="Game" type="Control"]
 anchor_right = 1.0
@@ -48,3 +55,22 @@ __meta__ = {
 [node name="OP" parent="." instance=ExtResource( 2 )]
 
 [node name="Pot" parent="." instance=ExtResource( 1 )]
+visible = true
+
+[node name="Goal" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 240.0
+margin_top = 160.0
+margin_right = -240.0
+margin_bottom = -160.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 240, 160 )
+custom_fonts/font = SubResource( 2 )
+text = "Shoot!"
+align = 1
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

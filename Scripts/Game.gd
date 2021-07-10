@@ -14,6 +14,7 @@ var minigames = [
 	"res://Scenes/MicroGames/LongWatson.tscn",
 	"res://Scenes/MicroGames/WarioAme.tscn"
 	]
+var goal_timer = 0
 
 func set_speed(x):
 	speed=x
@@ -74,14 +75,23 @@ func increment_minigames_played():
 		$Pot/Pot/AnimationPlayer.speedup=true
 
 func start_minigame():
-	self.add_child_below_node($MinigameGoesHere,Global.get_instance(minigames[randi()%len(minigames)]))
+	var mg = Global.get_instance(minigames[randi()%len(minigames)])
+	self.add_child_below_node($MinigameGoesHere,mg)
+	$Goal.text=mg.goal
+	goal_timer=0.4
+	$Goal.show()
 
 func unload_minigame():
 	var minigames = get_tree().get_nodes_in_group("Minigame")
 	assert(len(minigames)==1)
 	minigames[0].queue_free()
 
-#func _process(delta):
+func _process(delta):
+	if goal_timer>0:
+		var x = clamp(goal_timer*10,2,4)
+		$Goal.rect_scale=Vector2(x,x)
+		goal_timer-=delta
+	$Goal.visible=goal_timer>0
 #	if initial_start_minigame_timer<15.3:
 #		initial_start_minigame_timer+=delta
 #		if initial_start_minigame_timer>=15.3:

@@ -252,6 +252,7 @@ animations = [ {
 ]]
 script = ExtResource( 3 )
 lifetime = 2.7
+goal = "B cancel!"
 
 [node name="Evolve" type="AnimatedSprite" parent="."]
 scale = Vector2( 4, 4 )

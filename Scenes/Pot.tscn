@@ -1304,7 +1304,6 @@ tracks/17/keys = {
 }
 
 [node name="Pot" type="Node2D"]
-visible = false
 position = Vector2( 480, 320 )
 
 [node name="Pot" type="Node2D" parent="."]

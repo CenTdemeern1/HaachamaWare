@@ -17,6 +17,7 @@
 ]]
 script = ExtResource( 7 )
 lifetime = 4.0
+goal = "Shoot!"
 
 [node name="Hit" type="AnimatedSprite" parent="."]
 scale = Vector2( 4, 4 )
