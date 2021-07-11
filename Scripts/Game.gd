@@ -84,7 +84,8 @@ func start_minigame():
 func unload_minigame():
 	var minigames_group = get_tree().get_nodes_in_group("Minigame")
 	assert(len(minigames_group)==1)
-	minigames_group[0].queue_free()
+	for minigame_in_group in minigames_group:
+		minigames_group.queue_free()
 
 func _process(delta):
 	if goal_timer>0:
