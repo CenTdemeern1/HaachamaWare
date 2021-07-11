@@ -13,7 +13,7 @@ func set_start_minigame(v):
 
 func _process(_delta):
 	if gameoverfinished:
-		if Input.is_action_just_pressed("start"):
+		if Input.is_action_just_pressed("button1") or Input.is_action_just_pressed("button2") or Input.is_action_just_pressed("start"):
 			Global.change_scene("res://Scenes/MainScene.tscn")
 #	if start_minigame_timer<3:
 #		start_minigame_timer+=delta
