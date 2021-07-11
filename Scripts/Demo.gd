@@ -7,7 +7,7 @@ func _ready():
 	playing_op = true
 	$OP/AnimationPlayer.play("OP")
 	$Pot/Pot/AnimationPlayer.play("OP")
-	$Pot/Pot/AnimationPlayer.connect("animation_finished",self,"anim_finish")
+	var _i = $Pot/Pot/AnimationPlayer.connect("animation_finished",self,"anim_finish")
 
 func anim_finish(name):
 	if name=="OP":

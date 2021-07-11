@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Sprites/circle_hollow.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Sprites/circle_filled.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/OSC/Button.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/OSC/Joystick.gd" type="Script" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 150.0
+
+[node name="OSC" type="Node2D"]
+
+[node name="Joystick" type="Node2D" parent="."]
+position = Vector2( 128, 512 )
+script = ExtResource( 4 )
+
+[node name="JSBG" type="Sprite" parent="Joystick"]
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 1 )
+
+[node name="JS" type="Sprite" parent="Joystick"]
+scale = Vector2( 0.213333, 0.213333 )
+texture = ExtResource( 2 )
+
+[node name="topleft" type="Position2D" parent="Joystick"]
+position = Vector2( -200, -200 )
+
+[node name="bottomright" type="Position2D" parent="Joystick"]
+position = Vector2( 200, 200 )
+
+[node name="B" type="Node2D" parent="."]
+position = Vector2( 704, 512 )
+script = ExtResource( 3 )
+action = "button2"
+inverted_action = "button1"
+
+[node name="Button" type="TouchScreenButton" parent="B"]
+position = Vector2( -64.0001, -64 )
+scale = Vector2( 0.427, 0.427 )
+normal = ExtResource( 1 )
+pressed = ExtResource( 2 )
+shape = SubResource( 1 )
+action = "button2"
+visibility_mode = 1
+
+[node name="A" type="Node2D" parent="."]
+position = Vector2( 864, 512 )
+script = ExtResource( 3 )
+action = "button1"
+inverted_action = "button2"
+
+[node name="Button" type="TouchScreenButton" parent="A"]
+position = Vector2( -64, -64 )
+scale = Vector2( 0.427, 0.427 )
+normal = ExtResource( 1 )
+pressed = ExtResource( 2 )
+shape = SubResource( 1 )
+action = "button1"
+visibility_mode = 1

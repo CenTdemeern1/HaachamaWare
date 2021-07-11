@@ -1,6 +1,6 @@
 extends Node2D
 
-func _process(delta):
+func _process(_delta):
 	if !$"../../..".is_demo:
 		$StomachCure1.visible = $"../../..".HP >= 4
 		$StomachCure2.visible = $"../../..".HP >= 3

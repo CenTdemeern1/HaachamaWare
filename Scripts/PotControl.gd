@@ -11,7 +11,7 @@ func set_start_minigame(v):
 		if !$"../../..".is_demo:
 			$"../../..".start_minigame()
 
-func _process(delta):
+func _process(_delta):
 	if gameoverfinished:
 		if Input.is_action_just_pressed("start"):
 			Global.change_scene("res://Scenes/MainScene.tscn")

@@ -4,7 +4,7 @@ export var rewindTo = 0
 export var autoplay = true
 
 func _ready():
-	connect("animation_finished",self,"finish")
+	var _i = connect("animation_finished",self,"finish")
 	if autoplay:
 		play()
 

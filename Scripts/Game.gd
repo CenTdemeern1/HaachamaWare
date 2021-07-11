@@ -27,7 +27,7 @@ func _ready():
 	playing_op = true
 	$OP/AnimationPlayer.play("OP")
 	$Pot/Pot/AnimationPlayer.play("OP")
-	$Pot/Pot/AnimationPlayer.connect("animation_finished",self,"anim_finish")
+	var _i = $Pot/Pot/AnimationPlayer.connect("animation_finished",self,"anim_finish")
 #	initial_start_minigame_timer = 0
 	if Global.mods["Distraction"]:
 		self.add_child(Global.get_instance("res://Scenes/Distraction.tscn"))
@@ -82,9 +82,9 @@ func start_minigame():
 	$Goal.show()
 
 func unload_minigame():
-	var minigames = get_tree().get_nodes_in_group("Minigame")
-	assert(len(minigames)==1)
-	minigames[0].queue_free()
+	var minigames_group = get_tree().get_nodes_in_group("Minigame")
+	assert(len(minigames_group)==1)
+	minigames_group[0].queue_free()
 
 func _process(delta):
 	if goal_timer>0:

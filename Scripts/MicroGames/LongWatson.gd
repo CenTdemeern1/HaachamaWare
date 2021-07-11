@@ -14,7 +14,7 @@ func _ready():
 	$OP.show()
 	$OP.speed_scale=$"..".difficulty
 	$OP.play()
-	for i in range(quality):
+	for _i in range(quality):
 		points.append(1.0)
 
 func _process(delta):

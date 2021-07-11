@@ -11,7 +11,7 @@ var mods = {
 var controls_are_inverted : bool = false
 
 func change_scene(to):
-	get_tree().change_scene_to(resource_queue.get_resource(to))
+	var _i = get_tree().change_scene_to(resource_queue.get_resource(to))
 
 func get_instance(name):
 	return resource_queue.get_resource(name).instance()
@@ -27,8 +27,8 @@ func _process(_delta):
 func advance_RNG(a=null):
 	if a==null:
 		a=1
-	for i in range(a):
-		randi()
+	for _i in range(a):
+		var _r = randi()
 
 func invert_controls():
 	var up = InputMap.get_action_list("up")
