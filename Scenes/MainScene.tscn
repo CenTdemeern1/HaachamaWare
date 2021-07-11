@@ -221,6 +221,12 @@ scale = Vector2( 4, 4 )
 frames = ExtResource( 7 )
 centered = false
 
+[node name="LogoTL" type="Position2D" parent="."]
+position = Vector2( 236, 344 )
+
+[node name="LogoBR" type="Position2D" parent="."]
+position = Vector2( 736, 640 )
+
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 volume_db = 5.0

@@ -24,6 +24,14 @@ func _process(delta):
 	if Input.is_action_just_pressed("start"):
 		start_pressed()
 
+func _input(event):
+	if event is InputEventScreenTouch:
+		if event.pressed and !$Menu.svisible:
+			if event.position.x>$LogoTL.global_position.x and event.position.y>$LogoTL.global_position.y and event.position.x<$LogoBR.global_position.x and event.position.y<$LogoBR.global_position.y:
+				start_pressed()
+			else:
+				$Menu.svisible=true
+
 func start_pressed():
 	if can_press_start:
 		can_press_start=false
