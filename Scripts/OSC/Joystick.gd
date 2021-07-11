@@ -9,8 +9,9 @@ func _input(event):
 			move_by_event(event)
 			do_action_based_on_stick()
 		else:
-			$JS.position=Vector2.ZERO
-			do_action_based_on_stick()
+			if event.position.x<480:
+				$JS.position=Vector2.ZERO
+				do_action_based_on_stick()
 	if event is InputEventScreenDrag:
 		move_by_event(event)
 		do_action_based_on_stick()
@@ -19,8 +20,8 @@ func move_by_event(event):
 	if event.position.x>$topleft.global_position.x and event.position.y>$topleft.global_position.y and event.position.x<$bottomright.global_position.x and event.position.y<$bottomright.global_position.y:
 		var rel = (event.position-self.position)
 		$JS.position=rel.normalized()*clamp(rel.length(),0,100)
-	else:
-		$JS.position=Vector2.ZERO
+#	else:
+#		$JS.position=Vector2.ZERO
 
 func do_action_based_on_stick():
 	Input.action_release("up")
