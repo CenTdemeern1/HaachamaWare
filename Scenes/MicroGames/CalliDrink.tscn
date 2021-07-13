@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Audio/calliGB.mp3" type="AudioStream" id=1]
+
+[node name="CalliDrink" type="Node2D" groups=[
+"Minigame",
+]]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true

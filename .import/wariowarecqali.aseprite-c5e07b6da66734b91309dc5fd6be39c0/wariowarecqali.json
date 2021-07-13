@@ -1,0 +1,337 @@
+{ "frames": [
+   {
+    "filename": "wariowarecqali 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 1.aseprite",
+    "frame": { "x": 240, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 2.aseprite",
+    "frame": { "x": 480, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 3.aseprite",
+    "frame": { "x": 720, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 4.aseprite",
+    "frame": { "x": 960, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 5.aseprite",
+    "frame": { "x": 1200, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 6.aseprite",
+    "frame": { "x": 1440, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 7.aseprite",
+    "frame": { "x": 1680, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 8.aseprite",
+    "frame": { "x": 1920, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 9.aseprite",
+    "frame": { "x": 2160, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 10.aseprite",
+    "frame": { "x": 2400, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 11.aseprite",
+    "frame": { "x": 2640, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 12.aseprite",
+    "frame": { "x": 2880, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 13.aseprite",
+    "frame": { "x": 3120, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 14.aseprite",
+    "frame": { "x": 3360, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 15.aseprite",
+    "frame": { "x": 3600, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 16.aseprite",
+    "frame": { "x": 3840, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 17.aseprite",
+    "frame": { "x": 4080, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 18.aseprite",
+    "frame": { "x": 4320, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 19.aseprite",
+    "frame": { "x": 4560, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 20.aseprite",
+    "frame": { "x": 4800, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 21.aseprite",
+    "frame": { "x": 5040, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 22.aseprite",
+    "frame": { "x": 5280, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 23.aseprite",
+    "frame": { "x": 5520, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 24.aseprite",
+    "frame": { "x": 5760, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 25.aseprite",
+    "frame": { "x": 6000, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 26.aseprite",
+    "frame": { "x": 6240, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 27.aseprite",
+    "frame": { "x": 6480, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 28.aseprite",
+    "frame": { "x": 6720, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 29.aseprite",
+    "frame": { "x": 6960, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 30.aseprite",
+    "frame": { "x": 7200, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 31.aseprite",
+    "frame": { "x": 7440, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 32.aseprite",
+    "frame": { "x": 7680, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 33.aseprite",
+    "frame": { "x": 7920, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 34.aseprite",
+    "frame": { "x": 8160, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "wariowarecqali 35.aseprite",
+    "frame": { "x": 8400, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.21-dev",
+  "image": "wariowarecqali.png",
+  "format": "RGBA8888",
+  "size": { "w": 8640, "h": 160 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}
