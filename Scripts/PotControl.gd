@@ -36,6 +36,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		if $"../../..".HP==0:
 			play("GameOver")
 			gameover = true
+			self.playback_speed=1
 		else:
 			play("Bad")
 #			start_minigame_timer = 0

@@ -71,8 +71,16 @@ func end_minigame():
 func increment_minigames_played():
 	minigames_played+=1
 	if fmod(minigames_played,2.5)<=0.5:
-		self.speed += 1 #Speed up!!!
-		$Pot/Pot/AnimationPlayer.speedup=true
+		speed_up() #Speed up!!!
+
+func speed_up():
+	self.speed += 1
+	$Pot/Pot/AnimationPlayer.speedup=true
+	#Speed up fail/win
+	if Global.mods["SpeedUpPot"]:
+		$Pot/Pot/AnimationPlayer.playback_speed=self.difficulty
+		$Pot/Pot/Good1.pitch_scale=self.difficulty
+		$Pot/Pot/Bad1.pitch_scale=self.difficulty
 
 func start_minigame():
 	var mg = Global.get_instance(minigames[randi()%len(minigames)])

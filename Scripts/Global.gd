@@ -6,7 +6,8 @@ var mods = {
 	InvControls=false,
 	InvColors=false,
 	LTW=false,
-	Distraction=false
+	Distraction=false,
+	SpeedUpPot=false
 }
 var controls_are_inverted : bool = false
 

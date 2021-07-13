@@ -291,14 +291,12 @@ __meta__ = {
 [node name="TextEdit" type="TextEdit" parent="Menu/SettingsWindow/Tabs/Settings"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 40.0
+margin_top = 80.0
 text = "I want something to fill this space
 So
 Here is a read only TextEdit node and some other stuff I guess
 
 You can switch tabs in this settings window for actual useful stuff
-
-
 
 
 If you want, you can play around with some of the nodes in here,
@@ -309,31 +307,31 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="nice" type="Sprite" parent="Menu/SettingsWindow/Tabs/Settings/TextEdit"]
-position = Vector2( 0, 424 )
-scale = Vector2( 8, 8 )
-texture = ExtResource( 13 )
-centered = false
-offset = Vector2( 0, -16 )
-
-[node name="Panel" type="Panel" parent="Menu/SettingsWindow/Tabs/Settings/TextEdit"]
+[node name="Panel" type="Panel" parent="Menu/SettingsWindow/Tabs/Settings"]
 margin_left = 287.0
-margin_top = 226.0
+margin_top = 266.0
 margin_right = 437.0
-margin_bottom = 376.0
+margin_bottom = 416.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LineEdit" type="LineEdit" parent="Menu/SettingsWindow/Tabs/Settings/TextEdit"]
+[node name="LineEdit" type="LineEdit" parent="Menu/SettingsWindow/Tabs/Settings"]
 margin_left = 30.0
-margin_top = 239.0
+margin_top = 279.0
 margin_right = 225.0
-margin_bottom = 263.0
+margin_bottom = 303.0
 text = "This LineEdit node is useless"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="nice" type="Sprite" parent="Menu/SettingsWindow/Tabs/Settings"]
+position = Vector2( 0, 464 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 13 )
+centered = false
+offset = Vector2( 0, -16 )
 
 [node name="Fullscreen" type="CheckButton" parent="Menu/SettingsWindow/Tabs/Settings"]
 margin_right = 76.0
@@ -343,6 +341,13 @@ script = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="SpeedUpPot" type="CheckBox" parent="Menu/SettingsWindow/Tabs/Settings"]
+margin_top = 40.0
+margin_right = 146.0
+margin_bottom = 80.0
+text = "Experimental feature: Speed up pot sequence"
+script = ExtResource( 11 )
 
 [node name="Mods" type="Control" parent="Menu/SettingsWindow/Tabs"]
 visible = false
