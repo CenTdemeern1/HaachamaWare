@@ -304,24 +304,6 @@
     "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
     "sourceSize": { "w": 240, "h": 160 },
     "duration": 100
-   },
-   {
-    "filename": "wariowarecqali 34.aseprite",
-    "frame": { "x": 8160, "y": 0, "w": 240, "h": 160 },
-    "rotated": false,
-    "trimmed": false,
-    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
-    "sourceSize": { "w": 240, "h": 160 },
-    "duration": 100
-   },
-   {
-    "filename": "wariowarecqali 35.aseprite",
-    "frame": { "x": 8400, "y": 0, "w": 240, "h": 160 },
-    "rotated": false,
-    "trimmed": false,
-    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
-    "sourceSize": { "w": 240, "h": 160 },
-    "duration": 100
    }
  ],
  "meta": {
@@ -329,7 +311,7 @@
   "version": "1.2.21-dev",
   "image": "wariowarecqali.png",
   "format": "RGBA8888",
-  "size": { "w": 8640, "h": 160 },
+  "size": { "w": 8160, "h": 160 },
   "scale": "1",
   "frameTags": [
   ]

@@ -1,11 +1,68 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Audio/calliGB.mp3" type="AudioStream" id=1]
+[ext_resource path="res://Assets/Sprites/minigame/callibg.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/minigame/calligbbuttonhint.aseprite" type="SpriteFrames" id=3]
+[ext_resource path="res://Scripts/AutoPlayAnimatedSprite.gd" type="Script" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "default"
+length = 3.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("BG/BGMove:offset")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.1, 1.8, 2.5, 3.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -66, 0 ), Vector2( -130, 0 ), Vector2( -238, 0 ), Vector2( -284, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ButtonHint:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [node name="CalliDrink" type="Node2D" groups=[
 "Minigame",
 ]]
 
+[node name="BG" type="Node2D" parent="."]
+
+[node name="BGColor" type="ColorRect" parent="BG"]
+margin_right = 960.0
+margin_bottom = 640.0
+color = Color( 0.545098, 0.67451, 0.0588235, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BGMove" type="Sprite" parent="BG"]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="ButtonHint" type="AnimatedSprite" parent="."]
+position = Vector2( 704, 312 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 3 )
+centered = false
+script = ExtResource( 4 )
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
 autoplay = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "default"
+anims/default = SubResource( 1 )

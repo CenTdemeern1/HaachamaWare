@@ -1,0 +1,22 @@
+{ "frames": [
+   {
+    "filename": "gb.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.21-dev",
+  "image": "gb.png",
+  "format": "RGBA8888",
+  "size": { "w": 240, "h": 160 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}
