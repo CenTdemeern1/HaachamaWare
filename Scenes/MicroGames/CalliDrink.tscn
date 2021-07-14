@@ -1,9 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Audio/calliGB.mp3" type="AudioStream" id=1]
 [ext_resource path="res://Assets/Sprites/minigame/callibg.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Sprites/minigame/calligbbuttonhint.aseprite" type="SpriteFrames" id=3]
 [ext_resource path="res://Scripts/AutoPlayAnimatedSprite.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Sprites/frame/gb.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/minigame/callidrink.aseprite" type="SpriteFrames" id=6]
+[ext_resource path="res://Assets/Sprites/minigame/callidrinkp2.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sprites/minigame/callidrinkp1.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/MicroGames/CalliopeTankControl.gd" type="Script" id=9]
 
 [sub_resource type="Animation" id=1]
 resource_name = "default"
@@ -38,6 +43,10 @@ tracks/1/keys = {
 ]]
 
 [node name="BG" type="Node2D" parent="."]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="BGColor" type="ColorRect" parent="BG"]
 margin_right = 960.0
@@ -58,10 +67,96 @@ scale = Vector2( 4, 4 )
 frames = ExtResource( 3 )
 centered = false
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Calliope" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 6 )
+centered = false
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Tanks" type="Control" parent="Calliope"]
+show_behind_parent = true
+margin_right = 240.0
+margin_bottom = 160.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tank1" type="TextureProgress" parent="Calliope/Tanks"]
+margin_left = 91.0
+margin_top = 41.0
+margin_right = 96.0
+margin_bottom = 60.0
+max_value = 1.0
+step = 0.01
+value = 1.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 8 )
+fill_mode = 3
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tank2" type="TextureProgress" parent="Calliope/Tanks"]
+margin_left = 98.0
+margin_top = 43.0
+margin_right = 106.0
+margin_bottom = 61.0
+max_value = 1.0
+step = 0.01
+value = 1.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 8 )
+fill_mode = 3
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tank3" type="TextureProgress" parent="Calliope/Tanks"]
+margin_left = 136.0
+margin_top = 43.0
+margin_right = 143.0
+margin_bottom = 61.0
+max_value = 1.0
+step = 0.01
+value = 1.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 8 )
+fill_mode = 3
+nine_patch_stretch = true
+
+[node name="Tank4" type="TextureProgress" parent="Calliope/Tanks"]
+margin_left = 145.0
+margin_top = 41.0
+margin_right = 150.0
+margin_bottom = 60.0
+max_value = 1.0
+step = 0.01
+value = 1.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 8 )
+fill_mode = 3
+nine_patch_stretch = true
+
+[node name="frame" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 5 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
-autoplay = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "default"
