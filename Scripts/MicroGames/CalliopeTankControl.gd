@@ -10,10 +10,9 @@ func get_tank_value():
 
 func set_tank_value(v:float):
 	tank_value = v
-	$Tanks/Tank1.value=v
-	$Tanks/Tank2.value=v
-	$Tanks/Tank3.value=v
-	$Tanks/Tank4.value=v
+	var tanks = $Tanks.get_children()
+	for tank in tanks:
+		tank.value=round(tank_value*tank.rect_size.y)/tank.rect_size.y
 
 func _process(delta):
 	self.tank_value-=delta*0.1
