@@ -1,5 +1,6 @@
 extends AnimatedSprite
 
+const base_spd = 384#480
 var shot = false
 
 func _ready():
@@ -16,8 +17,8 @@ func _process(delta):
 				$"..".lose()
 			self.play()
 	if !shot:
-		position.x+=(Input.get_action_strength("right")-Input.get_action_strength("left"))*delta*480*$"../..".difficulty
-		position.y+=(Input.get_action_strength("down")-Input.get_action_strength("up"))*delta*480*$"../..".difficulty
+		position.x+=(Input.get_action_strength("right")-Input.get_action_strength("left"))*delta*base_spd*$"../..".difficulty
+		position.y+=(Input.get_action_strength("down")-Input.get_action_strength("up"))*delta*base_spd*$"../..".difficulty
 		var clamprect : Rect2 = $"../ReferenceRect".get_rect()
 		position.x = clamp(position.x,clamprect.position.x,clamprect.position.x+clamprect.size.x)
 		position.y = clamp(position.y,clamprect.position.y,clamprect.position.y+clamprect.size.y)

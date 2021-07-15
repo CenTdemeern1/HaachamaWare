@@ -16,7 +16,7 @@
 "Minigame",
 ]]
 script = ExtResource( 7 )
-lifetime = 4.0
+lifetime = 4.8
 goal = "Shoot!"
 
 [node name="Hit" type="AnimatedSprite" parent="."]
