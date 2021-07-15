@@ -16,6 +16,69 @@
     "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
     "sourceSize": { "w": 240, "h": 160 },
     "duration": 100
+   },
+   {
+    "filename": "callidrink 2.aseprite",
+    "frame": { "x": 480, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "callidrink 3.aseprite",
+    "frame": { "x": 720, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "callidrink 4.aseprite",
+    "frame": { "x": 960, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "callidrink 5.aseprite",
+    "frame": { "x": 1200, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "callidrink 6.aseprite",
+    "frame": { "x": 1440, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "callidrink 7.aseprite",
+    "frame": { "x": 1680, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
+   },
+   {
+    "filename": "callidrink 8.aseprite",
+    "frame": { "x": 1920, "y": 0, "w": 240, "h": 160 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
+    "sourceSize": { "w": 240, "h": 160 },
+    "duration": 100
    }
  ],
  "meta": {
@@ -23,9 +86,14 @@
   "version": "1.2.21-dev",
   "image": "callidrink.png",
   "format": "RGBA8888",
-  "size": { "w": 480, "h": 160 },
+  "size": { "w": 2160, "h": 160 },
   "scale": "1",
   "frameTags": [
+   { "name": "drink", "from": 0, "to": 1, "direction": "forward" },
+   { "name": "Guh", "from": 2, "to": 3, "direction": "forward" },
+   { "name": "GuhLoop", "from": 4, "to": 5, "direction": "forward" },
+   { "name": "Zzz", "from": 6, "to": 6, "direction": "forward" },
+   { "name": "ZzzLoop", "from": 7, "to": 8, "direction": "forward" }
   ]
  }
 }

@@ -1,0 +1,51 @@
+{ "frames": [
+   {
+    "filename": "callidrink_zzz 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 34, "h": 22 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 34, "h": 22 },
+    "sourceSize": { "w": 34, "h": 22 },
+    "duration": 100
+   },
+   {
+    "filename": "callidrink_zzz 1.aseprite",
+    "frame": { "x": 34, "y": 0, "w": 34, "h": 22 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 34, "h": 22 },
+    "sourceSize": { "w": 34, "h": 22 },
+    "duration": 100
+   },
+   {
+    "filename": "callidrink_zzz 2.aseprite",
+    "frame": { "x": 68, "y": 0, "w": 34, "h": 22 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 34, "h": 22 },
+    "sourceSize": { "w": 34, "h": 22 },
+    "duration": 100
+   },
+   {
+    "filename": "callidrink_zzz 3.aseprite",
+    "frame": { "x": 102, "y": 0, "w": 34, "h": 22 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 34, "h": 22 },
+    "sourceSize": { "w": 34, "h": 22 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.21-dev",
+  "image": "callidrink_zzz.png",
+  "format": "RGBA8888",
+  "size": { "w": 136, "h": 22 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Intro", "from": 0, "to": 1, "direction": "forward" },
+   { "name": "Loop", "from": 2, "to": 3, "direction": "forward" }
+  ]
+ }
+}

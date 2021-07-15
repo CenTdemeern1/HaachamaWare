@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Assets/Audio/calliGB.mp3" type="AudioStream" id=1]
 [ext_resource path="res://Assets/Sprites/minigame/callibg.png" type="Texture" id=2]
@@ -9,6 +9,10 @@
 [ext_resource path="res://Assets/Sprites/minigame/callidrinkp2.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Sprites/minigame/callidrinkp1.png" type="Texture" id=8]
 [ext_resource path="res://Scripts/MicroGames/CalliopeTankControl.gd" type="Script" id=9]
+[ext_resource path="res://Assets/Sprites/minigame/callidrink_zzz.aseprite" type="SpriteFrames" id=10]
+[ext_resource path="res://Assets/Sprites/minigame/callidrink_guh.aseprite" type="SpriteFrames" id=11]
+[ext_resource path="res://Scripts/MicroGames/CalliDrink.gd" type="Script" id=12]
+[ext_resource path="res://Assets/Sprites/minigame/bomb.aseprite" type="SpriteFrames" id=13]
 
 [sub_resource type="Animation" id=1]
 resource_name = "default"
@@ -37,10 +41,68 @@ tracks/1/keys = {
 "update": 1,
 "values": [ true, false ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("SpeechBubbles:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SpeechBubbles/Guh:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2, 2.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath("SpeechBubbles/Zzz")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 2, 2.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ "Intro", false ],
+"method": "play"
+}, {
+"args": [ "Loop", false ],
+"method": "play"
+} ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("Calliope")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "lose_if_lost"
+} ]
+}
 
 [node name="CalliDrink" type="Node2D" groups=[
 "Minigame",
 ]]
+script = ExtResource( 12 )
+lifetime = 3.4
+goal = "Drink!"
 
 [node name="BG" type="Node2D" parent="."]
 __meta__ = {
@@ -71,9 +133,32 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="SpeechBubbles" type="Node2D" parent="."]
+visible = false
+position = Vector2( 620, 240 )
+
+[node name="Guh" type="AnimatedSprite" parent="SpeechBubbles"]
+visible = false
+scale = Vector2( 4, 4 )
+frames = ExtResource( 11 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Zzz" type="AnimatedSprite" parent="SpeechBubbles"]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 10 )
+animation = "Intro"
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="Calliope" type="AnimatedSprite" parent="."]
 scale = Vector2( 4, 4 )
 frames = ExtResource( 6 )
+animation = "drink"
 centered = false
 script = ExtResource( 9 )
 __meta__ = {
@@ -155,9 +240,19 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Bomb" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 13 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
+autoplay = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "default"
 anims/default = SubResource( 1 )
+
+[connection signal="animation_finished" from="Calliope" to="Calliope" method="_on_Calliope_animation_finished"]
