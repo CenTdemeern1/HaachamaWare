@@ -239,7 +239,6 @@ stream = ExtResource( 5 )
 autoplay = true
 
 [node name="Menu" type="Control" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 9 )
@@ -277,6 +276,7 @@ __meta__ = {
 }
 
 [node name="Settings" type="Control" parent="Menu/SettingsWindow/Tabs"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -291,7 +291,7 @@ __meta__ = {
 [node name="TextEdit" type="TextEdit" parent="Menu/SettingsWindow/Tabs/Settings"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 80.0
+margin_top = 173.0
 text = "I want something to fill this space
 So
 Here is a read only TextEdit node and some other stuff I guess
@@ -307,20 +307,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Panel" type="Panel" parent="Menu/SettingsWindow/Tabs/Settings"]
-margin_left = 287.0
-margin_top = 266.0
-margin_right = 437.0
-margin_bottom = 416.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="LineEdit" type="LineEdit" parent="Menu/SettingsWindow/Tabs/Settings"]
-margin_left = 30.0
-margin_top = 279.0
-margin_right = 225.0
-margin_bottom = 303.0
+margin_left = 227.0
+margin_top = 396.0
+margin_right = 422.0
+margin_bottom = 420.0
 text = "This LineEdit node is useless"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -348,6 +339,19 @@ margin_right = 146.0
 margin_bottom = 80.0
 text = "Experimental feature: Speed up pot sequence"
 script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CaptureAme" type="CheckBox" parent="Menu/SettingsWindow/Tabs/Settings"]
+margin_top = 80.0
+margin_right = 319.0
+margin_bottom = 120.0
+text = "Experimental fun feature: Export stretched pictures of Amelia Watson"
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Mods" type="Control" parent="Menu/SettingsWindow/Tabs"]
 visible = false
