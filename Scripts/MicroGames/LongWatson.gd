@@ -42,6 +42,7 @@ func _process(delta):
 				var igr = Global.get_instance("res://Scenes/IGRecordViewport.tscn")
 				self.add_child(igr)
 				var sd = $Stretch
+				sd.rect_position = Vector2.ZERO
 				self.remove_child($Stretch)
 				igr.add_child(sd)
 #				get_node("IGRecordViewport/Stretch").material.set_shader_param("p10",0.5)
@@ -51,6 +52,7 @@ func _process(delta):
 #			image.flip_y()
 			image.save_png("user://amestretch.png")
 			var s = get_node("IGRecordViewport/Stretch")
+			s.rect_position = Vector2(92,80)
 			get_node("IGRecordViewport").remove_child(s)
 			self.add_child_below_node($BG,s)
 			capture_stage=2
