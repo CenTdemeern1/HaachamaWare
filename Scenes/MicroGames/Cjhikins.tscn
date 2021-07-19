@@ -1,0 +1,426 @@
+[gd_scene load_steps=71 format=2]
+
+[ext_resource path="res://Assets/Sprites/minigame/kiarachikin (2).png" type="Texture" id=1]
+[ext_resource path="res://Scenes/MicroGames/Cjhikin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/MicroGames/CjhikinMinigame.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Sprites/minigame/kiarachikin (2)top.png" type="Texture" id=4]
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 1 )
+region = Rect2( 240, 0, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 1 )
+region = Rect2( 480, 0, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 1 )
+region = Rect2( 720, 0, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 160, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 1 )
+region = Rect2( 240, 160, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 1 )
+region = Rect2( 480, 160, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 1 )
+region = Rect2( 720, 160, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 320, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 1 )
+region = Rect2( 240, 320, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 1 )
+region = Rect2( 480, 320, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 1 )
+region = Rect2( 720, 320, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 480, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 1 )
+region = Rect2( 240, 480, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 1 )
+region = Rect2( 480, 480, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 1 )
+region = Rect2( 720, 480, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 640, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 1 )
+region = Rect2( 240, 640, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 1 )
+region = Rect2( 480, 640, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 1 )
+region = Rect2( 720, 640, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 800, 240, 160 )
+
+[sub_resource type="SpriteFrames" id=49]
+animations = [ {
+"frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=71]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 4 )
+region = Rect2( 240, 0, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=73]
+atlas = ExtResource( 4 )
+region = Rect2( 480, 0, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=74]
+atlas = ExtResource( 4 )
+region = Rect2( 720, 0, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 160, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 4 )
+region = Rect2( 240, 160, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 4 )
+region = Rect2( 480, 160, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 4 )
+region = Rect2( 720, 160, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=79]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 320, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=80]
+atlas = ExtResource( 4 )
+region = Rect2( 240, 320, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=81]
+atlas = ExtResource( 4 )
+region = Rect2( 480, 320, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 4 )
+region = Rect2( 720, 320, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=83]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 480, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=84]
+atlas = ExtResource( 4 )
+region = Rect2( 240, 480, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=85]
+atlas = ExtResource( 4 )
+region = Rect2( 480, 480, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=86]
+atlas = ExtResource( 4 )
+region = Rect2( 720, 480, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=87]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 640, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=88]
+atlas = ExtResource( 4 )
+region = Rect2( 240, 640, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=89]
+atlas = ExtResource( 4 )
+region = Rect2( 480, 640, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=90]
+atlas = ExtResource( 4 )
+region = Rect2( 720, 640, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=91]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 800, 240, 160 )
+
+[sub_resource type="SpriteFrames" id=92]
+animations = [ {
+"frames": [ SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ), SubResource( 85 ), SubResource( 86 ), SubResource( 87 ), SubResource( 88 ), SubResource( 89 ), SubResource( 90 ), SubResource( 91 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="NavigationPolygon" id=50]
+vertices = PoolVector2Array( 443, 195, 443, 183, 517, 183, 517, 195, 589, 195, 589, 207, 665, 207, 665, 227, 721, 227, 721, 267, 765, 267, 765, 393, 721, 393, 721, 445, 665, 445, 665, 465, 589, 465, 589, 477, 517, 477, 517, 489, 443, 489, 443, 477, 371, 477, 371, 465, 295, 465, 295, 445, 371, 207, 239, 445, 239, 393, 295, 227, 195, 393, 195, 267, 239, 267, 239, 227, 295, 207, 371, 195 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 4, 5 ), PoolIntArray( 5, 6, 7 ), PoolIntArray( 7, 8, 9 ), PoolIntArray( 9, 10, 11, 12 ), PoolIntArray( 7, 12, 13, 14, 5 ), PoolIntArray( 5, 14, 15, 16, 3 ), PoolIntArray( 3, 16, 17, 18, 0 ), PoolIntArray( 18, 19, 20, 21 ), PoolIntArray( 21, 22, 23, 0 ), PoolIntArray( 23, 24, 25, 26, 0 ), PoolIntArray( 25, 27, 28, 29, 26 ), PoolIntArray( 28, 30, 31, 32 ), PoolIntArray( 32, 33, 29 ), PoolIntArray( 29, 34, 26 ), PoolIntArray( 26, 35, 0 ), PoolIntArray( 7, 9, 12 ), PoolIntArray( 0, 18, 21 ), PoolIntArray( 29, 28, 32 ) ]
+outlines = [ PoolVector2Array( 443, 183, 517, 183, 517, 195, 589, 195, 589, 207, 665, 207, 665, 227, 721, 227, 721, 267, 765, 267, 765, 393, 721, 393, 721, 445, 665, 445, 665, 465, 589, 465, 589, 477, 517, 477, 517, 489, 443, 489, 443, 477, 371, 477, 371, 465, 295, 465, 295, 445, 239, 445, 239, 393, 195, 393, 195, 267, 239, 267, 239, 227, 295, 227, 295, 207, 371, 207, 371, 195, 443, 195 ) ]
+
+[sub_resource type="NavigationPolygon" id=51]
+vertices = PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 ) ]
+
+[sub_resource type="NavigationPolygon" id=52]
+vertices = PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 ) ]
+
+[sub_resource type="NavigationPolygon" id=53]
+vertices = PoolVector2Array( 440, 140, 516, 140, 516, 184, 440, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 440, 140, 516, 140, 516, 184, 440, 184 ) ]
+
+[sub_resource type="NavigationPolygon" id=27]
+vertices = PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 ) ]
+
+[sub_resource type="NavigationPolygon" id=54]
+vertices = PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 ) ]
+
+[sub_resource type="NavigationPolygon" id=55]
+vertices = PoolVector2Array( 444, 128, 516, 128, 516, 184, 444, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 444, 128, 516, 128, 516, 184, 444, 184 ) ]
+
+[sub_resource type="NavigationPolygon" id=56]
+vertices = PoolVector2Array( 444, 116, 516, 116, 516, 184, 444, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 444, 116, 516, 116, 516, 184, 444, 184 ) ]
+
+[sub_resource type="NavigationPolygon" id=57]
+vertices = PoolVector2Array( 444, 132, 516, 132, 516, 184, 444, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 444, 132, 516, 132, 516, 184, 444, 184 ) ]
+
+[sub_resource type="NavigationPolygon" id=58]
+vertices = PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 ) ]
+
+[sub_resource type="NavigationPolygon" id=59]
+vertices = PoolVector2Array( 440, 140, 516, 140, 516, 184, 440, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 440, 140, 516, 140, 516, 184, 440, 184 ) ]
+
+[sub_resource type="NavigationPolygon" id=60]
+vertices = PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 ) ]
+
+[sub_resource type="NavigationPolygon" id=61]
+vertices = PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 ) ]
+
+[sub_resource type="NavigationPolygon" id=62]
+vertices = PoolVector2Array( 444, 140, 520, 140, 520, 184, 444, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 444, 140, 520, 140, 520, 184, 444, 184 ) ]
+
+[sub_resource type="NavigationPolygon" id=63]
+vertices = PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 ) ]
+
+[sub_resource type="NavigationPolygon" id=64]
+vertices = PoolVector2Array( 444, 132, 516, 132, 516, 184, 444, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 444, 132, 516, 132, 516, 184, 444, 184 ) ]
+
+[sub_resource type="NavigationPolygon" id=65]
+vertices = PoolVector2Array( 444, 116, 516, 116, 516, 184, 444, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 444, 116, 516, 116, 516, 184, 444, 184 ) ]
+
+[sub_resource type="NavigationPolygon" id=66]
+vertices = PoolVector2Array( 444, 128, 516, 128, 516, 184, 444, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 444, 128, 516, 128, 516, 184, 444, 184 ) ]
+
+[sub_resource type="NavigationPolygon" id=67]
+vertices = PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 ) ]
+
+[sub_resource type="NavigationPolygon" id=68]
+vertices = PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 ) ]
+
+[sub_resource type="NavigationPolygon" id=69]
+vertices = PoolVector2Array( 444, 140, 520, 140, 520, 184, 444, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 444, 140, 520, 140, 520, 184, 444, 184 ) ]
+
+[sub_resource type="NavigationPolygon" id=70]
+vertices = PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 444, 140, 516, 140, 516, 184, 444, 184 ) ]
+
+[node name="Cjhikins" type="Node2D" groups=[
+"Minigame",
+]]
+script = ExtResource( 3 )
+
+[node name="BG" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = SubResource( 49 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cjhikin" parent="." instance=ExtResource( 2 )]
+position = Vector2( 480, 320 )
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PoolVector2Array( 250, -79, 0, 0 )
+
+[node name="FG" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = SubResource( 92 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Navigation2D" type="Navigation2D" parent="."]
+
+[node name="Field" type="NavigationPolygonInstance" parent="Navigation2D"]
+navpoly = SubResource( 50 )
+
+[node name="Peg1" type="NavigationPolygonInstance" parent="Navigation2D"]
+navpoly = SubResource( 51 )
+
+[node name="Peg2" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( 72, 12 )
+navpoly = SubResource( 52 )
+
+[node name="Peg3" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( 148, 24 )
+navpoly = SubResource( 53 )
+
+[node name="Peg4" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( 220, 44 )
+navpoly = SubResource( 27 )
+
+[node name="Peg5" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( 276, 84 )
+navpoly = SubResource( 54 )
+
+[node name="Peg6" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( 320, 140 )
+navpoly = SubResource( 55 )
+
+[node name="Peg7" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( 320, 208 )
+navpoly = SubResource( 56 )
+
+[node name="Peg8" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( 276, 260 )
+navpoly = SubResource( 57 )
+
+[node name="Peg9" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( 220, 304 )
+navpoly = SubResource( 58 )
+
+[node name="Peg10" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( 148, 324 )
+navpoly = SubResource( 59 )
+
+[node name="Peg11" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( 72, 336 )
+navpoly = SubResource( 60 )
+
+[node name="Peg12" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( 0, 348 )
+navpoly = SubResource( 60 )
+
+[node name="Peg13" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( -72, 336 )
+navpoly = SubResource( 61 )
+
+[node name="Peg14" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( -148, 324 )
+navpoly = SubResource( 62 )
+
+[node name="Peg15" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( -220, 304 )
+navpoly = SubResource( 63 )
+
+[node name="Peg16" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( -276, 260 )
+navpoly = SubResource( 64 )
+
+[node name="Peg17" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( -320, 208 )
+navpoly = SubResource( 65 )
+
+[node name="Peg18" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( -320, 140 )
+navpoly = SubResource( 66 )
+
+[node name="Peg19" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( -276, 84 )
+navpoly = SubResource( 67 )
+
+[node name="Peg20" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( -220, 44 )
+navpoly = SubResource( 68 )
+
+[node name="Peg21" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( -148, 24 )
+navpoly = SubResource( 69 )
+
+[node name="Peg22" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( -72, 12 )
+navpoly = SubResource( 70 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Sprites/minigame/kiarachikin (1).aseprite" type="SpriteFrames" id=1]
+[ext_resource path="res://Scripts/MicroGames/Cjhikin.gd" type="Script" id=2]
+
+[node name="Cjhikin" type="AnimatedSprite"]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+centered = false
+offset = Vector2( -9.5, -17 )
+script = ExtResource( 2 )
