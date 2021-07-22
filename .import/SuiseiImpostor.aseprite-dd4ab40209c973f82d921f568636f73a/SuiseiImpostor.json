@@ -1,0 +1,31 @@
+{ "frames": [
+   {
+    "filename": "SuiseiImpostor 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 21, "h": 35 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 21, "h": 35 },
+    "sourceSize": { "w": 21, "h": 35 },
+    "duration": 200
+   },
+   {
+    "filename": "SuiseiImpostor 1.aseprite",
+    "frame": { "x": 21, "y": 0, "w": 21, "h": 35 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 21, "h": 35 },
+    "sourceSize": { "w": 21, "h": 35 },
+    "duration": 200
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.21-dev",
+  "image": "SuiseiImpostor.png",
+  "format": "RGBA8888",
+  "size": { "w": 42, "h": 35 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}

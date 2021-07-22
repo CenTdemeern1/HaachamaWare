@@ -1,0 +1,153 @@
+{ "frames": [
+   {
+    "filename": "GuraCrewmate 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 38, "h": 27 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 38, "h": 27 },
+    "sourceSize": { "w": 38, "h": 27 },
+    "duration": 200
+   },
+   {
+    "filename": "GuraCrewmate 1.aseprite",
+    "frame": { "x": 38, "y": 0, "w": 38, "h": 27 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 38, "h": 27 },
+    "sourceSize": { "w": 38, "h": 27 },
+    "duration": 200
+   },
+   {
+    "filename": "GuraCrewmate 2.aseprite",
+    "frame": { "x": 76, "y": 0, "w": 38, "h": 27 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 38, "h": 27 },
+    "sourceSize": { "w": 38, "h": 27 },
+    "duration": 200
+   },
+   {
+    "filename": "GuraCrewmate 3.aseprite",
+    "frame": { "x": 114, "y": 0, "w": 38, "h": 27 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 38, "h": 27 },
+    "sourceSize": { "w": 38, "h": 27 },
+    "duration": 200
+   },
+   {
+    "filename": "GuraCrewmate 4.aseprite",
+    "frame": { "x": 152, "y": 0, "w": 38, "h": 27 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 38, "h": 27 },
+    "sourceSize": { "w": 38, "h": 27 },
+    "duration": 200
+   },
+   {
+    "filename": "GuraCrewmate 5.aseprite",
+    "frame": { "x": 190, "y": 0, "w": 38, "h": 27 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 38, "h": 27 },
+    "sourceSize": { "w": 38, "h": 27 },
+    "duration": 200
+   },
+   {
+    "filename": "GuraCrewmate 6.aseprite",
+    "frame": { "x": 228, "y": 0, "w": 38, "h": 27 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 38, "h": 27 },
+    "sourceSize": { "w": 38, "h": 27 },
+    "duration": 200
+   },
+   {
+    "filename": "GuraCrewmate 7.aseprite",
+    "frame": { "x": 266, "y": 0, "w": 38, "h": 27 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 38, "h": 27 },
+    "sourceSize": { "w": 38, "h": 27 },
+    "duration": 200
+   },
+   {
+    "filename": "GuraCrewmate 8.aseprite",
+    "frame": { "x": 304, "y": 0, "w": 38, "h": 27 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 38, "h": 27 },
+    "sourceSize": { "w": 38, "h": 27 },
+    "duration": 200
+   },
+   {
+    "filename": "GuraCrewmate 9.aseprite",
+    "frame": { "x": 342, "y": 0, "w": 38, "h": 27 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 38, "h": 27 },
+    "sourceSize": { "w": 38, "h": 27 },
+    "duration": 200
+   },
+   {
+    "filename": "GuraCrewmate 10.aseprite",
+    "frame": { "x": 380, "y": 0, "w": 38, "h": 27 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 38, "h": 27 },
+    "sourceSize": { "w": 38, "h": 27 },
+    "duration": 200
+   },
+   {
+    "filename": "GuraCrewmate 11.aseprite",
+    "frame": { "x": 418, "y": 0, "w": 38, "h": 27 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 38, "h": 27 },
+    "sourceSize": { "w": 38, "h": 27 },
+    "duration": 200
+   },
+   {
+    "filename": "GuraCrewmate 12.aseprite",
+    "frame": { "x": 456, "y": 0, "w": 38, "h": 27 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 38, "h": 27 },
+    "sourceSize": { "w": 38, "h": 27 },
+    "duration": 200
+   },
+   {
+    "filename": "GuraCrewmate 13.aseprite",
+    "frame": { "x": 494, "y": 0, "w": 38, "h": 27 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 38, "h": 27 },
+    "sourceSize": { "w": 38, "h": 27 },
+    "duration": 200
+   },
+   {
+    "filename": "GuraCrewmate 14.aseprite",
+    "frame": { "x": 532, "y": 0, "w": 38, "h": 27 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 38, "h": 27 },
+    "sourceSize": { "w": 38, "h": 27 },
+    "duration": 200
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.21-dev",
+  "image": "GuraCrewmate.png",
+  "format": "RGBA8888",
+  "size": { "w": 570, "h": 27 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "WalkLeft", "from": 0, "to": 3, "direction": "forward" },
+   { "name": "DieLeft", "from": 4, "to": 6, "direction": "forward" },
+   { "name": "WalkRight", "from": 7, "to": 10, "direction": "forward" },
+   { "name": "DieRight", "from": 11, "to": 13, "direction": "forward" },
+   { "name": "Dead", "from": 14, "to": 14, "direction": "forward" }
+  ]
+ }
+}
