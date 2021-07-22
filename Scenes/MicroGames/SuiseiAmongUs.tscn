@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Assets/Sprites/minigame/SuiseiAmongUs/environment.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Sprites/minigame/SuiseiAmongUs/Suisei.aseprite" type="SpriteFrames" id=2]
@@ -8,16 +8,42 @@
 [ext_resource path="res://Assets/Sprites/minigame/SuiseiAmongUs/Gura.aseprite" type="SpriteFrames" id=6]
 [ext_resource path="res://Assets/Sprites/minigame/SuiseiAmongUs/GuraCrewmate.aseprite" type="SpriteFrames" id=7]
 [ext_resource path="res://Scripts/MicroGames/GuraCrewmate.gd" type="Script" id=8]
-[ext_resource path="res://Assets/Sprites/minigame/SuiseiAmongUs/SuiseiImpostor.aseprite" type="SpriteFrames" id=9]
+[ext_resource path="res://Assets/Sprites/minigame/SuiseiAmongUs/SuiseiImpostor.png" type="Texture" id=9]
 [ext_resource path="res://Scripts/MicroGames/SuiseiImpostor.gd" type="Script" id=10]
+[ext_resource path="res://Assets/Sprites/minigame/SuiseiAmongUs/kill.png" type="Texture" id=11]
+[ext_resource path="res://Scripts/MicroGames/SuiseiAmongUs.gd" type="Script" id=12]
+[ext_resource path="res://Assets/Sprites/minigame/bomb.aseprite" type="SpriteFrames" id=13]
+[ext_resource path="res://Assets/Audio/gura1.mp3" type="AudioStream" id=14]
+[ext_resource path="res://Assets/Audio/Kill.mp3" type="AudioStream" id=15]
 
-[sub_resource type="NavigationPolygon" id=4]
+[sub_resource type="NavigationPolygon" id=9]
 vertices = PoolVector2Array( 412, 524, 412, 296, 648, 296, 648, 528, 868, 528, 868, 560, 92, 560, 92, 524 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 4, 5, 6 ), PoolIntArray( 0, 3, 6, 7 ) ]
 outlines = [ PoolVector2Array( 412, 296, 648, 296, 648, 528, 868, 528, 868, 560, 92, 560, 92, 524, 412, 524 ) ]
 
+[sub_resource type="NavigationPolygon" id=4]
+vertices = PoolVector2Array( 412, 116, 648, 116, 648, 296, 412, 296 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 412, 296, 648, 296, 648, 116, 412, 116 ) ]
+
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 12, 13.5 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 21, 35 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 9 )
+region = Rect2( 21, 0, 21, 35 )
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ SubResource( 6 ), SubResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 10.5, 17.5 )
@@ -47,6 +73,20 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 528, 116 ), Vector2( 528, 116 ), Vector2( 648, 116 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("GuraCrewmate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "make_an_exit"
+} ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -87,7 +127,12 @@ tracks/2/keys = {
 "values": [ false, true ]
 }
 
-[node name="SuiseiAmongUs" type="Node2D"]
+[node name="SuiseiAmongUs" type="Node2D" groups=[
+"Minigame",
+]]
+z_index = -1
+script = ExtResource( 12 )
+goal = "Kill!"
 
 [node name="BGPanel" type="Sprite" parent="."]
 scale = Vector2( 4, 4 )
@@ -126,9 +171,17 @@ __meta__ = {
 }
 
 [node name="Floor" type="Navigation2D" parent="."]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Floor"]
+navpoly = SubResource( 9 )
+
+[node name="NavigationPolygonInstance2" type="NavigationPolygonInstance" parent="Floor"]
 navpoly = SubResource( 4 )
+enabled = false
 
 [node name="GuraCrewmate" type="AnimatedSprite" parent="."]
 position = Vector2( 584, 376 )
@@ -152,7 +205,7 @@ shape = SubResource( 3 )
 [node name="SuiseiImpostor" type="AnimatedSprite" parent="."]
 position = Vector2( 462, 436 )
 scale = Vector2( 4, 4 )
-frames = ExtResource( 9 )
+frames = SubResource( 8 )
 centered = false
 offset = Vector2( -10.5, -35 )
 script = ExtResource( 10 )
@@ -167,11 +220,14 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SuiseiImpostor/Area2D"]
 shape = SubResource( 5 )
 
-[node name="Kill" type="Polygon2D" parent="."]
-position = Vector2( 811, 508 )
+[node name="Kill" type="Sprite" parent="."]
+position = Vector2( 44, -56 )
 scale = Vector2( 4, 4 )
-color = Color( 0.701961, 0, 0, 1 )
-polygon = PoolVector2Array( -11.75, -2.75, -8.25, -7, -3, -10, 4.25, -10.75, 10.75, -5.75, 12.75, 0.25, 10, 5.25, 5.25, 8.5, -1.75, 9.25, -12, 4 )
+texture = ExtResource( 11 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Suisei" type="AnimatedSprite" parent="."]
 scale = Vector2( 4, 4 )
@@ -201,6 +257,30 @@ centered = false
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Exit" type="Position2D" parent="."]
+position = Vector2( 530, 0 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( 92, 80 )
+z_index = 1
+color = Color( 0.121569, 0.113725, 0.0980392, 1 )
+polygon = PoolVector2Array( 0, 0, 776, 0, 776, 36, 0, 36 )
+
+[node name="Bomb" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 13 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+autoplay = true
+
+[node name="KillSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
 
 [connection signal="animation_finished" from="GuraCrewmate" to="GuraCrewmate" method="_on_GuraCrewmate_animation_finished"]
 [connection signal="area_entered" from="SuiseiImpostor/Area2D" to="SuiseiImpostor" method="_on_Area2D_area_entered"]

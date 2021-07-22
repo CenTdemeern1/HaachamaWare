@@ -11,7 +11,8 @@ const things_to_load = [
 	"res://Scenes/MicroGames/Evolving.tscn",
 	"res://Scenes/MicroGames/LongWatson.tscn",
 	"res://Scenes/MicroGames/WarioAme.tscn",
-	"res://Scenes/MicroGames/CalliDrink.tscn"
+	"res://Scenes/MicroGames/CalliDrink.tscn",
+	"res://Scenes/MicroGames/SuiseiAmongUs.tscn"
 	]
 
 func _ready():

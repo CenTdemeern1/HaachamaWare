@@ -17,7 +17,7 @@ var move_direction = Vector2(0,0)
 var can_kill = false
 
 func move_relative(delta):
-	self.position=$"../Floor".get_closest_point(self.position+self.move_direction*delta*60*movement_speed)
+	self.position=$"../Floor".get_closest_point(self.position+self.move_direction*delta*60*movement_speed*$"../..".difficulty)
 
 func _process(delta):
 	self.move_direction=Vector2(Input.get_action_strength("right")-Input.get_action_strength("left"),Input.get_action_strength("down")-Input.get_action_strength("up"))
@@ -46,12 +46,17 @@ func _process(delta):
 		self.z_index=0
 	if can_kill:
 		if $"../GuraCrewmate".action!=$"../GuraCrewmate".actions.dead and $"../GuraCrewmate".action!=$"../GuraCrewmate".actions.dying:
-			$"../Kill".color=Color(0.7,0,0,1)
+			$"../Kill".modulate=Color(1,1,1,1)
 			if Input.is_action_just_pressed("button1"):
 				$"../GuraCrewmate".die()
 				self.position=$"../GuraCrewmate".position
+				$"../AnimationPlayer".play("Win")
+				$"../KillSFX".play()
+				$"..".win()
+		else:
+			$"../Kill".modulate=Color(0.7,0.7,0.7,0.7)
 	else:
-		$"../Kill".color=Color.black
+		$"../Kill".modulate=Color(0.7,0.7,0.7,0.7)
 
 func _on_Area2D_area_entered(area):
 	self.can_kill=true
