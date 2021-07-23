@@ -1304,6 +1304,7 @@ tracks/17/keys = {
 }
 
 [node name="Pot" type="Node2D"]
+visible = false
 position = Vector2( 480, 320 )
 
 [node name="Pot" type="Node2D" parent="."]
@@ -1350,6 +1351,7 @@ texture = ExtResource( 5 )
 centered = false
 
 [node name="BadDish" type="Node2D" parent="Pot/Pot"]
+visible = false
 position = Vector2( -480, -320 )
 
 [node name="BadDish" type="Sprite" parent="Pot/Pot/BadDish"]
@@ -1384,6 +1386,7 @@ centered = false
 script = ExtResource( 15 )
 
 [node name="Poison" type="AnimatedSprite" parent="Pot"]
+visible = false
 scale = Vector2( 4, 4 )
 frames = ExtResource( 17 )
 frame = 1
@@ -1430,6 +1433,7 @@ texture = ExtResource( 25 )
 [node name="Waku" type="AnimatedSprite" parent="Pot"]
 scale = Vector2( 4, 4 )
 frames = ExtResource( 18 )
+frame = 2
 centered = false
 
 [node name="Haachama" type="Node2D" parent="Pot"]
