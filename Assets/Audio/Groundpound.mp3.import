@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Groundpound.mp3-b40a93fd17478ef58bb87994a59de7ae.mp3
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

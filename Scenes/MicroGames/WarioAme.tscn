@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Assets/Sprites/minigame/warioame (1).png" type="Texture" id=1]
 [ext_resource path="res://Assets/Sprites/frame/frame - ame.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Audio/Groundpound.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Assets/Sprites/minigame/DownIndicator.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/MicroGames/WarioAme.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Sprites/minigame/warioame.aseprite" type="SpriteFrames" id=6]
@@ -110,6 +111,18 @@ tracks/4/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 0, 1, 2 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("GPSFX:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
 }
 
 [sub_resource type="Animation" id=11]
@@ -306,5 +319,8 @@ anims/Quicktime = SubResource( 13 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
 autoplay = true
+
+[node name="GPSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

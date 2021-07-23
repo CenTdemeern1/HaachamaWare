@@ -11,5 +11,5 @@ dest_files=[ "res://.import/arrow2.mp3-e2427b6880c9a57f4b6e0a00d1faa761.mp3str" 
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

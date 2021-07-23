@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Groundpound.ogg-e0c4d119b698635f6efec1ed1b3bfe02.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Groundpound.ogg"
+dest_files=[ "res://.import/Groundpound.ogg-e0c4d119b698635f6efec1ed1b3bfe02.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

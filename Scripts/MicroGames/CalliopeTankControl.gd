@@ -28,7 +28,7 @@ func set_tank_value(v:float):
 	for tank in tanks:
 		tank.value=round(tank_value*tank.rect_size.y)/tank.rect_size.y
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("button1") and self.animation=="drink" and goal>0.1:
 #		print("beep!",self.tank_value)
 		goal -= 0.2*$"../..".difficulty

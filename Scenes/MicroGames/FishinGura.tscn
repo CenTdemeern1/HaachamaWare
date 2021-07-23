@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Assets/Sprites/frame/frame.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Sprites/minigame/fishingura (1).aseprite" type="SpriteFrames" id=2]
@@ -9,8 +9,10 @@
 [ext_resource path="res://Scripts/MicroGames/FishinGura.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/AutoPlayAnimatedSprite.gd" type="Script" id=8]
 [ext_resource path="res://Assets/Sprites/minigame/fishingura.aseprite" type="SpriteFrames" id=9]
+[ext_resource path="res://Assets/Audio/arrow2.mp3" type="AudioStream" id=10]
 [ext_resource path="res://Assets/Sprites/minigame/bomb.aseprite" type="SpriteFrames" id=11]
 [ext_resource path="res://Assets/Audio/gura1.mp3" type="AudioStream" id=12]
+[ext_resource path="res://Assets/Audio/arrow.mp3" type="AudioStream" id=13]
 
 [node name="FishinGura" type="Node2D" groups=[
 "Minigame",
@@ -58,6 +60,16 @@ scale = Vector2( 4, 4 )
 frames = ExtResource( 5 )
 offset = Vector2( -0.5, 5.5 )
 script = ExtResource( 6 )
+
+[node name="ArrowHit" type="AudioStreamPlayer2D" parent="Crosshair"]
+scale = Vector2( 0.25, 0.25 )
+stream = ExtResource( 13 )
+volume_db = 12.0
+
+[node name="ArrowMiss" type="AudioStreamPlayer2D" parent="Crosshair"]
+scale = Vector2( 0.25, 0.25 )
+stream = ExtResource( 10 )
+volume_db = 12.0
 
 [node name="frame" type="Sprite" parent="."]
 scale = Vector2( 4, 4 )

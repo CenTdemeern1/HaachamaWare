@@ -13,8 +13,10 @@ func _process(delta):
 			shot=true
 			if $"../Hitbox".get_rect().has_point(self.position):
 				$"..".win()
+				$ArrowHit.play()
 			else:
 				$"..".lose()
+				$ArrowMiss.play()
 			self.play()
 	if !shot:
 		position.x+=(Input.get_action_strength("right")-Input.get_action_strength("left"))*delta*base_spd*$"../..".difficulty

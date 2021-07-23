@@ -58,8 +58,8 @@ func _process(delta):
 	else:
 		$"../Kill".modulate=Color(0.7,0.7,0.7,0.7)
 
-func _on_Area2D_area_entered(area):
+func _on_Area2D_area_entered(_area):
 	self.can_kill=true
 
-func _on_Area2D_area_exited(area):
+func _on_Area2D_area_exited(_area):
 	self.can_kill=false
