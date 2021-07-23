@@ -16,12 +16,12 @@
 [ext_resource path="res://Assets/Audio/gura1.mp3" type="AudioStream" id=14]
 [ext_resource path="res://Assets/Audio/Kill.mp3" type="AudioStream" id=15]
 
-[sub_resource type="NavigationPolygon" id=9]
+[sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 412, 524, 412, 296, 648, 296, 648, 528, 868, 528, 868, 560, 92, 560, 92, 524 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 4, 5, 6 ), PoolIntArray( 0, 3, 6, 7 ) ]
 outlines = [ PoolVector2Array( 412, 296, 648, 296, 648, 528, 868, 528, 868, 560, 92, 560, 92, 524, 412, 524 ) ]
 
-[sub_resource type="NavigationPolygon" id=4]
+[sub_resource type="NavigationPolygon" id=2]
 vertices = PoolVector2Array( 412, 116, 648, 116, 648, 296, 412, 296 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( 412, 296, 648, 296, 648, 116, 412, 116 ) ]
@@ -29,27 +29,26 @@ outlines = [ PoolVector2Array( 412, 296, 648, 296, 648, 116, 412, 116 ) ]
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 12, 13.5 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 21, 35 )
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 9 )
 region = Rect2( 21, 0, 21, 35 )
 
-[sub_resource type="SpriteFrames" id=8]
+[sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [ SubResource( 6 ), SubResource( 7 ) ],
+"frames": [ SubResource( 4 ), SubResource( 5 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 10.5, 17.5 )
 
-[sub_resource type="Animation" id=1]
-resource_name = "Lose"
+[sub_resource type="Animation" id=8]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Door1:position")
 tracks/0/interp = 2
@@ -89,7 +88,7 @@ tracks/2/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=9]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Suisei:frame")
 tracks/0/interp = 1
@@ -177,10 +176,10 @@ __meta__ = {
 }
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Floor"]
-navpoly = SubResource( 9 )
+navpoly = SubResource( 1 )
 
 [node name="NavigationPolygonInstance2" type="NavigationPolygonInstance" parent="Floor"]
-navpoly = SubResource( 4 )
+navpoly = SubResource( 2 )
 enabled = false
 
 [node name="GuraCrewmate" type="AnimatedSprite" parent="."]
@@ -205,7 +204,7 @@ shape = SubResource( 3 )
 [node name="SuiseiImpostor" type="AnimatedSprite" parent="."]
 position = Vector2( 462, 436 )
 scale = Vector2( 4, 4 )
-frames = SubResource( 8 )
+frames = SubResource( 6 )
 centered = false
 offset = Vector2( -10.5, -35 )
 script = ExtResource( 10 )
@@ -218,7 +217,7 @@ position = Vector2( 0, -17.5 )
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SuiseiImpostor/Area2D"]
-shape = SubResource( 5 )
+shape = SubResource( 7 )
 
 [node name="Kill" type="Sprite" parent="."]
 position = Vector2( 44, -56 )
@@ -247,8 +246,8 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Lose = SubResource( 1 )
-anims/Win = SubResource( 2 )
+anims/Lose = SubResource( 8 )
+anims/Win = SubResource( 9 )
 
 [node name="cctvframe" type="Sprite" parent="."]
 scale = Vector2( 4, 4 )
