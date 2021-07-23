@@ -85,6 +85,9 @@ func speed_up():
 		$Pot/Pot/Bad1.pitch_scale=self.difficulty
 
 func start_minigame():
+	var minigames_group = get_tree().get_nodes_in_group("Minigame")
+	if len(minigames_group)>0:
+		unload_minigame()
 	var mg = Global.get_instance(minigames[randi()%len(minigames)])
 	self.add_child_below_node($MinigameGoesHere,mg)
 	$Goal.text=mg.goal
