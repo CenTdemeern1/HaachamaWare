@@ -22,13 +22,21 @@ _global_script_class_icons={
 
 config/name="HaachamaWare"
 run/main_scene="res://Scenes/Loading.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="HaachamaWare"
 boot_splash/image="res://Assets/Sprites/splash.png"
 boot_splash/use_filter=false
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
+config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
 Global="*res://Scripts/Global.gd"
+
+[debug]
+
+settings/crash_handler/message="Please report this to the devs. Thanks!"
 
 [display]
 
