@@ -7,15 +7,7 @@ var speed = 1 setget set_speed
 var difficulty = 1# setget set_difficulty
 var minigames_played = 0
 var won = true
-#var initial_start_minigame_timer = 16
-var minigames = [
-	"res://Scenes/MicroGames/FishinGura.tscn",
-	"res://Scenes/MicroGames/Evolving.tscn",
-	"res://Scenes/MicroGames/LongWatson.tscn",
-	"res://Scenes/MicroGames/WarioAme.tscn",
-	"res://Scenes/MicroGames/CalliDrink.tscn",
-	"res://Scenes/MicroGames/SuiseiAmongUs.tscn"
-	]
+# var minigames moved to Global.gd
 var goal_timer = 0
 
 func set_speed(x):
@@ -88,7 +80,7 @@ func start_minigame():
 	var minigames_group = get_tree().get_nodes_in_group("Minigame")
 	if len(minigames_group)>0:
 		unload_minigame()
-	var mg = Global.get_instance(minigames[randi()%len(minigames)])
+	var mg = Global.get_instance(Global.minigames[randi()%len(Global.minigames)])
 	self.add_child_below_node($MinigameGoesHere,mg)
 	$Goal.text=mg.goal
 	goal_timer=0.4

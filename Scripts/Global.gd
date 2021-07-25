@@ -2,6 +2,15 @@ extends Node
 
 var resource_queue
 var fadeinMM = true
+var disabled_minigames : Array = []
+var minigames : Array = [
+	"res://Scenes/MicroGames/FishinGura.tscn",
+	"res://Scenes/MicroGames/Evolving.tscn",
+	"res://Scenes/MicroGames/LongWatson.tscn",
+	"res://Scenes/MicroGames/WarioAme.tscn",
+	"res://Scenes/MicroGames/CalliDrink.tscn",
+	"res://Scenes/MicroGames/SuiseiAmongUs.tscn"
+	]
 var mods = {
 	InvControls=false,
 	InvColors=false,
