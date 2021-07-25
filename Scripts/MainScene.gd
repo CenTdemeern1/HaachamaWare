@@ -47,4 +47,7 @@ func _on_LogoDrop_finished():
 
 
 func _on_Start_finished():
-	Global.change_scene("res://Scenes/Game.tscn")
+	if len(Global.minigames)>0:
+		Global.change_scene("res://Scenes/Game.tscn")
+	else:
+		Global.change_scene("res://Scenes/Demo.tscn")
