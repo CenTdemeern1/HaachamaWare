@@ -2,10 +2,12 @@ extends Control
 
 const things_to_load = [
 	"res://Scenes/OP.tscn",
+	"res://Scenes/OSC.tscn",
 	"res://Scenes/Pot.tscn",
 	"res://Scenes/Game.tscn",
 	"res://Scenes/Demo.tscn",
 	"res://Scenes/ColorInvert.tscn",
+	"res://Scenes/Distraction.tscn",
 	"res://Scenes/IGRecordViewport.tscn",
 	"res://Scenes/MicroGames/FishinGura.tscn",
 	"res://Scenes/MicroGames/Evolving.tscn",
