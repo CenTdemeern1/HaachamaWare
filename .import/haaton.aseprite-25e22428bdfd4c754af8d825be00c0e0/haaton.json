@@ -1,11 +1,11 @@
 { "frames": [
    {
     "filename": "haaton.aseprite",
-    "frame": { "x": 0, "y": 0, "w": 25, "h": 32 },
+    "frame": { "x": 0, "y": 0, "w": 31, "h": 32 },
     "rotated": false,
     "trimmed": false,
-    "spriteSourceSize": { "x": 0, "y": 0, "w": 25, "h": 32 },
-    "sourceSize": { "w": 25, "h": 32 },
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 31, "h": 32 },
+    "sourceSize": { "w": 31, "h": 32 },
     "duration": 100
    }
  ],
@@ -14,7 +14,7 @@
   "version": "1.2.21-dev",
   "image": "haaton.png",
   "format": "RGBA8888",
-  "size": { "w": 25, "h": 32 },
+  "size": { "w": 31, "h": 32 },
   "scale": "1",
   "frameTags": [
   ]
