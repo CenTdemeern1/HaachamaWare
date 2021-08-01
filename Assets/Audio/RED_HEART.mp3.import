@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/RED_HEART.mp3-486ae2c99cbd956b39f223153734f4bf.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/RED_HEART.mp3"
+dest_files=[ "res://.import/RED_HEART.mp3-486ae2c99cbd956b39f223153734f4bf.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
