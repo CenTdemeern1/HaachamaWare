@@ -6,4 +6,3 @@ func _process(_delta):
 		$SuiseiImpostor.set_process(false)
 		$AnimationPlayer.playback_speed=$"..".difficulty
 		$AnimationPlayer.play("Lose")
-		$Floor/NavigationPolygonInstance2.enabled=true

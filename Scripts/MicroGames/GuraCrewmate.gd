@@ -42,6 +42,7 @@ func _ready():
 func make_an_exit():
 	self.action_timer=20
 	self.action=actions.exit
+	$"../Floor/NavigationPolygonInstance2".enabled=true
 
 func _process(delta):
 	action_timer-=delta
