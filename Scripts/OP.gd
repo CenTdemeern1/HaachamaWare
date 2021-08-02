@@ -21,6 +21,8 @@ func _process(delta):
 			pass
 		elif Input.is_action_pressed("button1") or Input.is_action_pressed("start"):
 			skiptimer+=delta
+		elif $"../..".is_demo and Input.is_mouse_button_pressed(BUTTON_LEFT) and OS.has_touchscreen_ui_hint():
+			skiptimer+=delta
 		else:
 			skiptimer-=delta
 		skiptimer=clamp(skiptimer,0,1)
