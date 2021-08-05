@@ -1,0 +1,67 @@
+{ "frames": [
+   {
+    "filename": "Haachama-chama 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 294, "h": 72 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 294, "h": 72 },
+    "sourceSize": { "w": 294, "h": 72 },
+    "duration": 1
+   },
+   {
+    "filename": "Haachama-chama 1.aseprite",
+    "frame": { "x": 294, "y": 0, "w": 294, "h": 72 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 294, "h": 72 },
+    "sourceSize": { "w": 294, "h": 72 },
+    "duration": 375
+   },
+   {
+    "filename": "Haachama-chama 2.aseprite",
+    "frame": { "x": 588, "y": 0, "w": 294, "h": 72 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 294, "h": 72 },
+    "sourceSize": { "w": 294, "h": 72 },
+    "duration": 125
+   },
+   {
+    "filename": "Haachama-chama 3.aseprite",
+    "frame": { "x": 882, "y": 0, "w": 294, "h": 72 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 294, "h": 72 },
+    "sourceSize": { "w": 294, "h": 72 },
+    "duration": 250
+   },
+   {
+    "filename": "Haachama-chama 4.aseprite",
+    "frame": { "x": 1176, "y": 0, "w": 294, "h": 72 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 294, "h": 72 },
+    "sourceSize": { "w": 294, "h": 72 },
+    "duration": 125
+   },
+   {
+    "filename": "Haachama-chama 5.aseprite",
+    "frame": { "x": 1470, "y": 0, "w": 294, "h": 72 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 294, "h": 72 },
+    "sourceSize": { "w": 294, "h": 72 },
+    "duration": 500
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.21-dev",
+  "image": "Haachama-chama.png",
+  "format": "RGBA8888",
+  "size": { "w": 1764, "h": 72 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}

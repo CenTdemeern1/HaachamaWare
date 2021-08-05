@@ -1,0 +1,22 @@
+{ "frames": [
+   {
+    "filename": "title_border.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 978, "h": 658 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 978, "h": 658 },
+    "sourceSize": { "w": 978, "h": 658 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.21-dev",
+  "image": "title_border.png",
+  "format": "RGBA8888",
+  "size": { "w": 978, "h": 658 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}
