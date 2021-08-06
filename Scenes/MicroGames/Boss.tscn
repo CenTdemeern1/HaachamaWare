@@ -1,5 +1,200 @@
-[gd_scene format=2]
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Assets/Sprites/minigame/Boss/Carrot/5.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Sprites/minigame/Boss/Carrot/7.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/minigame/Boss/Carrot/4.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/minigame/Boss/Carrot/1.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/minigame/Boss/Carrot/3.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/minigame/Boss/Carrot/2.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Sprites/minigame/Boss/Carrot/Sprout.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sprites/minigame/Boss/Carrot/6.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Sprites/minigame/Boss/Haachama/desk.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sprites/minigame/Boss/Haachama/Haaachama_left_hand.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Sprites/minigame/Boss/Haachama/Haaachama_right_hand.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Sprites/minigame/Boss/Haachama/pot.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Sprites/minigame/Boss/Haachama/Haaachama.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Sprites/minigame/Boss/Haachama/BG.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Sprites/frame/cctvframe.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Sprites/minigame/bomb.aseprite" type="SpriteFrames" id=16]
+[ext_resource path="res://Scripts/MicroGames/CarrotPiece.gd" type="Script" id=17]
+[ext_resource path="res://Scripts/FPScounter.gd" type="Script" id=18]
+[ext_resource path="res://Scripts/MicroGames/Carrot.gd" type="Script" id=19]
+[ext_resource path="res://Assets/Sprites/minigame/Boss/Haachama/banner.png" type="Texture" id=20]
+[ext_resource path="res://Scripts/MicroGames/Boss.gd" type="Script" id=21]
+[ext_resource path="res://Assets/Sprites/minigame/Boss/Indicators/DpadDirectionsYellow1.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Sprites/minigame/Boss/Indicators/Border.png" type="Texture" id=23]
+
+[sub_resource type="Animation" id=1]
+resource_name = "bob_down"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 156, 424 ), Vector2( 156, 432 ), Vector2( 156, 424 ) ]
+}
 
 [node name="Boss" type="Node2D" groups=[
 "Minigame",
 ]]
+script = ExtResource( 21 )
+
+[node name="BG" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 14 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Banner" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 20 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Border" type="Sprite" parent="Banner"]
+position = Vector2( 43.5, 51 )
+texture = ExtResource( 23 )
+
+[node name="Indicator1" type="Sprite" parent="Banner"]
+position = Vector2( 43.5, 51 )
+texture = ExtResource( 22 )
+
+[node name="Indicator2" type="Sprite" parent="Banner"]
+position = Vector2( 77.5, 51 )
+texture = ExtResource( 22 )
+
+[node name="Desk" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 9 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Haachama" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 13 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LeftHand" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+centered = false
+
+[node name="RightHand" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 11 )
+centered = false
+
+[node name="Knife" type="RemoteTransform2D" parent="RightHand"]
+position = Vector2( 134, 108 )
+remote_path = NodePath("../../Knife")
+
+[node name="Carrot" type="Node2D" parent="."]
+position = Vector2( 504, 456 )
+scale = Vector2( 4, 4 )
+script = ExtResource( 19 )
+
+[node name="Sprout" type="Sprite" parent="Carrot"]
+texture = ExtResource( 7 )
+centered = false
+script = ExtResource( 17 )
+
+[node name="1" type="Sprite" parent="Carrot"]
+texture = ExtResource( 4 )
+centered = false
+script = ExtResource( 17 )
+goes_in_pot = true
+
+[node name="2" type="Sprite" parent="Carrot"]
+texture = ExtResource( 6 )
+centered = false
+script = ExtResource( 17 )
+goes_in_pot = true
+
+[node name="3" type="Sprite" parent="Carrot"]
+texture = ExtResource( 5 )
+centered = false
+script = ExtResource( 17 )
+goes_in_pot = true
+
+[node name="4" type="Sprite" parent="Carrot"]
+texture = ExtResource( 3 )
+centered = false
+script = ExtResource( 17 )
+goes_in_pot = true
+
+[node name="5" type="Sprite" parent="Carrot"]
+texture = ExtResource( 1 )
+centered = false
+script = ExtResource( 17 )
+goes_in_pot = true
+
+[node name="6" type="Sprite" parent="Carrot"]
+texture = ExtResource( 8 )
+centered = false
+script = ExtResource( 17 )
+goes_in_pot = true
+
+[node name="7" type="Sprite" parent="Carrot"]
+texture = ExtResource( 2 )
+centered = false
+script = ExtResource( 17 )
+goes_in_pot = true
+
+[node name="Pot" type="Sprite" parent="."]
+position = Vector2( 156, 432 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 12 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 38, 105, 51, 22 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pot"]
+anims/bob_down = SubResource( 1 )
+
+[node name="Knife" type="Sprite" parent="."]
+position = Vector2( 536, 432 )
+scale = Vector2( 4, 4 )
+z_index = 1
+texture = ExtResource( 11 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 134, 108, 3, 16 )
+
+[node name="cctvframe" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 15 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Bomb" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 16 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

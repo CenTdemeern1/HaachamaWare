@@ -1,0 +1,49 @@
+{ "frames": [
+   {
+    "filename": "DpadDirections 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 34, "h": 33 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 34, "h": 33 },
+    "sourceSize": { "w": 34, "h": 33 },
+    "duration": 100
+   },
+   {
+    "filename": "DpadDirections 1.aseprite",
+    "frame": { "x": 34, "y": 0, "w": 34, "h": 33 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 34, "h": 33 },
+    "sourceSize": { "w": 34, "h": 33 },
+    "duration": 100
+   },
+   {
+    "filename": "DpadDirections 2.aseprite",
+    "frame": { "x": 68, "y": 0, "w": 34, "h": 33 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 34, "h": 33 },
+    "sourceSize": { "w": 34, "h": 33 },
+    "duration": 100
+   },
+   {
+    "filename": "DpadDirections 3.aseprite",
+    "frame": { "x": 102, "y": 0, "w": 34, "h": 33 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 34, "h": 33 },
+    "sourceSize": { "w": 34, "h": 33 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.21-dev",
+  "image": "DpadDirections.png",
+  "format": "RGBA8888",
+  "size": { "w": 136, "h": 33 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}
