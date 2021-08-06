@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Assets/Sprites/pot/Inagood.aseprite" type="SpriteFrames" id=1]
 [ext_resource path="res://Assets/Sprites/pot/haBG.aseprite" type="SpriteFrames" id=2]
@@ -30,12 +30,18 @@
 [ext_resource path="res://Scripts/StomachCure.gd" type="Script" id=28]
 [ext_resource path="res://Assets/Sprites/SPEEED.aseprite" type="SpriteFrames" id=29]
 [ext_resource path="res://Scripts/SpeedUpVisual.gd" type="Script" id=30]
+[ext_resource path="res://Assets/Fonts/Early GameBoy.ttf" type="DynamicFontData" id=31]
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+outline_size = 4
+outline_color = Color( 0.2, 0.231373, 0.286275, 1 )
+font_data = ExtResource( 31 )
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 1
 
-[sub_resource type="Animation" id=2]
-resource_name = "Bad"
+[sub_resource type="Animation" id=3]
 length = 4.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Bad1:playing")
@@ -254,8 +260,7 @@ tracks/17/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "BadTransition"
+[sub_resource type="Animation" id=4]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("..:scale")
@@ -450,8 +455,7 @@ tracks/15/keys = {
 "values": [ Vector2( 480, 320 ) ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "GameOver"
+[sub_resource type="Animation" id=5]
 length = 5.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Bad1:playing")
@@ -670,7 +674,7 @@ tracks/17/keys = {
 "values": [ Vector2( 0, -640 ), Vector2( 0, -640 ), Vector2( 0, 10 ), Vector2( 0, -10 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 length = 4.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Good1:playing")
@@ -889,7 +893,7 @@ tracks/17/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("..:scale")
@@ -1084,7 +1088,7 @@ tracks/15/keys = {
 "values": [ Vector2( 480, 320 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 length = 16.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("..:scale")
@@ -1315,6 +1319,18 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 6 )
 centered = false
 
+[node name="MinigamesPlayed" type="Label" parent="Pot"]
+margin_right = 960.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.505882, 0.894118, 0.976471, 1 )
+custom_colors/font_color_shadow = Color( 0.439216, 0.780392, 0.858824, 1 )
+text = "00"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Stove" type="AnimatedSprite" parent="Pot"]
 scale = Vector2( 4, 4 )
 frames = ExtResource( 8 )
@@ -1508,12 +1524,12 @@ centered = false
 script = ExtResource( 15 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Pot"]
-anims/Bad = SubResource( 2 )
-anims/BadTransition = SubResource( 3 )
-anims/GameOver = SubResource( 4 )
-anims/Good = SubResource( 5 )
-anims/GoodTransition = SubResource( 6 )
-anims/OP = SubResource( 7 )
+anims/Bad = SubResource( 3 )
+anims/BadTransition = SubResource( 4 )
+anims/GameOver = SubResource( 5 )
+anims/Good = SubResource( 6 )
+anims/GoodTransition = SubResource( 7 )
+anims/OP = SubResource( 8 )
 script = ExtResource( 24 )
 
 [connection signal="animation_finished" from="Pot/AnimationPlayer" to="Pot/AnimationPlayer" method="_on_AnimationPlayer_animation_finished"]

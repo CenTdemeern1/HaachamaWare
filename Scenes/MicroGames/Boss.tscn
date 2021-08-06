@@ -44,6 +44,9 @@ tracks/0/keys = {
 "Minigame",
 ]]
 script = ExtResource( 21 )
+lifetime = 20.0
+speed_up_timer = false
+goal = "Cut 15!"
 
 [node name="BG" type="Sprite" parent="."]
 scale = Vector2( 4, 4 )

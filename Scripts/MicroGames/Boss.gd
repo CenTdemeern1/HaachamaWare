@@ -1,4 +1,4 @@
-extends Node2D
+extends MicroGame
 
 var buttons = ["up","down","left","right","button1","button2"]
 var sprites = [
@@ -12,7 +12,7 @@ var sprites = [
 
 var correct_button_just_pressed = false
 var anything_pressed = false
-
+var successful_cuts = 0
 var current_button_queue
 var next_button_queue
 
@@ -36,6 +36,9 @@ func _process(delta):
 				if button==current_button_queue:
 					correct_button_just_pressed=true
 					shift_over_queue()
+					successful_cuts+=1
+					if successful_cuts == 15:
+						win()
 	else:
 		anything_pressed=false
 		for button in buttons:

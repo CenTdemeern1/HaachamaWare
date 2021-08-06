@@ -80,7 +80,11 @@ func start_minigame():
 	var minigames_group = get_tree().get_nodes_in_group("Minigame")
 	if len(minigames_group)>0:
 		unload_minigame()
-	var mg = Global.get_instance(Global.minigames[randi()%len(Global.minigames)])
+	var mg
+	if minigames_played > 0 and (minigames_played%20)==0 and Global.disabled_minigames==[]:
+		mg = Global.get_instance(Global.boss_minigames[randi()%len(Global.boss_minigames)])
+	else:
+		mg = Global.get_instance(Global.minigames[randi()%len(Global.minigames)])
 	self.add_child_below_node($MinigameGoesHere,mg)
 	$Goal.text=mg.goal
 	goal_timer=0.4
@@ -93,6 +97,10 @@ func unload_minigame():
 		minigame_in_group.queue_free()
 
 func _process(delta):
+	var mgp = str(minigames_played)
+	if len(mgp)==1:
+		mgp="0"+mgp
+	$Pot/Pot/MinigamesPlayed.text=mgp
 	if goal_timer>0:
 		var x = clamp(goal_timer*10,2,4)
 		$Goal.rect_scale=Vector2(x,x)

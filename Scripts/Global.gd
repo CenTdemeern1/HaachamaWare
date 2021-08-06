@@ -11,6 +11,9 @@ var minigames : Array = [
 	"res://Scenes/MicroGames/CalliDrink.tscn",
 	"res://Scenes/MicroGames/SuiseiAmongUs.tscn"
 	]
+var boss_minigames : Array = [
+	"res://Scenes/MicroGames/Boss.tscn"
+]
 var mods = {
 	InvControls=false,
 	InvColors=false,

@@ -4,6 +4,7 @@ const is_demo = true
 var playing_op
 
 func _ready():
+	$Pot/Pot/MinigamesPlayed.hide()
 	playing_op = true
 	$OP/AnimationPlayer.play("OP")
 	$Pot/Pot/AnimationPlayer.play("OP")
