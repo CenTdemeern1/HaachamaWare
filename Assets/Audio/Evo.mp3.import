@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Evo.mp3-55507ecd5ae6d3fa1594f4b1687dd997.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Evo.mp3"
+dest_files=[ "res://.import/Evo.mp3-55507ecd5ae6d3fa1594f4b1687dd997.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

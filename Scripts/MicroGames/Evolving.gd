@@ -2,7 +2,7 @@ extends MicroGame
 
 var generaltimer = 0
 var mashcount = 0
-var played_booing = false
+var played_booing_or_success = false
 var difficulty
 
 func _ready():
@@ -18,8 +18,8 @@ func _ready():
 
 func _process(delta):
 	generaltimer+=delta
-	if generaltimer>=2.0/difficulty and !played_booing and !preemptively_won_or_lost:
-		played_booing=true
+	if generaltimer>=2.0/difficulty and !played_booing_or_success and !preemptively_won_or_lost:
+		played_booing_or_success=true
 		$Booing.play()
 	if generaltimer>0.3/difficulty:
 		if generaltimer<2.0/difficulty:
@@ -28,3 +28,5 @@ func _process(delta):
 				if mashcount == 4:
 					win()
 					$EvolveCancel.show()
+					played_booing_or_success=true
+					$Success.play()
