@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://Assets/Sprites/minigame/Boss/Carrot/5.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Sprites/minigame/Boss/Carrot/7.png" type="Texture" id=2]
@@ -54,6 +54,23 @@ font_data = ExtResource( 24 )
 outline_size = 4
 outline_color = Color( 0.2, 0.231373, 0.286275, 1 )
 font_data = ExtResource( 24 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "Cut"
+length = 0.1
+step = 0.025
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.025, 0.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -48 ), Vector2( 0, 0 ) ]
+}
 
 [sub_resource type="Animation" id=1]
 resource_name = "bob_down"
@@ -170,6 +187,9 @@ centered = false
 [node name="Knife" type="RemoteTransform2D" parent="RightHand"]
 position = Vector2( 134, 108 )
 remote_path = NodePath("../../Knife")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RightHand"]
+anims/Cut = SubResource( 4 )
 
 [node name="Carrot" type="Node2D" parent="."]
 position = Vector2( 504, 456 )

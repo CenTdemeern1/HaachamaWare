@@ -50,6 +50,7 @@ func _process(_delta):
 					$Haachama.show()
 					$HaachamaDisgusted.hide()
 					$CutSFX.play()
+					$RightHand/AnimationPlayer.play("Cut")
 					correct_button_pressed = true
 					if successful_cuts == 22:
 						win()
