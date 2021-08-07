@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://Assets/Sprites/minigame/Boss/Carrot/5.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Sprites/minigame/Boss/Carrot/7.png" type="Texture" id=2]
@@ -43,6 +43,7 @@
 [ext_resource path="res://Scripts/MicroGames/VeggiesToGo.gd" type="Script" id=41]
 [ext_resource path="res://Assets/Audio/Cut.mp3" type="AudioStream" id=42]
 [ext_resource path="res://Assets/Audio/Haaachama_cooking.mp3" type="AudioStream" id=43]
+[ext_resource path="res://Assets/Sprites/circle_filled.png" type="Texture" id=44]
 
 [sub_resource type="DynamicFont" id=2]
 size = 64
@@ -54,6 +55,34 @@ font_data = ExtResource( 24 )
 outline_size = 4
 outline_color = Color( 0.2, 0.231373, 0.286275, 1 )
 font_data = ExtResource( 24 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "Pulse"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0.705882 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.05, 0.05 ), Vector2( 0.25, 0.25 ), Vector2( 0.25, 0.25 ) ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "Cut"
@@ -141,16 +170,26 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="circle_filled" type="Sprite" parent="Banner"]
+self_modulate = Color( 0, 0, 0, 0.705882 )
+position = Vector2( 77.5, 51 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 44 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Banner/circle_filled"]
+autoplay = "Pulse"
+anims/Pulse = SubResource( 5 )
+
 [node name="Border" type="Sprite" parent="Banner"]
-position = Vector2( 43.5, 51 )
+position = Vector2( 77.5, 51 )
 texture = ExtResource( 23 )
 
 [node name="Indicator1" type="Sprite" parent="Banner"]
-position = Vector2( 43.5, 51 )
+position = Vector2( 77.5, 51 )
 texture = ExtResource( 22 )
 
 [node name="Indicator2" type="Sprite" parent="Banner"]
-position = Vector2( 77.5, 51 )
+position = Vector2( 43.5, 51 )
 texture = ExtResource( 22 )
 
 [node name="Haachama" type="Sprite" parent="."]
