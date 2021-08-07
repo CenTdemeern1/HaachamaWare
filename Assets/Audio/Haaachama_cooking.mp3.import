@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Haaachama_cooking.mp3-e2255f7309471269a2cb130d07bca77f.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Haaachama_cooking.mp3"
+dest_files=[ "res://.import/Haaachama_cooking.mp3-e2255f7309471269a2cb130d07bca77f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

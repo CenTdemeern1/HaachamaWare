@@ -49,6 +49,7 @@ func _process(_delta):
 #					print(current_vegetable)
 					$Haachama.show()
 					$HaachamaDisgusted.hide()
+					$CutSFX.play()
 					correct_button_pressed = true
 					if successful_cuts == 22:
 						win()

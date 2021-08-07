@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://Assets/Sprites/minigame/Boss/Carrot/5.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Sprites/minigame/Boss/Carrot/7.png" type="Texture" id=2]
@@ -41,6 +41,8 @@
 [ext_resource path="res://Assets/Sprites/minigame/Boss/Eggplant/eggplant1.png" type="Texture" id=39]
 [ext_resource path="res://Assets/Sprites/minigame/Boss/Haachama/disgusted.png" type="Texture" id=40]
 [ext_resource path="res://Scripts/MicroGames/VeggiesToGo.gd" type="Script" id=41]
+[ext_resource path="res://Assets/Audio/Cut.mp3" type="AudioStream" id=42]
+[ext_resource path="res://Assets/Audio/Haaachama_cooking.mp3" type="AudioStream" id=43]
 
 [sub_resource type="DynamicFont" id=2]
 size = 64
@@ -361,3 +363,11 @@ script = ExtResource( 18 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 43 )
+autoplay = true
+
+[node name="CutSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 42 )
+volume_db = 12.0
