@@ -1,0 +1,22 @@
+{ "frames": [
+   {
+    "filename": "eggplant.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 35, "h": 12 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 35, "h": 12 },
+    "sourceSize": { "w": 35, "h": 12 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.21-dev",
+  "image": "eggplant.png",
+  "format": "RGBA8888",
+  "size": { "w": 35, "h": 12 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}

@@ -15,6 +15,7 @@ var anything_pressed = false
 var successful_cuts = 0
 var current_button_queue
 var next_button_queue
+var current_vegetable = 0
 
 func shift_over_queue():
 	current_button_queue=next_button_queue
@@ -27,18 +28,33 @@ func _ready():
 	shift_over_queue()
 	shift_over_queue()
 
-func _process(delta):
+func _process(_delta):
 	correct_button_just_pressed=false
 	if !anything_pressed:
+		var correct_button_pressed = false
 		for button in buttons:
 			if Input.is_action_pressed(button):
 				anything_pressed=true
 				if button==current_button_queue:
 					correct_button_just_pressed=true
 					shift_over_queue()
+					if successful_cuts>=8:
+						current_vegetable=1
+					if successful_cuts>=16:
+						current_vegetable=2
+					if successful_cuts>=22:
+						current_vegetable=3
+#					current_vegetable=int(floor(successful_cuts/8))
 					successful_cuts+=1
-					if successful_cuts == 15:
+#					print(current_vegetable)
+					$Haachama.show()
+					$HaachamaDisgusted.hide()
+					correct_button_pressed = true
+					if successful_cuts == 22:
 						win()
+		if anything_pressed and !correct_button_pressed:
+			$Haachama.hide()
+			$HaachamaDisgusted.show()
 	else:
 		anything_pressed=false
 		for button in buttons:

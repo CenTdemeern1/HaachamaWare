@@ -23,7 +23,9 @@ func increment_cp():
 	$"..".increment()
 
 func _process(delta):
-	if $"../..".correct_button_just_pressed and $"..".get_children()[$"..".next_piece]==self:
+	if falling or !self.visible or $"..".veggie_index!=$"../..".current_vegetable:
+		pass
+	elif $"../..".correct_button_just_pressed and $"..".get_children()[$"..".next_piece]==self:
 		if goes_in_pot:
 			velocity = Vector2(-7.5,-40)
 		else:

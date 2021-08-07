@@ -14,15 +14,17 @@ const things_to_load = [
 	"res://Scenes/MicroGames/LongWatson.tscn",
 	"res://Scenes/MicroGames/WarioAme.tscn",
 	"res://Scenes/MicroGames/CalliDrink.tscn",
-	"res://Scenes/MicroGames/SuiseiAmongUs.tscn"
+	"res://Scenes/MicroGames/SuiseiAmongUs.tscn",
+	"res://Scenes/MicroGames/Boss.tscn"
 	]
 
 func _ready():
 	Global.resource_queue = preload("res://Scripts/resource_queue.gd").new()
-	Global.resource_queue.start()
-	for i in things_to_load:
-		Global.resource_queue.queue_resource(i)
-	Global.resource_queue.queue_resource("res://Scenes/MainScene.tscn") #load it last
+	if OS.get_name()!="HTML5":
+		Global.resource_queue.start()
+		for i in things_to_load:
+			Global.resource_queue.queue_resource(i)
+		Global.resource_queue.queue_resource("res://Scenes/MainScene.tscn") #load it last
 
 
 func _process(delta):
