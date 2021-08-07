@@ -253,6 +253,7 @@ animations = [ {
 ]]
 script = ExtResource( 3 )
 lifetime = 2.7
+speed_up_timer = false
 goal = "B cancel!"
 
 [node name="Evolve" type="AnimatedSprite" parent="."]
