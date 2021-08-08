@@ -24,6 +24,8 @@ func do_speedup():
 	if speedup:
 		speedup=false
 		$"../SpeedUp".show_su()
+	if $"../../..".minigames_played > 0 and ($"../../..".minigames_played%20)==0 and Global.disabled_minigames==[]:
+		$"../BossGame".show_su()
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name=="GoodTransition":

@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Assets/Sprites/pot/Inagood.aseprite" type="SpriteFrames" id=1]
 [ext_resource path="res://Assets/Sprites/pot/haBG.aseprite" type="SpriteFrames" id=2]
@@ -31,14 +31,16 @@
 [ext_resource path="res://Assets/Sprites/SPEEED.aseprite" type="SpriteFrames" id=29]
 [ext_resource path="res://Scripts/SpeedUpVisual.gd" type="Script" id=30]
 [ext_resource path="res://Assets/Fonts/Early GameBoy.ttf" type="DynamicFontData" id=31]
+[ext_resource path="res://Scripts/BossGameVisual.gd" type="Script" id=32]
+[ext_resource path="res://Assets/Sprites/BOSS_STAGE.aseprite" type="SpriteFrames" id=33]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 64
 outline_size = 4
 outline_color = Color( 0.2, 0.231373, 0.286275, 1 )
 font_data = ExtResource( 31 )
 
-[sub_resource type="CanvasItemMaterial" id=1]
+[sub_resource type="CanvasItemMaterial" id=2]
 blend_mode = 1
 
 [sub_resource type="Animation" id=3]
@@ -1322,7 +1324,7 @@ centered = false
 [node name="MinigamesPlayed" type="Label" parent="Pot"]
 margin_right = 960.0
 margin_bottom = 80.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.505882, 0.894118, 0.976471, 1 )
 custom_colors/font_color_shadow = Color( 0.439216, 0.780392, 0.858824, 1 )
 text = "00"
@@ -1394,7 +1396,7 @@ centered = false
 
 [node name="Sparkles" type="AnimatedSprite" parent="Pot"]
 visible = false
-material = SubResource( 1 )
+material = SubResource( 2 )
 scale = Vector2( 4, 4 )
 frames = ExtResource( 16 )
 frame = 1
@@ -1506,6 +1508,13 @@ scale = Vector2( 4, 4 )
 frames = ExtResource( 29 )
 centered = false
 script = ExtResource( 30 )
+
+[node name="BossGame" type="AnimatedSprite" parent="Pot"]
+visible = false
+scale = Vector2( 4, 4 )
+frames = ExtResource( 33 )
+centered = false
+script = ExtResource( 32 )
 
 [node name="Good1" type="AudioStreamPlayer" parent="Pot"]
 stream = ExtResource( 20 )
