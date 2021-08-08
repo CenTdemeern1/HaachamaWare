@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/NG.mp3-c432a5bf745d10fd3e1d87b5eeb23164.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/NG.mp3"
+dest_files=[ "res://.import/NG.mp3-c432a5bf745d10fd3e1d87b5eeb23164.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

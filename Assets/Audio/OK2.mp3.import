@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/OK2.mp3-4386a03ff6627ad3c949823449e8618b.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/OK2.mp3"
+dest_files=[ "res://.import/OK2.mp3-4386a03ff6627ad3c949823449e8618b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
