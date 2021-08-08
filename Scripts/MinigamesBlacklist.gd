@@ -14,6 +14,10 @@ func _ready():
 
 func _on_MoveLeft_pressed():
 	var selections = $ActiveMinigames.get_selected_items()
+	if (selections as Array)==[]:
+		$"../../../../NG".play()
+	else:
+		$"../../../../OK2".play()
 	selections.invert()
 	for i in selections:
 		Global.disabled_minigames.append(Global.minigames[i])
@@ -23,6 +27,10 @@ func _on_MoveLeft_pressed():
 
 func _on_MoveRight_pressed():
 	var selections = $InactiveMinigames.get_selected_items()
+	if (selections as Array)==[]:
+		$"../../../../NG".play()
+	else:
+		$"../../../../OK2".play()
 	selections.invert()
 	for i in selections:
 		Global.minigames.append(Global.disabled_minigames[i])

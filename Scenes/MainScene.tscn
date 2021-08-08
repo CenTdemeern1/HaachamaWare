@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://Assets/Sprites/OPLoop.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/IntroLoopAnimatedSprite.gd" type="Script" id=2]
@@ -12,10 +12,13 @@
 [ext_resource path="res://Assets/Fonts/Gamer.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://Scripts/ModToggle.gd" type="Script" id=11]
 [ext_resource path="res://Assets/Fonts/Early GameBoy.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Assets/Audio/NG.mp3" type="AudioStream" id=13]
 [ext_resource path="res://Scripts/Fullscreen.gd" type="Script" id=14]
 [ext_resource path="res://Assets/Icons/arrow_back_white_24dp.svg" type="Texture" id=15]
 [ext_resource path="res://Assets/Icons/arrow_forward_white_24dp.svg" type="Texture" id=16]
 [ext_resource path="res://Scripts/MinigamesBlacklist.gd" type="Script" id=17]
+[ext_resource path="res://Assets/Audio/OK1.mp3" type="AudioStream" id=18]
+[ext_resource path="res://Assets/Audio/OK2.mp3" type="AudioStream" id=19]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
@@ -183,23 +186,23 @@ void fragment() {
 shader = SubResource( 37 )
 shader_param/blur_amount = 0.0
 
-[sub_resource type="DynamicFont" id=45]
+[sub_resource type="DynamicFont" id=39]
 size = 12
 font_data = ExtResource( 12 )
 
-[sub_resource type="DynamicFont" id=39]
+[sub_resource type="DynamicFont" id=40]
 size = 32
 font_data = ExtResource( 12 )
 
-[sub_resource type="DynamicFont" id=40]
+[sub_resource type="DynamicFont" id=41]
 size = 24
 font_data = ExtResource( 12 )
 
-[sub_resource type="StyleBoxEmpty" id=41]
-
 [sub_resource type="StyleBoxEmpty" id=42]
 
-[sub_resource type="StyleBoxFlat" id=43]
+[sub_resource type="StyleBoxEmpty" id=43]
+
+[sub_resource type="StyleBoxFlat" id=44]
 bg_color = Color( 0, 0, 0, 0 )
 border_width_left = 4
 border_width_top = 4
@@ -207,7 +210,7 @@ border_width_right = 4
 border_width_bottom = 4
 border_color = Color( 1, 1, 1, 1 )
 
-[sub_resource type="DynamicFont" id=44]
+[sub_resource type="DynamicFont" id=45]
 size = 64
 font_data = ExtResource( 10 )
 
@@ -445,9 +448,9 @@ __meta__ = {
 [node name="RichTextLabel" type="RichTextLabel" parent="Menu/SettingsWindow/Tabs/Credits"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/italics_font = SubResource( 45 )
-custom_fonts/bold_font = SubResource( 39 )
-custom_fonts/normal_font = SubResource( 40 )
+custom_fonts/italics_font = SubResource( 39 )
+custom_fonts/bold_font = SubResource( 40 )
+custom_fonts/normal_font = SubResource( 41 )
 bbcode_enabled = true
 bbcode_text = "[center][b]~Programming[/b]
 CenTdemeern1
@@ -488,10 +491,10 @@ margin_left = 648.0
 margin_top = 320.0
 margin_right = 898.0
 margin_bottom = 400.0
-custom_styles/pressed = SubResource( 41 )
-custom_styles/focus = SubResource( 42 )
-custom_styles/normal = SubResource( 43 )
-custom_fonts/font = SubResource( 44 )
+custom_styles/pressed = SubResource( 42 )
+custom_styles/focus = SubResource( 43 )
+custom_styles/normal = SubResource( 44 )
+custom_fonts/font = SubResource( 45 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Play Game"
 __meta__ = {
@@ -503,10 +506,10 @@ margin_left = 648.0
 margin_top = 408.0
 margin_right = 898.0
 margin_bottom = 488.0
-custom_styles/pressed = SubResource( 41 )
-custom_styles/focus = SubResource( 42 )
-custom_styles/normal = SubResource( 43 )
-custom_fonts/font = SubResource( 44 )
+custom_styles/pressed = SubResource( 42 )
+custom_styles/focus = SubResource( 43 )
+custom_styles/normal = SubResource( 44 )
+custom_fonts/font = SubResource( 45 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Settings"
 __meta__ = {
@@ -518,15 +521,24 @@ margin_left = 648.0
 margin_top = 496.0
 margin_right = 898.0
 margin_bottom = 576.0
-custom_styles/pressed = SubResource( 41 )
-custom_styles/focus = SubResource( 42 )
-custom_styles/normal = SubResource( 43 )
-custom_fonts/font = SubResource( 44 )
+custom_styles/pressed = SubResource( 42 )
+custom_styles/focus = SubResource( 43 )
+custom_styles/normal = SubResource( 44 )
+custom_fonts/font = SubResource( 45 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Quit"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="NG" type="AudioStreamPlayer" parent="Menu"]
+stream = ExtResource( 13 )
+
+[node name="OK1" type="AudioStreamPlayer" parent="Menu"]
+stream = ExtResource( 18 )
+
+[node name="OK2" type="AudioStreamPlayer" parent="Menu"]
+stream = ExtResource( 19 )
 
 [connection signal="animation_finished" from="AnimatedSprite" to="AnimatedSprite" method="_on_AnimatedSprite_animation_finished"]
 [connection signal="finished" from="Start" to="." method="_on_Start_finished"]
