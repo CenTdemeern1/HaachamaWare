@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://Assets/Sprites/pot/Inagood.aseprite" type="SpriteFrames" id=1]
 [ext_resource path="res://Assets/Sprites/pot/haBG.aseprite" type="SpriteFrames" id=2]
@@ -33,6 +33,7 @@
 [ext_resource path="res://Assets/Fonts/Early GameBoy.ttf" type="DynamicFontData" id=31]
 [ext_resource path="res://Scripts/BossGameVisual.gd" type="Script" id=32]
 [ext_resource path="res://Assets/Sprites/BOSS_STAGE.aseprite" type="SpriteFrames" id=33]
+[ext_resource path="res://Assets/Audio/BOSS.mp3" type="AudioStream" id=34]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -658,10 +659,10 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"times": PoolRealArray( 2.4, 5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 2.4 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ true, false ]
+"values": [ true ]
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("GameOver:position")
@@ -1312,6 +1313,7 @@ tracks/17/keys = {
 [node name="Pot" type="Node2D"]
 visible = false
 position = Vector2( 480, 320 )
+scale = Vector2( 4, 4 )
 
 [node name="Pot" type="Node2D" parent="."]
 position = Vector2( -480, -320 )
@@ -1389,7 +1391,7 @@ texture = ExtResource( 21 )
 centered = false
 
 [node name="futa" type="Sprite" parent="Pot/Pot"]
-position = Vector2( -480, -320 )
+position = Vector2( -480, -960 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 7 )
 centered = false
@@ -1485,7 +1487,6 @@ centered = false
 script = ExtResource( 15 )
 
 [node name="Good" type="Node2D" parent="Pot/Ina"]
-visible = false
 
 [node name="InaGood" type="AnimatedSprite" parent="Pot/Ina/Good"]
 scale = Vector2( 4, 4 )
@@ -1522,6 +1523,9 @@ stream = ExtResource( 20 )
 [node name="Bad1" type="AudioStreamPlayer" parent="Pot"]
 stream = ExtResource( 23 )
 
+[node name="BOSSWARNING" type="AudioStreamPlayer" parent="Pot"]
+stream = ExtResource( 34 )
+
 [node name="GameOverSFX" type="AudioStreamPlayer" parent="Pot"]
 stream = ExtResource( 27 )
 
@@ -1540,5 +1544,6 @@ anims/Good = SubResource( 6 )
 anims/GoodTransition = SubResource( 7 )
 anims/OP = SubResource( 8 )
 script = ExtResource( 24 )
+start_minigame = true
 
 [connection signal="animation_finished" from="Pot/AnimationPlayer" to="Pot/AnimationPlayer" method="_on_AnimationPlayer_animation_finished"]

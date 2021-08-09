@@ -2,6 +2,8 @@ extends Control
 
 const things_to_load = [
 	"res://Assets/Sprites/Clear.aseprite",
+	"res://Assets/Audio/GAME_CLEAR.mp3",
+	"res://Assets/Audio/BOSS.mp3",
 	"res://Scenes/OP.tscn",
 	"res://Scenes/OSC.tscn",
 	"res://Scenes/Pot.tscn",

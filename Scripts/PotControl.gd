@@ -2,6 +2,10 @@ extends AnimationPlayer
 
 #var start_minigame_timer = 5
 var gameclear
+var gameclearaudio
+var bosswarning
+var good1
+var bad1
 var gameover = false
 var gameoverfinished = false
 var speedup = false
@@ -9,6 +13,10 @@ export var start_minigame = false setget set_start_minigame
 
 func _ready():
 	gameclear = Global.resource_queue.get_resource("res://Assets/Sprites/Clear.aseprite")
+	gameclearaudio = Global.resource_queue.get_resource("res://Assets/Audio/GAME_CLEAR.mp3")
+	bosswarning = Global.resource_queue.get_resource("res://Assets/Audio/BOSS.mp3")
+	good1 = $"../Good1".stream
+	bad1 = $"../Bad1".stream
 
 func set_start_minigame(v):
 	if v:
@@ -31,7 +39,17 @@ func do_speedup():
 	if $"../../..".minigames_played > 0 and ($"../../..".minigames_played%20)==0 and Global.disabled_minigames==[]:
 		$"../BossGame".show_su()
 
+func swap_out_sfx():
+	return
+#	if $"../../..".minigames_played > 0 and ($"../../..".minigames_played%20)==0 and Global.disabled_minigames==[]:
+#		$"../Good1".stream=bosswarning
+#		$"../Bad1".stream=bosswarning
+#	else:
+#		$"../Good1".stream=good1
+#		$"../Bad1".stream=bad1
+
 func _on_AnimationPlayer_animation_finished(anim_name):
+	swap_out_sfx()
 	if anim_name=="GoodTransition":
 		play("Good")
 		$"../../..".unload_minigame()
@@ -43,6 +61,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 			if $"../../..".won_boss:
 				$"../GameOver".frames=gameclear
 				$"../GameOver".scale=Vector2(2,2)
+				$"../GameOverSFX".stream=gameclearaudio
 			play("GameOver")
 			gameover = true
 			self.playback_speed=1
