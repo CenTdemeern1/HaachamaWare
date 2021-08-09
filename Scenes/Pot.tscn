@@ -263,7 +263,7 @@ tracks/17/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=4]
 resource_name = "BadBOSS"
 length = 5.0
 tracks/0/type = "value"
@@ -483,7 +483,7 @@ tracks/17/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("..:scale")
@@ -678,7 +678,7 @@ tracks/15/keys = {
 "values": [ Vector2( 480, 320 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 length = 5.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Bad1:playing")
@@ -897,7 +897,7 @@ tracks/17/keys = {
 "values": [ Vector2( 0, -640 ), Vector2( 0, -640 ), Vector2( 0, 10 ), Vector2( 0, -10 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 length = 4.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Good1:playing")
@@ -1116,7 +1116,7 @@ tracks/17/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=8]
 resource_name = "GoodBOSS"
 length = 5.0
 tracks/0/type = "value"
@@ -1336,7 +1336,7 @@ tracks/17/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=9]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("..:scale")
@@ -1531,7 +1531,7 @@ tracks/15/keys = {
 "values": [ Vector2( 480, 320 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=10]
 length = 16.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("..:scale")
@@ -1978,14 +1978,13 @@ script = ExtResource( 15 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Pot"]
 anims/Bad = SubResource( 3 )
-anims/BadBOSS = SubResource( 10 )
-anims/BadTransition = SubResource( 4 )
-anims/GameOver = SubResource( 5 )
-anims/Good = SubResource( 6 )
-anims/GoodBOSS = SubResource( 9 )
-anims/GoodTransition = SubResource( 7 )
-anims/OP = SubResource( 8 )
+anims/BadBOSS = SubResource( 4 )
+anims/BadTransition = SubResource( 5 )
+anims/GameOver = SubResource( 6 )
+anims/Good = SubResource( 7 )
+anims/GoodBOSS = SubResource( 8 )
+anims/GoodTransition = SubResource( 9 )
+anims/OP = SubResource( 10 )
 script = ExtResource( 24 )
-start_minigame = true
 
 [connection signal="animation_finished" from="Pot/AnimationPlayer" to="Pot/AnimationPlayer" method="_on_AnimationPlayer_animation_finished"]
