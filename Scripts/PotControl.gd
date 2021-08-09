@@ -51,7 +51,10 @@ func swap_out_sfx():
 func _on_AnimationPlayer_animation_finished(anim_name):
 	swap_out_sfx()
 	if anim_name=="GoodTransition":
-		play("Good")
+		if $"../../..".minigames_played > 0 and ($"../../..".minigames_played%20)==0 and Global.disabled_minigames==[]:
+			play("GoodBOSS")
+		else:
+			play("Good")
 		$"../../..".unload_minigame()
 #		start_minigame_timer = 0
 		do_speedup()
@@ -66,7 +69,10 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 			gameover = true
 			self.playback_speed=1
 		else:
-			play("Bad")
+			if $"../../..".minigames_played > 0 and ($"../../..".minigames_played%20)==0 and Global.disabled_minigames==[]:
+				play("BadBOSS")
+			else:
+				play("Bad")
 #			start_minigame_timer = 0
 		do_speedup()
 	if anim_name=="GameOver":
