@@ -1,0 +1,49 @@
+{ "frames": [
+   {
+    "filename": "Clear 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 480, "h": 320 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 480, "h": 320 },
+    "sourceSize": { "w": 480, "h": 320 },
+    "duration": 100
+   },
+   {
+    "filename": "Clear 1.aseprite",
+    "frame": { "x": 480, "y": 0, "w": 480, "h": 320 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 480, "h": 320 },
+    "sourceSize": { "w": 480, "h": 320 },
+    "duration": 100
+   },
+   {
+    "filename": "Clear 2.aseprite",
+    "frame": { "x": 960, "y": 0, "w": 480, "h": 320 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 480, "h": 320 },
+    "sourceSize": { "w": 480, "h": 320 },
+    "duration": 100
+   },
+   {
+    "filename": "Clear 3.aseprite",
+    "frame": { "x": 1440, "y": 0, "w": 480, "h": 320 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 480, "h": 320 },
+    "sourceSize": { "w": 480, "h": 320 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.21-dev",
+  "image": "Clear.png",
+  "format": "I8",
+  "size": { "w": 1920, "h": 320 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}

@@ -7,6 +7,7 @@ var speed = 1 setget set_speed
 var difficulty = 1# setget set_difficulty
 var minigames_played = 0
 var won = true
+var won_boss = false
 # var minigames moved to Global.gd
 var goal_timer = 0
 
@@ -49,6 +50,8 @@ func penalize():
 		_penalize()
 
 func _win():
+	if minigames_played > 0 and (minigames_played%20)==0 and Global.disabled_minigames==[]:
+		won_boss = true
 	won = true
 
 func _penalize():

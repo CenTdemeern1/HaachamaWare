@@ -1,6 +1,7 @@
 extends Control
 
 const things_to_load = [
+	"res://Assets/Sprites/Clear.aseprite",
 	"res://Scenes/OP.tscn",
 	"res://Scenes/OSC.tscn",
 	"res://Scenes/Pot.tscn",

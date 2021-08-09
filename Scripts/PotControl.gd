@@ -1,10 +1,14 @@
 extends AnimationPlayer
 
 #var start_minigame_timer = 5
+var gameclear
 var gameover = false
 var gameoverfinished = false
 var speedup = false
 export var start_minigame = false setget set_start_minigame
+
+func _ready():
+	gameclear = Global.resource_queue.get_resource("res://Assets/Sprites/Clear.aseprite")
 
 func set_start_minigame(v):
 	if v:
@@ -36,6 +40,9 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name=="BadTransition":
 		$"../../..".unload_minigame()
 		if $"../../..".HP==0:
+			if $"../../..".won_boss:
+				$"../GameOver".frames=gameclear
+				$"../GameOver".scale=Vector2(2,2)
 			play("GameOver")
 			gameover = true
 			self.playback_speed=1
