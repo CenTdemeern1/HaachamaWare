@@ -1,7 +1,8 @@
 extends Node2D
 
 func _ready():
-	self.visible=OS.has_touchscreen_ui_hint()
+	if OS.get_name() != "Switch":
+		self.visible=OS.has_touchscreen_ui_hint()
 
 func _input(event):
 	if event is InputEventScreenTouch:
