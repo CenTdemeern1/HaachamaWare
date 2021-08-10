@@ -40,7 +40,7 @@
   "app": "http://www.aseprite.org/",
   "version": "1.2.21-dev",
   "image": "Clear.png",
-  "format": "I8",
+  "format": "RGBA8888",
   "size": { "w": 1920, "h": 320 },
   "scale": "1",
   "frameTags": [
