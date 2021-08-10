@@ -432,6 +432,25 @@ margin_right = 266.0
 margin_bottom = 244.0
 icon = ExtResource( 16 )
 
+[node name="DisabledMinigamesLabel" type="Label" parent="Menu/SettingsWindow/Tabs/Mods/Minigames"]
+margin_top = 354.0
+margin_right = 225.0
+margin_bottom = 368.0
+custom_colors/font_color = Color( 1, 1, 1, 0.25098 )
+text = "Disabled minigames"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnabledMinigamesLabel" type="Label" parent="Menu/SettingsWindow/Tabs/Mods/Minigames"]
+margin_left = 267.0
+margin_top = 354.0
+margin_right = 492.0
+margin_bottom = 368.0
+custom_colors/font_color = Color( 1, 1, 1, 0.25098 )
+text = "Enabled minigames"
+align = 2
+
 [node name="Credits" type="Control" parent="Menu/SettingsWindow/Tabs"]
 visible = false
 anchor_right = 1.0
