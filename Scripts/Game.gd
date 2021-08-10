@@ -20,6 +20,8 @@ func set_speed(x):
 
 func _ready():
 	playing_op = true
+	if len(Input.get_connected_joypads()) != 0:
+		$OSC.hide()
 	$OP/AnimationPlayer.play("OP")
 	$Pot/Pot/AnimationPlayer.play("OP")
 	var _i = $Pot/Pot/AnimationPlayer.connect("animation_finished",self,"anim_finish")
