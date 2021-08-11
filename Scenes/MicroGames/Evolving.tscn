@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=69 format=2]
 
 [ext_resource path="res://Assets/Sprites/minigame/evolveQcancel.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Sprites/minigame/evolveQ.png" type="Texture" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Assets/Audio/gura1.mp3" type="AudioStream" id=6]
 [ext_resource path="res://Assets/Audio/Booing.mp3" type="AudioStream" id=7]
 [ext_resource path="res://Assets/Audio/Evo.mp3" type="AudioStream" id=8]
+[ext_resource path="res://Assets/Sprites/minigame/evolvebuttonhint.aseprite" type="SpriteFrames" id=9]
+[ext_resource path="res://Scripts/AutoPlayAnimatedSprite.gd" type="Script" id=10]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
@@ -261,6 +263,16 @@ goal = "B cancel!"
 scale = Vector2( 4, 4 )
 frames = SubResource( 29 )
 centered = false
+
+[node name="ButtonHint" type="AnimatedSprite" parent="."]
+position = Vector2( 756, 468 )
+scale = Vector2( 4, 4 )
+frames = ExtResource( 9 )
+centered = false
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="EvolveCancel" type="AnimatedSprite" parent="."]
 scale = Vector2( 4, 4 )
