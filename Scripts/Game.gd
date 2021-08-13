@@ -10,6 +10,7 @@ var won = true
 var won_boss = false
 # var minigames moved to Global.gd
 var goal_timer = 0
+var last_minigame = ""
 
 func set_speed(x):
 	speed=x
@@ -83,12 +84,18 @@ func start_minigame():
 	var minigames_group = get_tree().get_nodes_in_group("Minigame")
 	if len(minigames_group)>0:
 		unload_minigame()
-	var mg
+	var mgfilename
 	if minigames_played > 0 and (minigames_played%20)==0 and Global.disabled_minigames==[]:
-		mg = Global.get_instance(Global.boss_minigames[randi()%len(Global.boss_minigames)])
+		mgfilename = Global.boss_minigames[randi()%len(Global.boss_minigames)]
 	else:
-		mg = Global.get_instance(Global.minigames[randi()%len(Global.minigames)])
+		var mgl = Global.minigames.duplicate()
+		if len(Global.minigames)>1:
+			if mgl.has(last_minigame):
+				mgl.erase(last_minigame)
+		mgfilename = mgl[randi()%len(mgl)]
+	var mg = Global.get_instance(mgfilename)
 	self.add_child_below_node($MinigameGoesHere,mg)
+	last_minigame=mgfilename
 	$Goal.text=mg.goal
 	goal_timer=0.4
 	$Goal.show()
