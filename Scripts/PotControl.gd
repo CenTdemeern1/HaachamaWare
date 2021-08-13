@@ -35,9 +35,11 @@ func _process(_delta):
 func do_speedup():
 	if speedup:
 		speedup=false
-		$"../SpeedUp".show_su()
+		if !gameover:
+			$"../SpeedUp".show_su()
 	if $"../../..".minigames_played > 0 and ($"../../..".minigames_played%20)==0 and Global.disabled_minigames==[]:
-		$"../BossGame".show_su()
+		if !gameover:
+			$"../BossGame".show_su()
 
 func swap_out_sfx():
 	return
