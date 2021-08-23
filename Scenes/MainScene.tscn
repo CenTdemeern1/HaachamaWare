@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://Assets/Sprites/OPLoop.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/IntroLoopAnimatedSprite.gd" type="Script" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Scripts/MinigamesBlacklist.gd" type="Script" id=17]
 [ext_resource path="res://Assets/Audio/OK1.mp3" type="AudioStream" id=18]
 [ext_resource path="res://Assets/Audio/OK2.mp3" type="AudioStream" id=19]
+[ext_resource path="res://Scripts/Rebind.gd" type="Script" id=20]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
@@ -248,7 +249,6 @@ stream = ExtResource( 5 )
 autoplay = true
 
 [node name="Menu" type="Control" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 9 )
@@ -265,6 +265,7 @@ __meta__ = {
 }
 
 [node name="SettingsWindow" type="WindowDialog" parent="Menu"]
+visible = true
 margin_left = 25.0
 margin_top = 45.0
 margin_right = 525.0
@@ -325,6 +326,201 @@ script = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Separator" type="HSeparator" parent="Menu/SettingsWindow/Tabs/Settings"]
+margin_top = 120.0
+margin_right = 492.0
+margin_bottom = 124.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Controls" type="Control" parent="Menu/SettingsWindow/Tabs/Settings"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Up" type="Panel" parent="Menu/SettingsWindow/Tabs/Settings/Controls"]
+margin_top = 135.0
+margin_right = 246.0
+margin_bottom = 180.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelUp" type="Label" parent="Menu/SettingsWindow/Tabs/Settings/Controls/Up"]
+margin_right = 246.0
+margin_bottom = 45.0
+text = "Up"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonUp" type="Button" parent="Menu/SettingsWindow/Tabs/Settings/Controls/Up"]
+margin_left = 250.0
+margin_right = 478.0
+margin_bottom = 45.0
+toggle_mode = true
+text = "Arrow up key backslash"
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+action = "up"
+
+[node name="Down" type="Panel" parent="Menu/SettingsWindow/Tabs/Settings/Controls"]
+margin_top = 180.0
+margin_right = 246.0
+margin_bottom = 225.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelDown" type="Label" parent="Menu/SettingsWindow/Tabs/Settings/Controls/Down"]
+margin_right = 246.0
+margin_bottom = 45.0
+text = "Down"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonDown" type="Button" parent="Menu/SettingsWindow/Tabs/Settings/Controls/Down"]
+margin_left = 250.0
+margin_right = 478.0
+margin_bottom = 45.0
+toggle_mode = true
+text = "Arrow up key backslash"
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+action = "down"
+
+[node name="Left" type="Panel" parent="Menu/SettingsWindow/Tabs/Settings/Controls"]
+margin_top = 225.0
+margin_right = 246.0
+margin_bottom = 270.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelLeft" type="Label" parent="Menu/SettingsWindow/Tabs/Settings/Controls/Left"]
+margin_right = 246.0
+margin_bottom = 45.0
+text = "Left"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonLeft" type="Button" parent="Menu/SettingsWindow/Tabs/Settings/Controls/Left"]
+margin_left = 250.0
+margin_right = 478.0
+margin_bottom = 45.0
+toggle_mode = true
+text = "Arrow up key backslash"
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+action = "left"
+
+[node name="Right" type="Panel" parent="Menu/SettingsWindow/Tabs/Settings/Controls"]
+margin_top = 270.0
+margin_right = 246.0
+margin_bottom = 315.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelRight" type="Label" parent="Menu/SettingsWindow/Tabs/Settings/Controls/Right"]
+margin_right = 246.0
+margin_bottom = 45.0
+text = "Right"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonRight" type="Button" parent="Menu/SettingsWindow/Tabs/Settings/Controls/Right"]
+margin_left = 250.0
+margin_right = 478.0
+margin_bottom = 45.0
+toggle_mode = true
+text = "Arrow up key backslash"
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+action = "right"
+
+[node name="B" type="Panel" parent="Menu/SettingsWindow/Tabs/Settings/Controls"]
+margin_top = 315.0
+margin_right = 246.0
+margin_bottom = 360.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelB" type="Label" parent="Menu/SettingsWindow/Tabs/Settings/Controls/B"]
+margin_right = 246.0
+margin_bottom = 45.0
+text = "B button"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonB" type="Button" parent="Menu/SettingsWindow/Tabs/Settings/Controls/B"]
+margin_left = 250.0
+margin_right = 478.0
+margin_bottom = 45.0
+toggle_mode = true
+text = "Arrow up key backslash"
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+action = "button2"
+
+[node name="A" type="Panel" parent="Menu/SettingsWindow/Tabs/Settings/Controls"]
+margin_top = 360.0
+margin_right = 246.0
+margin_bottom = 405.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelA" type="Label" parent="Menu/SettingsWindow/Tabs/Settings/Controls/A"]
+margin_right = 246.0
+margin_bottom = 45.0
+text = "A button"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonA" type="Button" parent="Menu/SettingsWindow/Tabs/Settings/Controls/A"]
+margin_left = 250.0
+margin_right = 478.0
+margin_bottom = 45.0
+toggle_mode = true
+text = "Arrow up key backslash"
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+action = "button1"
 
 [node name="Mods" type="Control" parent="Menu/SettingsWindow/Tabs"]
 visible = false
