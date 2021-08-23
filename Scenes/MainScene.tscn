@@ -249,6 +249,7 @@ stream = ExtResource( 5 )
 autoplay = true
 
 [node name="Menu" type="Control" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 9 )
@@ -265,7 +266,6 @@ __meta__ = {
 }
 
 [node name="SettingsWindow" type="WindowDialog" parent="Menu"]
-visible = true
 margin_left = 25.0
 margin_top = 45.0
 margin_right = 525.0
