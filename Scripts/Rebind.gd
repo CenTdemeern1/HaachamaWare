@@ -22,14 +22,13 @@ func _unhandled_key_input(event):
 	pressed = false
 
 func get_first_key_event():
-	for i in InputMap.get_action_list(action):
-		if i is InputEventKey:
-			return i
+	return Global.get_first_key_event(action)
 
 func remap_action_to(event):
 	InputMap.action_erase_event(action,get_first_key_event())
 	InputMap.action_add_event(action, event)
 	text = "%s Key" % event.as_text()
+	Global.save_controls()
 
 
 func display_current_key():

@@ -1,5 +1,8 @@
 extends Node
 
+const saved_input_actions = ["up","down","left","right","button1","button2"]
+const configfile = "user://config.ini"
+
 var resource_queue
 var fadeinMM = true
 var disabled_minigames : Array = []
@@ -29,6 +32,33 @@ func change_scene(to):
 
 func get_instance(name):
 	return resource_queue.get_resource(name).instance()
+
+func get_first_key_event(action):
+	for i in InputMap.get_action_list(action):
+		if i is InputEventKey:
+			return i
+
+func save_controls():
+	var config = ConfigFile.new()
+	for action in saved_input_actions:
+		config.set_value("input",action,OS.get_scancode_string(get_first_key_event(action).scancode))
+	config.save(configfile)
+
+func load_controls():
+	var config = ConfigFile.new()
+	var err = config.load(configfile)
+	if err:
+		save_controls()
+	else: #Equivalent to err==OK, since OK == 0 which is falsy
+		for action in config.get_section_keys("input"):
+			var scancode = OS.find_scancode_from_string(config.get_value("input", action))
+			var keyevent = InputEventKey.new()
+			keyevent.scancode = scancode
+			InputMap.action_erase_event(action,get_first_key_event(action))
+			InputMap.action_add_event(action, keyevent)
+
+func _ready():
+	load_controls()
 
 func _process(_delta):
 	#RNG scrambling.
