@@ -1,0 +1,31 @@
+{ "frames": [
+   {
+    "filename": "uprightaltmash 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 34, "h": 33 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 34, "h": 33 },
+    "sourceSize": { "w": 34, "h": 33 },
+    "duration": 50
+   },
+   {
+    "filename": "uprightaltmash 1.aseprite",
+    "frame": { "x": 34, "y": 0, "w": 34, "h": 33 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 34, "h": 33 },
+    "sourceSize": { "w": 34, "h": 33 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.21-dev",
+  "image": "uprightaltmash.png",
+  "format": "RGBA8888",
+  "size": { "w": 68, "h": 33 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}
