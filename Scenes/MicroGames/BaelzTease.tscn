@@ -1,4 +1,4 @@
-[gd_scene load_steps=105 format=2]
+[gd_scene load_steps=106 format=2]
 
 [ext_resource path="res://Assets/Sprites/minigame/BaelzTease/nezu6.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Sprites/minigame/BaelzTease/nezu5.png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Assets/Sprites/minigame/BaelzTease/uprightaltmash.aseprite" type="SpriteFrames" id=11]
 [ext_resource path="res://Scripts/AutoPlayAnimatedSprite.gd" type="Script" id=12]
 [ext_resource path="res://Scripts/MicroGames/BaelzTease.gd" type="Script" id=13]
+[ext_resource path="res://Assets/Audio/Bae.mp3" type="AudioStream" id=14]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 3 )
@@ -437,5 +438,9 @@ scale = Vector2( 4, 4 )
 frames = ExtResource( 9 )
 centered = false
 offset = Vector2( 202.75, -30.5 )
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+autoplay = true
 
 [connection signal="animation_finished" from="Nezu" to="Nezu" method="_on_Nezu_animation_finished"]
