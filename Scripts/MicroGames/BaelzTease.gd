@@ -3,6 +3,10 @@ extends MicroGame
 var prev = -1
 var pull = 0
 var mash = false
+var mashamount = 6
+
+func _ready():
+	mashamount=floor(float(mashamount)/$"..".difficulty)
 
 func _process(_delta):
 	if mash:
@@ -14,5 +18,8 @@ func _process(_delta):
 		elif right<up and prev!=1:
 			prev=1
 			pull+=1
-		if pull>=6:
+		if pull>=mashamount and !preemptively_won_or_lost:
 			win()
+			$Nezu.play("3")
+			$Nezu/UpRightAltMash.hide()
+			mash=false
