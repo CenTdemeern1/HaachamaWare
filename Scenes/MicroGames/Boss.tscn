@@ -189,6 +189,7 @@ position = Vector2( 77.5, 51 )
 texture = ExtResource( 22 )
 
 [node name="Indicator2" type="Sprite" parent="Banner"]
+modulate = Color( 1, 1, 1, 0.498039 )
 position = Vector2( 43.5, 51 )
 texture = ExtResource( 22 )
 
