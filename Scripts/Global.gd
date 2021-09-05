@@ -45,7 +45,7 @@ func save_controls():
 		config.set_value("input",action,OS.get_scancode_string(get_first_key_event(action).scancode))
 	for mod in mods:
 		config.set_value("mod", mod, mods[mod])
-		config.set_value("minigame", "disabled", PoolStringArray(disabled_minigames).join(','))
+	config.set_value("minigame", "disabled", PoolStringArray(disabled_minigames).join(','))
 	config.save(configfile)
 
 func load_controls():
