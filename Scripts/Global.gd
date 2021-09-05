@@ -43,6 +43,8 @@ func save_controls():
 	var config = ConfigFile.new()
 	for action in saved_input_actions:
 		config.set_value("input",action,OS.get_scancode_string(get_first_key_event(action).scancode))
+	for mod in mods:
+		config.set_value("mod", mod, mods[mod])
 	config.save(configfile)
 
 func load_controls():
@@ -57,6 +59,8 @@ func load_controls():
 			keyevent.scancode = scancode
 			InputMap.action_erase_event(action,get_first_key_event(action))
 			InputMap.action_add_event(action, keyevent)
+		for mod in config.get_section_keys("mod"):
+			mods[mod] = config.get_value("mod", mod)
 
 func _ready():
 	load_controls()
