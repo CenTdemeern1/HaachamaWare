@@ -24,6 +24,7 @@ func _on_MoveLeft_pressed():
 		$InactiveMinigames.add_item(translate_file_to_minigame_name(Global.minigames[i]))
 		Global.minigames.remove(i)
 		$ActiveMinigames.remove_item(i)
+	Global.save_controls()
 
 func _on_MoveRight_pressed():
 	var selections = $InactiveMinigames.get_selected_items()
@@ -37,3 +38,4 @@ func _on_MoveRight_pressed():
 		$ActiveMinigames.add_item(translate_file_to_minigame_name(Global.disabled_minigames[i]))
 		Global.disabled_minigames.remove(i)
 		$InactiveMinigames.remove_item(i)
+	Global.save_controls()

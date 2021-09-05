@@ -45,6 +45,7 @@ func save_controls():
 		config.set_value("input",action,OS.get_scancode_string(get_first_key_event(action).scancode))
 	for mod in mods:
 		config.set_value("mod", mod, mods[mod])
+		config.set_value("minigame", "disabled", PoolStringArray(disabled_minigames).join(','))
 	config.save(configfile)
 
 func load_controls():
@@ -61,6 +62,9 @@ func load_controls():
 			InputMap.action_add_event(action, keyevent)
 		for mod in config.get_section_keys("mod"):
 			mods[mod] = config.get_value("mod", mod)
+		for d in config.get_value("minigame", "disabled").split(","):
+			disabled_minigames.append(d)
+			minigames.remove(d)
 
 func _ready():
 	load_controls()
