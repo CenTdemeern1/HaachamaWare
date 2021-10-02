@@ -57,6 +57,7 @@ func _process(_delta):
 		if anything_pressed and !correct_button_pressed:
 			$Haachama.hide()
 			$HaachamaDisgusted.show()
+			$NG.play()
 	else:
 		anything_pressed=false
 		for button in buttons:
