@@ -4,7 +4,9 @@ var rotvalue = 0.0
 
 func _ready():
 	pass
-
+#Hey, I can use this pegdata I recorded to interpolate and get each peg's current frame!
+#TODO: Do that
+#TODO: Lower peg Z value to -18 (-19?) if peg frame in (1,2,3,19,20) (that is +1 because Aseprite counts from 1)
 var pegdata = [
 	[-2,3],
 	[-1,4],

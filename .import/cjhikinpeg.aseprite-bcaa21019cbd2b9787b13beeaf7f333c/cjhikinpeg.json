@@ -1,0 +1,193 @@
+{ "frames": [
+   {
+    "filename": "cjhikinpeg 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "sourceSize": { "w": 18, "h": 38 },
+    "duration": 100
+   },
+   {
+    "filename": "cjhikinpeg 1.aseprite",
+    "frame": { "x": 18, "y": 0, "w": 18, "h": 38 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "sourceSize": { "w": 18, "h": 38 },
+    "duration": 100
+   },
+   {
+    "filename": "cjhikinpeg 2.aseprite",
+    "frame": { "x": 36, "y": 0, "w": 18, "h": 38 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "sourceSize": { "w": 18, "h": 38 },
+    "duration": 100
+   },
+   {
+    "filename": "cjhikinpeg 3.aseprite",
+    "frame": { "x": 54, "y": 0, "w": 18, "h": 38 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "sourceSize": { "w": 18, "h": 38 },
+    "duration": 100
+   },
+   {
+    "filename": "cjhikinpeg 4.aseprite",
+    "frame": { "x": 72, "y": 0, "w": 18, "h": 38 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "sourceSize": { "w": 18, "h": 38 },
+    "duration": 100
+   },
+   {
+    "filename": "cjhikinpeg 5.aseprite",
+    "frame": { "x": 90, "y": 0, "w": 18, "h": 38 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "sourceSize": { "w": 18, "h": 38 },
+    "duration": 100
+   },
+   {
+    "filename": "cjhikinpeg 6.aseprite",
+    "frame": { "x": 108, "y": 0, "w": 18, "h": 38 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "sourceSize": { "w": 18, "h": 38 },
+    "duration": 100
+   },
+   {
+    "filename": "cjhikinpeg 7.aseprite",
+    "frame": { "x": 126, "y": 0, "w": 18, "h": 38 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "sourceSize": { "w": 18, "h": 38 },
+    "duration": 100
+   },
+   {
+    "filename": "cjhikinpeg 8.aseprite",
+    "frame": { "x": 144, "y": 0, "w": 18, "h": 38 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "sourceSize": { "w": 18, "h": 38 },
+    "duration": 100
+   },
+   {
+    "filename": "cjhikinpeg 9.aseprite",
+    "frame": { "x": 162, "y": 0, "w": 18, "h": 38 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "sourceSize": { "w": 18, "h": 38 },
+    "duration": 100
+   },
+   {
+    "filename": "cjhikinpeg 10.aseprite",
+    "frame": { "x": 180, "y": 0, "w": 18, "h": 38 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "sourceSize": { "w": 18, "h": 38 },
+    "duration": 100
+   },
+   {
+    "filename": "cjhikinpeg 11.aseprite",
+    "frame": { "x": 198, "y": 0, "w": 18, "h": 38 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "sourceSize": { "w": 18, "h": 38 },
+    "duration": 100
+   },
+   {
+    "filename": "cjhikinpeg 12.aseprite",
+    "frame": { "x": 216, "y": 0, "w": 18, "h": 38 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "sourceSize": { "w": 18, "h": 38 },
+    "duration": 100
+   },
+   {
+    "filename": "cjhikinpeg 13.aseprite",
+    "frame": { "x": 234, "y": 0, "w": 18, "h": 38 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "sourceSize": { "w": 18, "h": 38 },
+    "duration": 100
+   },
+   {
+    "filename": "cjhikinpeg 14.aseprite",
+    "frame": { "x": 252, "y": 0, "w": 18, "h": 38 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "sourceSize": { "w": 18, "h": 38 },
+    "duration": 100
+   },
+   {
+    "filename": "cjhikinpeg 15.aseprite",
+    "frame": { "x": 270, "y": 0, "w": 18, "h": 38 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "sourceSize": { "w": 18, "h": 38 },
+    "duration": 100
+   },
+   {
+    "filename": "cjhikinpeg 16.aseprite",
+    "frame": { "x": 288, "y": 0, "w": 18, "h": 38 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "sourceSize": { "w": 18, "h": 38 },
+    "duration": 100
+   },
+   {
+    "filename": "cjhikinpeg 17.aseprite",
+    "frame": { "x": 306, "y": 0, "w": 18, "h": 38 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "sourceSize": { "w": 18, "h": 38 },
+    "duration": 100
+   },
+   {
+    "filename": "cjhikinpeg 18.aseprite",
+    "frame": { "x": 324, "y": 0, "w": 18, "h": 38 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "sourceSize": { "w": 18, "h": 38 },
+    "duration": 100
+   },
+   {
+    "filename": "cjhikinpeg 19.aseprite",
+    "frame": { "x": 342, "y": 0, "w": 18, "h": 38 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 18, "h": 38 },
+    "sourceSize": { "w": 18, "h": 38 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.21-dev",
+  "image": "cjhikinpeg.png",
+  "format": "RGBA8888",
+  "size": { "w": 360, "h": 38 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}
