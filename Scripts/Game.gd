@@ -79,6 +79,7 @@ func speed_up():
 		$Pot/Pot/AnimationPlayer.playback_speed=self.difficulty
 		$Pot/Pot/Good1.pitch_scale=self.difficulty
 		$Pot/Pot/Bad1.pitch_scale=self.difficulty
+		$Pot/Pot/BOSSWARNING.pitch_scale=self.difficulty
 
 func start_minigame():
 	var minigames_group = get_tree().get_nodes_in_group("Minigame")

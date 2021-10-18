@@ -2,9 +2,9 @@ extends AnimatedSprite
 
 #TODO: Have the chicken take the highest Z value of the pegs above it, +1, and set it as it's own Z value
 
-const action_timer_max = 2
+const action_timer_max = 1
 const action_timer_min = 0.25
-const movement_speed = 2
+const movement_speed = 1.25
 var action_timer = 0
 var move_direction = Vector2(0,0)
 

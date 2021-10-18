@@ -1,0 +1,40 @@
+{ "frames": [
+   {
+    "filename": "chickenalarm 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 12, "h": 32 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 12, "h": 32 },
+    "sourceSize": { "w": 12, "h": 32 },
+    "duration": 100
+   },
+   {
+    "filename": "chickenalarm 1.aseprite",
+    "frame": { "x": 12, "y": 0, "w": 12, "h": 32 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 12, "h": 32 },
+    "sourceSize": { "w": 12, "h": 32 },
+    "duration": 100
+   },
+   {
+    "filename": "chickenalarm 2.aseprite",
+    "frame": { "x": 24, "y": 0, "w": 12, "h": 32 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 12, "h": 32 },
+    "sourceSize": { "w": 12, "h": 32 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.21-dev",
+  "image": "chickenalarm.png",
+  "format": "RGBA8888",
+  "size": { "w": 36, "h": 32 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}
