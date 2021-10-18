@@ -45,9 +45,9 @@ func _process(delta):
 		rotvalue-=delta
 	rotvalue = absrange(rotvalue,0,1)
 	var f = round(rotvalue*20) as int
-	$BG.frame=f
-	$FG.frame=f
-	$Label.text=str(f)
+#	$BG.frame=f
+#	$FG.frame=f
+#	$Label.text=str(f)
 #	for peg in range(1,23):
 #		var p : NavigationPolygonInstance = get_node("Navigation2D/Peg"+str(peg))
 #		p.enabled=false
