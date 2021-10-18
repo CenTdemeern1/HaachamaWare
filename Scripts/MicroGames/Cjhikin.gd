@@ -22,7 +22,6 @@ func _process(delta):
 		if peg.position.y<self.position.y:
 			z=max(z,peg.z)
 	self.z_index=z+1
-	print(z_index)
 
 func roll_action():
 	if self.action_timer<=0:
