@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Sprites/minigame/koronecallibombtimer.aseprite" type="SpriteFrames" id=1]
+[ext_resource path="res://Assets/Sprites/frame/cctvframe.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Audio/gura1.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Sprites/minigame/placeholder_koronebombscene.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/MicroGame.gd" type="Script" id=5]
+
+[node name="FishinGura" type="Node2D" groups=[
+"Minigame",
+]]
+script = ExtResource( 5 )
+speed_up_timer = false
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="frame" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Bomb" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 1 )
+centered = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
