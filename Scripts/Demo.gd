@@ -5,6 +5,8 @@ var playing_op
 
 func _ready():
 	$Pot/Pot/MinigamesPlayed.hide()
+	if len(Input.get_connected_joypads()) != 0:
+		$OSC.hide()
 	playing_op = true
 	$OP/AnimationPlayer.play("OP")
 	$Pot/Pot/AnimationPlayer.play("OP")
