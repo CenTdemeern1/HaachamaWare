@@ -395,8 +395,8 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 480.0
-custom_fonts/normal_font = SubResource( 30 )
 custom_colors/default_color = Color( 1, 0.756863, 0.486275, 1 )
+custom_fonts/normal_font = SubResource( 30 )
 bbcode_enabled = true
 bbcode_text = "
 
@@ -452,8 +452,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 14.0
 margin_bottom = -242.0
-custom_fonts/normal_font = SubResource( 31 )
 custom_colors/default_color = Color( 0.403922, 0.329412, 0.298039, 1 )
+custom_fonts/normal_font = SubResource( 31 )
 bbcode_enabled = true
 bbcode_text = "[center]Original Music
 
@@ -479,8 +479,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 88.0
 margin_bottom = -168.0
-custom_fonts/normal_font = SubResource( 31 )
 custom_colors/default_color = Color( 0.403922, 0.329412, 0.298039, 1 )
+custom_fonts/normal_font = SubResource( 31 )
 bbcode_enabled = true
 bbcode_text = "[center]Red Heart Haachama[/center]
 "
@@ -533,9 +533,9 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -480.0
+custom_colors/default_color = Color( 0.745098, 0.509804, 0.298039, 1 )
 custom_fonts/bold_font = SubResource( 32 )
 custom_fonts/normal_font = SubResource( 30 )
-custom_colors/default_color = Color( 0.745098, 0.509804, 0.298039, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]
 Pixel
