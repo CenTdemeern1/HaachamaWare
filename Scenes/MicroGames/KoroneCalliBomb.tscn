@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/Sprites/minigame/koronecallibombtimer.aseprite" type="SpriteFrames" id=1]
 [ext_resource path="res://Assets/Sprites/frame/cctvframe.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Audio/calli.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Audio/calli_monitor.mp3" type="AudioStream" id=3]
 [ext_resource path="res://Assets/Sprites/minigame/placeholder_koronebombscene.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/MicroGames/KoroneCalliBomb.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Sprites/frame/cctvframe_off.png" type="Texture" id=6]
