@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/calli_monitor.mp3-ddd1c692a988fa5dbf354e5248d3adf2.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/calli_monitor.mp3"
+dest_files=[ "res://.import/calli_monitor.mp3-ddd1c692a988fa5dbf354e5248d3adf2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
