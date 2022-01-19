@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=59 format=2]
 
 [ext_resource path="res://Assets/Sprites/minigame/koronecallibombtimer.aseprite" type="SpriteFrames" id=1]
 [ext_resource path="res://Assets/Sprites/frame/cctvframe.png" type="Texture" id=2]
@@ -199,6 +199,34 @@ animations = [ {
 "speed": 20.0
 } ]
 
+[sub_resource type="Shader" id=46]
+code = "shader_type canvas_item;
+
+void fragment() {
+	COLOR.a=fract(UV.y*240f);
+	if (fract((TIME+(UV.y*10f))*0.1f)<0.25f){
+		COLOR.a+=0.1;
+	}
+}
+"
+
+[sub_resource type="ShaderMaterial" id=47]
+shader = SubResource( 46 )
+
+[sub_resource type="Shader" id=48]
+code = "shader_type canvas_item;
+
+float rand(float X) {return fract(sin(X/73.7) * 73459.87563);}
+
+void fragment() {
+	float noise = rand(UV.x*9573.68495f+UV.y*4355.437589f+TIME);
+	COLOR.a=noise*0.075f;
+}
+"
+
+[sub_resource type="ShaderMaterial" id=49]
+shader = SubResource( 48 )
+
 [node name="KoroneCalliBomb" type="Node2D" groups=["Minigame"]]
 script = ExtResource( 5 )
 lifetime = 3.3
@@ -217,8 +245,19 @@ frames = SubResource( 34 )
 centered = false
 script = ExtResource( 9 )
 
-[node name="NoiseShader" type="ColorRect" parent="."]
-visible = false
+[node name="CRTShader" type="ColorRect" parent="."]
+material = SubResource( 47 )
+margin_left = 92.0
+margin_top = 80.0
+margin_right = 868.0
+margin_bottom = 560.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CRTShader2" type="ColorRect" parent="."]
+material = SubResource( 49 )
 margin_left = 92.0
 margin_top = 80.0
 margin_right = 868.0
