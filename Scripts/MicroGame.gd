@@ -20,7 +20,7 @@ func _process(delta):
 		timer-=delta
 		timer = clamp(timer,0,lifetime)
 		var frc = timer/lifetime
-		$Bomb.frame = int((1-frc)*16)
+		$Bomb.frame = int((1-frc)*($Bomb.frames.get_frame_count("default")-1))#16
 		if timer == 0:
 			time_over()
 

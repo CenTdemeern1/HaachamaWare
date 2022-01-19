@@ -133,32 +133,14 @@
     "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
     "sourceSize": { "w": 240, "h": 160 },
     "duration": 100
-   },
-   {
-    "filename": "koronecallibombtimer 15.aseprite",
-    "frame": { "x": 3600, "y": 0, "w": 240, "h": 160 },
-    "rotated": false,
-    "trimmed": false,
-    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
-    "sourceSize": { "w": 240, "h": 160 },
-    "duration": 100
-   },
-   {
-    "filename": "koronecallibombtimer 16.aseprite",
-    "frame": { "x": 3840, "y": 0, "w": 240, "h": 160 },
-    "rotated": false,
-    "trimmed": false,
-    "spriteSourceSize": { "x": 0, "y": 0, "w": 240, "h": 160 },
-    "sourceSize": { "w": 240, "h": 160 },
-    "duration": 100
    }
  ],
  "meta": {
-  "app": "http://www.aseprite.org/",
-  "version": "1.2.21-dev",
+  "app": "https://www.aseprite.org/",
+  "version": "1.2.32-x64",
   "image": "koronecallibombtimer.png",
   "format": "RGBA8888",
-  "size": { "w": 4080, "h": 160 },
+  "size": { "w": 3600, "h": 160 },
   "scale": "1",
   "frameTags": [
   ]

@@ -1,12 +1,14 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://Assets/Sprites/minigame/koronecallibombtimer.aseprite" type="SpriteFrames" id=1]
 [ext_resource path="res://Assets/Sprites/frame/cctvframe.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Audio/gura1.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Audio/calli.mp3" type="AudioStream" id=3]
 [ext_resource path="res://Assets/Sprites/minigame/placeholder_koronebombscene.png" type="Texture" id=4]
-[ext_resource path="res://Scripts/MicroGame.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/MicroGames/KoroneCalliBomb.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Sprites/frame/cctvframe_off.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Sprites/minigame/wariowarebomb1.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Sprites/minigame/wariowarebomb2.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/MicroGames/AnimatedBombScene.gd" type="Script" id=9]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 7 )
@@ -140,17 +142,68 @@ region = Rect2( 240, 800, 240, 160 )
 atlas = ExtResource( 7 )
 region = Rect2( 480, 800, 240, 160 )
 
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 8 )
+region = Rect2( 240, 0, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 8 )
+region = Rect2( 480, 0, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 8 )
+region = Rect2( 720, 0, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 160, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 8 )
+region = Rect2( 240, 160, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 8 )
+region = Rect2( 480, 160, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 8 )
+region = Rect2( 720, 160, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 320, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 8 )
+region = Rect2( 240, 320, 240, 160 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 8 )
+region = Rect2( 480, 320, 240, 160 )
+
 [sub_resource type="SpriteFrames" id=34]
 animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
-"loop": true,
+"loop": false,
 "name": "default",
 "speed": 10.0
+}, {
+"frames": [ SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ) ],
+"loop": false,
+"name": "explode",
+"speed": 20.0
 } ]
 
-[node name="FishinGura" type="Node2D" groups=["Minigame"]]
+[node name="KoroneCalliBomb" type="Node2D" groups=["Minigame"]]
 script = ExtResource( 5 )
+lifetime = 3.3
 speed_up_timer = false
+goal = "Keep Talking!"
 
 [node name="Sprite" type="Sprite" parent="."]
 visible = false
@@ -158,12 +211,24 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 4 )
 centered = false
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="AnimatedBombScene" type="AnimatedSprite" parent="."]
 scale = Vector2( 4, 4 )
 frames = SubResource( 34 )
 centered = false
+script = ExtResource( 9 )
+
+[node name="NoiseShader" type="ColorRect" parent="."]
+visible = false
+margin_left = 92.0
+margin_top = 80.0
+margin_right = 868.0
+margin_bottom = 560.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="frame_off" type="Sprite" parent="."]
+visible = false
 scale = Vector2( 4, 4 )
 texture = ExtResource( 6 )
 centered = false
@@ -190,3 +255,5 @@ __meta__ = {
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 autoplay = true
+
+[connection signal="animation_finished" from="AnimatedBombScene" to="AnimatedBombScene" method="_on_AnimatedBombScene_animation_finished"]
