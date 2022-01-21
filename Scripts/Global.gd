@@ -1,5 +1,7 @@
 extends Node
 
+#TODO: Add option to disable noise effect, and save it in the config file.
+
 const saved_input_actions = ["up","down","left","right","button1","button2"]
 const configfile = "user://config.ini"
 
