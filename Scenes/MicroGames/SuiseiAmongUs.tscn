@@ -130,6 +130,7 @@ tracks/2/keys = {
 [node name="SuiseiAmongUs" type="Node2D" groups=["Minigame"]]
 z_index = -1
 script = ExtResource( 12 )
+lifetime = 4.0
 goal = "Kill!"
 
 [node name="BGPanel" type="Sprite" parent="."]
