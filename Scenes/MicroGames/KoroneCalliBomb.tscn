@@ -256,7 +256,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CRTShader2" type="ColorRect" parent="."]
+[node name="NoiseShader" type="ColorRect" parent="."]
 material = SubResource( 49 )
 margin_left = 92.0
 margin_top = 80.0
