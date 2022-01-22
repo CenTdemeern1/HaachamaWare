@@ -18,4 +18,6 @@ func _on_AnimatedBombScene_animation_finished():
 	if self.animation=="explode":
 		$"../frame_off".show()
 		$"../frame".hide()
+		$"../TVSnow".play()
+		$"../AudioStreamPlayer".volume_db=-12
 		count_endtimer = true

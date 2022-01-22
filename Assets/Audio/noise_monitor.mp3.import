@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/noise_monitor.mp3-f182179c737c3a81414a733211e6ee07.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/noise_monitor.mp3"
+dest_files=[ "res://.import/noise_monitor.mp3-f182179c737c3a81414a733211e6ee07.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

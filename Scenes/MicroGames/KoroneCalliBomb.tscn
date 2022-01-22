@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=2]
+[gd_scene load_steps=60 format=2]
 
 [ext_resource path="res://Assets/Sprites/minigame/koronecallibombtimer.aseprite" type="SpriteFrames" id=1]
 [ext_resource path="res://Assets/Sprites/frame/cctvframe.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Assets/Sprites/minigame/wariowarebomb1.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Sprites/minigame/wariowarebomb2.png" type="Texture" id=8]
 [ext_resource path="res://Scripts/MicroGames/AnimatedBombScene.gd" type="Script" id=9]
+[ext_resource path="res://Assets/Audio/noise_monitor.mp3" type="AudioStream" id=10]
 
 [sub_resource type="AtlasTexture" id=35]
 atlas = ExtResource( 8 )
@@ -294,5 +295,9 @@ __meta__ = {
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 autoplay = true
+
+[node name="TVSnow" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = 8.0
 
 [connection signal="animation_finished" from="AnimatedBombScene" to="AnimatedBombScene" method="_on_AnimatedBombScene_animation_finished"]
