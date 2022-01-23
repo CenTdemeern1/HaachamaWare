@@ -4,6 +4,9 @@ var has_started_exploding = false
 
 func lose_and_end():
 	if !has_started_exploding:
+		$SymbolIndicator.has_selected_a_key=true
+		$SymbolIndicator.hide()
+		$ButtonBackground.hide()
 		$AnimatedBombScene.play("explode_start")
 		has_started_exploding = true
 
