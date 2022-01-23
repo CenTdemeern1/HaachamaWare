@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=2]
+[gd_scene load_steps=68 format=2]
 
 [ext_resource path="res://Assets/Sprites/minigame/koronecallibombtimer.aseprite" type="SpriteFrames" id=1]
 [ext_resource path="res://Assets/Sprites/frame/cctvframe.png" type="Texture" id=2]
@@ -239,6 +239,61 @@ void fragment() {
 [sub_resource type="ShaderMaterial" id=49]
 shader = SubResource( 48 )
 
+[sub_resource type="Animation" id=73]
+resource_name = "MoveKeypad"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("SymbolIndicator:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 92, 464 ), Vector2( 92, 560 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ButtonBackground:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 196, 468 ), Vector2( 196, 564 ) ]
+}
+
+[sub_resource type="Animation" id=74]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("SymbolIndicator:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 92, 464 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ButtonBackground:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 196, 468 ) ]
+}
+
 [node name="KoroneCalliBomb" type="Node2D" groups=["Minigame"]]
 script = ExtResource( 5 )
 speed_up_timer = false
@@ -368,5 +423,9 @@ stream = ExtResource( 16 )
 
 [node name="Kaboom" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/MoveKeypad = SubResource( 73 )
+anims/RESET = SubResource( 74 )
 
 [connection signal="animation_finished" from="AnimatedBombScene" to="AnimatedBombScene" method="_on_AnimatedBombScene_animation_finished"]
