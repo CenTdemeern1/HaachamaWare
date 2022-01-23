@@ -296,7 +296,6 @@ tracks/1/keys = {
 
 [node name="KoroneCalliBomb" type="Node2D" groups=["Minigame"]]
 script = ExtResource( 5 )
-speed_up_timer = false
 goal = "Keep Talking!"
 
 [node name="Sprite" type="Sprite" parent="."]
