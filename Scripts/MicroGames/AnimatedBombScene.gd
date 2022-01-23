@@ -15,7 +15,9 @@ func _process(delta):
 			count_endtimer = false
 
 func _on_AnimatedBombScene_animation_finished():
-	if self.animation=="explode":
+	if self.animation=="explode_start":
+		self.play("explode")
+	elif self.animation=="explode":
 		$"../frame_off".show()
 		$"../frame".hide()
 		$"../TVSnow".play()

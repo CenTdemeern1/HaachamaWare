@@ -1,0 +1,49 @@
+{ "frames": [
+   {
+    "filename": "KeypadSelectionCursor 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 21, "h": 21 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 21, "h": 21 },
+    "sourceSize": { "w": 21, "h": 21 },
+    "duration": 100
+   },
+   {
+    "filename": "KeypadSelectionCursor 1.aseprite",
+    "frame": { "x": 21, "y": 0, "w": 21, "h": 21 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 21, "h": 21 },
+    "sourceSize": { "w": 21, "h": 21 },
+    "duration": 100
+   },
+   {
+    "filename": "KeypadSelectionCursor 2.aseprite",
+    "frame": { "x": 42, "y": 0, "w": 21, "h": 21 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 21, "h": 21 },
+    "sourceSize": { "w": 21, "h": 21 },
+    "duration": 100
+   },
+   {
+    "filename": "KeypadSelectionCursor 3.aseprite",
+    "frame": { "x": 63, "y": 0, "w": 21, "h": 21 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 21, "h": 21 },
+    "sourceSize": { "w": 21, "h": 21 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.2.32-x64",
+  "image": "KeypadSelectionCursor.png",
+  "format": "RGBA8888",
+  "size": { "w": 84, "h": 21 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}

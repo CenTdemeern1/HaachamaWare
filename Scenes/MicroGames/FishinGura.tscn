@@ -14,9 +14,7 @@
 [ext_resource path="res://Assets/Audio/gura1.mp3" type="AudioStream" id=12]
 [ext_resource path="res://Assets/Audio/arrow.mp3" type="AudioStream" id=13]
 
-[node name="FishinGura" type="Node2D" groups=[
-"Minigame",
-]]
+[node name="FishinGura" type="Node2D" groups=["Minigame"]]
 script = ExtResource( 7 )
 lifetime = 4.8
 goal = "Shoot!"

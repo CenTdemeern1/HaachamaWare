@@ -1,0 +1,58 @@
+{ "frames": [
+   {
+    "filename": "coronecalli_keypad 0.aseprite",
+    "frame": { "x": 0, "y": 0, "w": 194, "h": 24 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 194, "h": 24 },
+    "sourceSize": { "w": 194, "h": 24 },
+    "duration": 100
+   },
+   {
+    "filename": "coronecalli_keypad 1.aseprite",
+    "frame": { "x": 194, "y": 0, "w": 194, "h": 24 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 194, "h": 24 },
+    "sourceSize": { "w": 194, "h": 24 },
+    "duration": 100
+   },
+   {
+    "filename": "coronecalli_keypad 2.aseprite",
+    "frame": { "x": 388, "y": 0, "w": 194, "h": 24 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 194, "h": 24 },
+    "sourceSize": { "w": 194, "h": 24 },
+    "duration": 100
+   },
+   {
+    "filename": "coronecalli_keypad 3.aseprite",
+    "frame": { "x": 582, "y": 0, "w": 194, "h": 24 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 194, "h": 24 },
+    "sourceSize": { "w": 194, "h": 24 },
+    "duration": 100
+   },
+   {
+    "filename": "coronecalli_keypad 4.aseprite",
+    "frame": { "x": 776, "y": 0, "w": 194, "h": 24 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 194, "h": 24 },
+    "sourceSize": { "w": 194, "h": 24 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.2.32-x64",
+  "image": "coronecalli_keypad.png",
+  "format": "RGBA8888",
+  "size": { "w": 970, "h": 24 },
+  "scale": "1",
+  "frameTags": [
+  ]
+ }
+}
