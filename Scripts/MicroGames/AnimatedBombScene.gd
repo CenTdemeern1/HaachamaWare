@@ -17,6 +17,7 @@ func _process(delta):
 func _on_AnimatedBombScene_animation_finished():
 	if self.animation=="explode_start":
 		self.play("explode")
+		$"../Kaboom".play()
 	elif self.animation=="explode":
 		$"../frame_off".show()
 		$"../frame".hide()

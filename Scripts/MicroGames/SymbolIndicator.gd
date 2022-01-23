@@ -31,8 +31,11 @@ func _process(_delta):
 		if pressed_key.frame == $SymbolIndicatorSprite.frame:
 			$"..".win()
 			pressed_key.animation = "Good"
+			$"../Good".play()
 		else:
 			pressed_key.animation = "Bad"
 		pressed_key.frame = keyframe
 		$Cursor.hide()
 		has_selected_a_key = true
+		$"..".timer = 0.5
+		$"../Bomb".hide()
