@@ -12,6 +12,9 @@ offset = Vector2( -9.5, -17 )
 script = ExtResource( 2 )
 
 [node name="Alert" type="AnimatedSprite" parent="."]
-visible = false
 position = Vector2( 0, -36 )
+frames = ExtResource( 3 )
+
+[node name="AlertBottom" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 19 )
 frames = ExtResource( 3 )

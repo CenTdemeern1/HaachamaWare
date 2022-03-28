@@ -1,4 +1,4 @@
-extends Node2D
+extends MicroGame
 
 var rotvalue = 0.0
 

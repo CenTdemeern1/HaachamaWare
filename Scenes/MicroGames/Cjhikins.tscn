@@ -1,10 +1,14 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=33 format=2]
 
+[ext_resource path="res://Assets/Sprites/minigame/Boss/Indicators/DpadDirections2.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/MicroGames/Cjhikin.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/MicroGames/CjhikinMinigame.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Sprites/minigame/Boss/Indicators/DpadDirections4.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Sprites/minigame/cjhikinpeg.aseprite" type="SpriteFrames" id=5]
 [ext_resource path="res://Assets/Sprites/minigame/cjhikinbg.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Sprites/frame/frame - kiara.png" type="Texture" id=7]
 [ext_resource path="res://Scripts/MicroGames/Peg.gd" type="Script" id=8]
+[ext_resource path="res://Assets/Sprites/minigame/bomb.aseprite" type="SpriteFrames" id=9]
 
 [sub_resource type="NavigationPolygon" id=45]
 vertices = PoolVector2Array( 443, 195, 443, 183, 517, 183, 517, 195, 589, 195, 589, 207, 665, 207, 665, 227, 721, 227, 721, 267, 765, 267, 765, 393, 721, 393, 721, 445, 665, 445, 665, 465, 589, 465, 589, 477, 517, 477, 517, 489, 443, 489, 443, 477, 371, 477, 371, 465, 295, 465, 295, 445, 371, 207, 239, 445, 239, 393, 295, 227, 195, 393, 195, 267, 239, 267, 239, 227, 295, 207, 371, 195 )
@@ -121,6 +125,10 @@ radius = 170.0
 
 [node name="Cjhikins" type="Node2D" groups=["Minigame"]]
 script = ExtResource( 3 )
+lifetime = 7.0
+win_or_lose_on_time_over = 0
+speed_up_timer = false
+goal = "Coop!"
 
 [node name="BGColor" type="Sprite" parent="."]
 z_index = -20
@@ -567,3 +575,29 @@ shape = SubResource( 67 )
 
 [node name="FieldLimitPoint" type="Position2D" parent="."]
 position = Vector2( 480, 330 )
+
+[node name="DpadDirections4" type="Sprite" parent="."]
+position = Vector2( 784, 494 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+
+[node name="DpadDirections2" type="Sprite" parent="."]
+position = Vector2( 176, 494 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+
+[node name="frame" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 7 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Bomb" type="AnimatedSprite" parent="."]
+scale = Vector2( 4, 4 )
+frames = ExtResource( 9 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
