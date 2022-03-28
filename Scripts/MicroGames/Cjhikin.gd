@@ -22,6 +22,7 @@ func _process(delta):
 		if peg.position.y<self.position.y:
 			z=max(z,peg.z)
 	self.z_index=z+1
+	check_safety()
 
 func roll_action():
 	if self.action_timer<=0:
@@ -38,7 +39,19 @@ func do_ai(delta):
 	action_timer-=delta
 	roll_action()
 	move_relative(delta)
-	if move_direction.x>0:
-		self.flip_h=true
-	if move_direction.x<0:
-		self.flip_h=false
+	if move_direction.x>0: # \ The way this is written, it doesn't flip the chicken's facing direction if it's not moving horizontally.
+		self.flip_h=true   # |
+	if move_direction.x<0: # |
+		self.flip_h=false  # /
+
+func check_safety():
+	"Checks if the chicken is within the field.."
+	var centerpoint = $"../../FieldLimitPoint".global_position
+	var offset = self.global_position-centerpoint #Calculate the offset from the center. Used here to normalize the position of the vector (Not the length!)
+	offset.x*=0.5 #The field size is double the size horizontally, so I'm compensating for that here.
+	if offset.length_squared()>28900: #Equal to length()>170. Inherently more efficient because we're avoiding square roots.
+		$Alert.show()
+		$Alert.play()
+	else:
+		$Alert.hide()
+		$Alert.stop()
