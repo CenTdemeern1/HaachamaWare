@@ -1,5 +1,8 @@
 extends MicroGame
 
+var has_started_ending = false
+var ending_timer = 0
+
 var rotvalue = 0.0
 
 func _ready():
@@ -13,6 +16,9 @@ func absrange(num, mi, ma):
 	return num
 
 func _process(delta):
+	if has_started_ending:
+		ending_timer+=delta
+	
 	if Input.is_action_pressed("up") or Input.is_action_pressed("right"):
 		rotvalue+=delta
 	if Input.is_action_pressed("down") or Input.is_action_pressed("left"):
@@ -36,4 +42,15 @@ func _process(delta):
 		while x<0:
 			x+=20
 		p.set_value(x)
-	
+
+func win_and_end():
+	if has_started_ending:
+		if ending_timer>=1:
+			win()
+			end()
+	else:
+		has_started_ending=true
+		$Kiara.play("Intro")
+
+func _on_Kiara_animation_finished():
+	$Kiara.play("Loop")

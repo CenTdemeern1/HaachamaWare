@@ -16,7 +16,8 @@ var minigames : Array = [
 	"res://Scenes/MicroGames/CalliDrink.tscn",
 	"res://Scenes/MicroGames/SuiseiAmongUs.tscn",
 	"res://Scenes/MicroGames/BaelzTease.tscn",
-	"res://Scenes/MicroGames/KoroneCalliBomb.tscn"
+	"res://Scenes/MicroGames/KoroneCalliBomb.tscn",
+	"res://Scenes/MicroGames/Cjhikins.tscn"
 	]
 var boss_minigames : Array = [
 	"res://Scenes/MicroGames/Boss.tscn"

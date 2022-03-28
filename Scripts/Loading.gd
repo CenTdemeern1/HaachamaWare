@@ -20,6 +20,7 @@ const things_to_load = [
 	"res://Scenes/MicroGames/SuiseiAmongUs.tscn",
 	"res://Scenes/MicroGames/BaelzTease.tscn",
 	"res://Scenes/MicroGames/KoroneCalliBomb.tscn",
+	"res://Scenes/MicroGames/Cjhikins.tscn",
 	"res://Scenes/MicroGames/Boss.tscn"
 	]
 

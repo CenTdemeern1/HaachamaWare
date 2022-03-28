@@ -6,6 +6,7 @@ const action_timer_max = 1
 const action_timer_min = 0.25
 const movement_speed = 1.25
 const failing_timer_limit = 1.5 #How long a chicken can be out of bounds for until the minigame fails
+const movelock = 0.75 #At which point the chicken actively stops rolling random actions to stay out of bounds
 var action_timer = 0
 var move_direction = Vector2(0,0)
 var out_of_bounds_timer = 0 #This timer will be used to check how long a chicken has been out of bounds for, and if it should fail the minigame.
@@ -39,7 +40,8 @@ func generate_move_direction_vector():
 
 func do_ai(delta):
 	action_timer-=delta
-	roll_action()
+	if out_of_bounds_timer<movelock:
+		roll_action()
 	move_relative(delta)
 	if move_direction.x>0: # \ The way this is written, it doesn't flip the chicken's facing direction if it's not moving horizontally.
 		self.flip_h=true   # |
@@ -66,7 +68,8 @@ func check_safety(delta):
 		var gb_value = 1-(out_of_bounds_timer/failing_timer_limit) # \ Calculate green and blue values for the next line
 		self_modulate = Color(1,gb_value,gb_value,1)               # / Add a visual indicator that makes the chicken redder as time goes on
 		if out_of_bounds_timer>=failing_timer_limit: # Is the timer over the limit?
-			$"../..".lose_and_end() # Lose if the timer has passed the limit.
+			if !$"../..".has_started_ending: # Have we not yet started the ending sequence?
+				$"../..".lose() # Lose if the timer has passed the limit.
 	else:
 		$Alert.hide()           # \ Stop all alerts
 		$AlertBottom.hide()     # |
