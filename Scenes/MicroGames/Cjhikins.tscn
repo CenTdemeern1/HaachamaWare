@@ -128,7 +128,7 @@ script = ExtResource( 3 )
 lifetime = 7.0
 win_or_lose_on_time_over = 0
 speed_up_timer = false
-goal = "Coop!"
+goal = "Confine!"
 
 [node name="BGColor" type="Sprite" parent="."]
 z_index = -20
