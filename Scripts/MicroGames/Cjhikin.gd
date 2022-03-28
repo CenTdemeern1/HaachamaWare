@@ -46,7 +46,7 @@ func do_ai(delta):
 
 func check_safety():
 	"Checks if the chicken is within the field.."
-	var centerpoint = $"../../FieldLimitPoint".global_position
+	var centerpoint = $"../../FieldLimitPoint".global_position #I've marked the field center with a Position2D node.
 	var offset = self.global_position-centerpoint #Calculate the offset from the center. Used here to normalize the position of the vector (Not the length!)
 	offset.x*=0.5 #The field size is double the size horizontally, so I'm compensating for that here.
 	if offset.length_squared()>28900: #Equal to length()>170. Inherently more efficient because we're avoiding square roots.
